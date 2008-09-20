@@ -58,6 +58,7 @@ for _,row in pairs(dataset) do
   mat:setcell(i,1,row.name)
   mat:setcell(i,2,row.comment)
 end
+mat:setcell(i,2,"sdd")
 -- shows dialog
 dlg:showxy( iup.CENTER, iup.CENTER)
 
