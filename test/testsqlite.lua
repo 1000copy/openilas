@@ -1,9 +1,13 @@
 require "luasql.sqlite3"
 require "base"
+print (package.path)
+package.path = '..\\lib\\?.lua;'..package.path
+
+require "dbhelper"
 env = luasql.sqlite3()
 local con = assert(env:connect("..\\bin\\openilas.db"));
 
-
+-- will be cause "LuaSQL: SQL logic error or missing database" in odd / even runing
 function notwork(con)
 	cur = assert (con:execute
 	[[SELECT count(*) as c FROM sqlite_master
@@ -27,5 +31,9 @@ function workfine(con)
 	row = cur:fetch (row, "a") -- reusing the table of results
 	end
 end
+
+
+
+
 --notwork(con)
 workfine(con)
