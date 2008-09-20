@@ -14,7 +14,20 @@ function dbexec(sql)
 	assert (con:execute (sql))
 	print (sql)
 end
+function dbquery(sql)
+    assert(con)
+	local cur = assert (con:execute (sql))
+	local row = cur:fetch ({}, "a") -- the rows will be indexed by field names
+	local result ={}
+	while row do
+	    local row1 = row
+		print (type(row))
+		table.insert(result,row1)
+		row = cur:fetch ({}, "a") -- reusing the table of results
+	end
 
+	return result
+end
 
 ftInt = {type="int" ,notnull=true,default=0}
 ftDate= {type="date" }
@@ -84,13 +97,4 @@ function inserttable(tablename,fvlist)
   dbexec(sql)
 end
 
----[[
-setconn("..\\bin\\openilas.db")
-createtable("employee",true,
-	{
-	   name = ftVarchar(10),
-	   code = ftVarchar(10),
-	   comment=ftVarchar(10),
-	})
-inserttable("employee",{name="lcj",code="001",comment="good man"})
---]]
+
