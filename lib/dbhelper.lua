@@ -20,12 +20,10 @@ function dbquery(sql)
 	local row = cur:fetch ({}, "a") -- the rows will be indexed by field names
 	local result ={}
 	while row do
-	    local row1 = row
-		print (type(row))
-		table.insert(result,row1)
+		table.insert(result,row)
 		row = cur:fetch ({}, "a") -- reusing the table of results
 	end
-
+	print(result)
 	return result
 end
 
