@@ -12,3 +12,4 @@ createtable("employee",true,
 inserttable("employee",{name="lcj",code="001",comment="good man"})
 
 inserttable("employee",{name="sq",code="002",comment="good woman"})
+inserttable("employee",{name="¿ÓÂ”",code="003",comment="bad man"})
