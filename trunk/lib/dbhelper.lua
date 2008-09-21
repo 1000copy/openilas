@@ -12,7 +12,6 @@ end;
 function dbexec(sql)
     assert(con)
 	assert (con:execute (sql))
-	print (sql)
 end
 function dbquery(sql)
     assert(con)
@@ -78,6 +77,10 @@ end
 function droptable( tableName)
     return string.format("DROP TABLE if exists %s ", tableName)
 end
+
+function selecttable( tableName)
+    return dbquery(string.format("select * from %s ", tableName))
+end
 function quoted(str)
   return string.format("'%s'",str)
 end
@@ -110,10 +113,21 @@ function updatetable(tablename,fvlist,cond)
   sql = string.format("update  %s set %s where %s",tablename,vstr,cond)
   dbexec(sql)
 end
---[[
+function lastid(tablename,id)
+  cur = dbquery(string.format("select max(%s) as lastid from %s",id,tablename))
+  return cur[1].lastid or 0
+end
+function deletetable(tablename,cond)
+  assert(cond)
+  dbexec(string.format("delete from %s where %s",tablename,cond))
+end
+
 setconn("..\\bin\\openilas.db")
+--print(dbquery("select * from employee"))
+--[[
+
 --updatetable("employee",{name="lcj_new"},"name='lcj'")
 inserttable("employee",{name="lcj_new"},"name='lcj'")
-print (dbquery("select * from employee"))
+print(lastid("employee","id"))
 --]]
 
