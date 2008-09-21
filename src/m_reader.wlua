@@ -148,10 +148,10 @@ function ReaderEdit:refresh()
 	end
 end
 
+
+
+
+--[[
 _reader = Reader()
-
-
----[[
-
 iup.MainLoop()
 --]]
