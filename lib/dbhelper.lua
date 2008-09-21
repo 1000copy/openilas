@@ -23,12 +23,12 @@ function dbquery(sql)
 		table.insert(result,row)
 		row = cur:fetch ({}, "a") -- reusing the table of results
 	end
-	print(result)
 	return result
 end
 
 ftInt = {type="int" ,notnull=true,default=0}
 ftDate= {type="date" }
+ftPk = {type="pk"}
 function ftVarchar(len)
     assert(len)
 	return  {type="varchar" ,len=len,notnull=true,default=""}
@@ -54,6 +54,8 @@ function createtable( tablename, forced,fields)
 			  defaultstr = "default "..v.default
 			end
 			fieldtypestr = v.type.." "..notnullstr.." "..defaultstr
+		elseif v~=nil and v.type=="pk" then
+			fieldtypestr = "integer primary key"
 		elseif v~=nil and v.type=="varchar" then
 			if v.default~=nil then
 			  defaultstr = "default '"..v.default.."'"
@@ -95,4 +97,23 @@ function inserttable(tablename,fvlist)
   dbexec(sql)
 end
 
+function updatetable(tablename,fvlist,cond)
+  local sql,vstr,vlist="","",{}
+  for k,v in pairs(fvlist) do
+	if type(v)=="int" then
+		table.insert(vlist,string.format("%s=%s",k,v))
+	else
+		table.insert(vlist,string.format("%s='%s'",k,v))
+	end
+  end
+  vstr = table.concat(vlist,",")
+  sql = string.format("update  %s set %s where %s",tablename,vstr,cond)
+  dbexec(sql)
+end
+--[[
+setconn("..\\bin\\openilas.db")
+--updatetable("employee",{name="lcj_new"},"name='lcj'")
+inserttable("employee",{name="lcj_new"},"name='lcj'")
+print (dbquery("select * from employee"))
+--]]
 
