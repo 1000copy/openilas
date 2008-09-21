@@ -148,10 +148,10 @@ function EmployeeEdit:refresh()
 	end
 end
 
-_employee = Employee()
 
 
----[[
 
+--[[
+ Employee()
 iup.MainLoop()
 --]]

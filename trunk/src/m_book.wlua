@@ -148,10 +148,10 @@ function BookEdit:refresh()
 	end
 end
 
-_book = Book()
 
 
----[[
 
+--[[
+Book()
 iup.MainLoop()
 --]]
