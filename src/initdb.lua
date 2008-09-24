@@ -45,4 +45,25 @@ inserttable("reader",{name="宋江",code="002",comment="天罡星"})
 inserttable("reader",{name="花荣",code="003",comment="天罡星"})
 inserttable("reader",{name="林冲",code="004",comment="天罡星"})
 inserttable("reader",{name="时迁",code="005",comment="地煞星"})
-print(selecttable("reader"))
+
+
+createtable("borrow",true,
+	{
+	   id =ftPk,
+	   reader_code = ftVarchar(10),
+	   comment=ftVarchar(10),
+	})
+
+
+createtable("borrow_detail",true,
+	{
+	   id =ftPk,
+	   borrow_id=ftInt,
+	   book_code = ftVarchar(10),
+	})
+inserttable("borrow",{reader_code="001",comment="自动添加"})
+local borrow_id = lastid("borrow","id")
+inserttable("borrow_detail",{book_code="001",borrow_id=borrow_id})
+print(selecttable("borrow"))
+print(selecttable("borrow_detail"))
+
