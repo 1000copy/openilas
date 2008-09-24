@@ -127,7 +127,7 @@ function EmployeeEdit:save()
 	end
 	self.dlg:hide()
 end
-function splitlc(str)
+local function splitlc(str)
   local r ={}
   for k,v in string.gmatch(str,"(%d+):(%d+)") do
     table.insert(r,k)
@@ -135,7 +135,7 @@ function splitlc(str)
   end
   return r
 end
-function GetCurrLine(mat)
+local function GetCurrLine(mat)
 	return tonumber(splitlc(mat.focus_cell)[1])
 end
 function EmployeeEdit:refresh()

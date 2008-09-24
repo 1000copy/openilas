@@ -64,6 +64,8 @@ createtable("borrow_detail",true,
 inserttable("borrow",{reader_code="001",comment="×Ô¶¯Ìí¼Ó"})
 local borrow_id = lastid("borrow","id")
 inserttable("borrow_detail",{book_code="001",borrow_id=borrow_id})
+inserttable("borrow_detail",{book_code="002",borrow_id=borrow_id})
+inserttable("borrow_detail",{book_code="003",borrow_id=borrow_id})
 print(selecttable("borrow"))
 print(selecttable("borrow_detail"))
 
