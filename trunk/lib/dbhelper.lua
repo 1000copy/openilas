@@ -78,8 +78,12 @@ function droptable( tableName)
     return string.format("DROP TABLE if exists %s ", tableName)
 end
 
-function selecttable( tableName)
-    return dbquery(string.format("select * from %s ", tableName))
+function selecttable( tableName,cond)
+    local sql = string.format("select * from %s ", tableName)
+	if cond ~=nil and cond ~="" then
+	  sql = sql .. string.format(' where %s',cond)
+	end
+    return dbquery(sql)
 end
 function quoted(str)
   return string.format("'%s'",str)
