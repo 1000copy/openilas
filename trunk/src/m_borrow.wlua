@@ -148,11 +148,11 @@ end
 
 
 
---[[
+--[[打开标注，就可以单独运行
 Borrow()
 iup.MainLoop()
 --]]
---[[testcase
+--[[打开标注，就可以运行测试用例
 
 require "base"
 require "luaunit"
