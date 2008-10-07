@@ -1,0 +1,22 @@
+
+2008年10月7日  现在luasupport可以使用了
+   a. 下载后把它解压到C:\Program Files\Vim\vimfiles\，然后重启vim就可以看到lua菜单
+   b. 文档生成ctrl+F9 可以执行，但是它把当前的路径加到了当前文件（本身就是full path)的前面，于是就会报错
+   c. 解决的方式是修改代码，幸好还不太难改。只要
+      line 1091 :"let l:fullname        = l:currentdir."/".l:currentbuffer
+      改成：let l:fullname        = currentbuffer
+      就可以了
+   d. luasupport有3种输出方式，vim,buffer,xterm,我偏爱buffer方式，当然xterm方式在windows下就不用想了
+
+2008年10月7日 lint现在可以使用了，很简单
+   usage: lua lualint -r *.lua 表示当前目录下的全部lua文件都要检查，仅仅列出使用了没有赋值的全局变量
+	  lua lualint -s *.lua 表示当前目录下的全部lua文件都要检查，列出使用了没有赋值的全局变量
+
+2008年10月7日 学习到vim的技巧,关于buffer的，有此可见，vim的设计还是非常的不错的，很细致。
+   ctrl+ w ,w 在buffer之间切换
+   ctrl+w ,1_ 当前buffer最小，当然1就是最小高度了，还可以是其他数字，要略大些 
+   ctrl+w,1| 当前buffer最小，当然1就是最小宽度了，还可以是其他数字，要略大些  
+   相应的ctrl+w ,_ 最大高度，ctrl+w,|最大宽度，=是等大小
+   用_表示高度，|表示宽度，倒是比较容易记忆的。
+   ctrl+w ,q ，退出当前buffer
+   ctrl + w ,s 分割
