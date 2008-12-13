@@ -20,7 +20,7 @@ namespace Layout
 		/// </summary>
         public GridLayout() : this(1, 0, 0, 0)
         {
-			
+
         }
 		/// <summary>
 		/// Constructs a new GridLayout with the specified Rows and Columns with spacing of 0.
@@ -29,7 +29,7 @@ namespace Layout
 		/// <param name="Columns">Number of Columns in the layout </param>
 		public GridLayout(int Rows, int Columns) : this(Rows, Columns, 0, 0)
 		{
-			
+
 		}
 
 		/// <summary>
@@ -59,7 +59,7 @@ namespace Layout
 				width = Math.Max(s.Width, width);
 				height = Math.Max(s.Height, height);
 			}
-			return new Size(width * grid.Width + HGap * (grid.Width - 1), 
+			return new Size(width * grid.Width + HGap * (grid.Width - 1),
 							height * grid.Height + VGap * (grid.Height - 1));
 		}
 
@@ -89,7 +89,7 @@ namespace Layout
 				width = Math.Max(s.Width, width);
 				height = Math.Max(s.Height, height);
 			}
-			return new Size(width * grid.Width + HGap * (grid.Width - 1), 
+			return new Size(width * grid.Width + HGap * (grid.Width - 1),
 							height * grid.Height + VGap * (grid.Height - 1));
 
 		}

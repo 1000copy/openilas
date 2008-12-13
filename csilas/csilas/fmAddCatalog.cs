@@ -179,9 +179,9 @@ namespace csilas
         }
 
         private void save_Click(object sender, EventArgs e)
-        {/*
+        {
             DataRow row = table.Rows[0];
-            string[] fields = new string[]
+         /*   string[] fields = new string[]
                 {"name","sex","dept_code","dept_name","reader_lvl",
                     "issue_date","regist_tag","reg_date","bn_limit","email","notes"};
             Hashtable ht = new Hashtable();
@@ -200,6 +200,10 @@ namespace csilas
         }
         private void exit_Click(object sender, EventArgs e)
         {
+            foreach (DataRow row in table.Rows)
+            {
+                //MessageBox.Show((string)row[""]);
+            }
             /*
             DataRow row = table.Rows[0];
             if (row.RowState!= DataRowState.Modified)
@@ -219,7 +223,11 @@ namespace csilas
             fm.id = id;
             fm.InitDb();
             fm.ShowDialog();
+            //ChartDataSource chart = null;
         }
+
+
+      
     }
 
 }
