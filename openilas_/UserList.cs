@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.Common;
+using System.Reflection;
 
 namespace mdisample
 {
@@ -68,11 +69,25 @@ namespace mdisample
         private void edit_Click(object sender, EventArgs e)
         {
             UserAdd useradd = new UserAdd();
+            string maindb_key = ((DataRowView)grid.CurrentRow.DataBoundItem)["maindb_key"].ToString();
             string usercode = ((DataRowView)grid.CurrentRow.DataBoundItem)["user_code"].ToString();
             useradd.usercode = usercode;
             if (useradd.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(useradd.table.Rows[0]["user"].ToString());
+                MessageBox.Show(useradd.user.user);
+                int i = grid.CurrentCell.RowIndex;
+                if (i > -1)
+                {
+                    DataRow row = table.Rows[i];
+                    row["user"] = useradd.user.user;
+                    row["user_code"] = useradd.user.user_code;
+                    row["unit"] = useradd.user.unit;
+                    DbHelper db = new DbHelper();
+                    string sql = String.Format("update  usercode set [user] ='{0}',user_code='{1}',unit='{2}' where maindb_key={3}", useradd.user.user, useradd.user.user_code, useradd.user.unit,maindb_key);
+                    db.Exec(sql);
+                }
+         
+              
             }
         }
 
@@ -91,8 +106,18 @@ namespace mdisample
                     table.Rows.Add(row);
                     //update db
                     DbHelper db = new DbHelper();
-                    string sql = String.Format("insert into usercode([user],user_code,unit) values('{0}','{1}','{2}')",useradd.user.user,useradd.user.user_code,useradd.user.unit);
-                    MessageBox.Show( db.Exec(sql).ToString());
+                    User user = useradd.user;
+                    Type type = user.GetType();
+                    foreach( PropertyInfo p in type.GetProperties()) {
+                        if (p.PropertyType == typeof(bool))
+                        {
+                            string name = p.Name;
+                            bool value =(bool) p.GetValue(user, null);
+                        }
+                     };
+                    string sql = String.Format("insert into usercode([user],user_code,unit,aqui_flag,cata_flag,coll_flag,circ_flag,seri_flag,bibl_flag,rdrm_flag,refr_flag) values('{0}','{1}','{2}',0,0,0,0,0,0,0,0)", useradd.user.user, useradd.user.user_code, useradd.user.unit);
+                    MessageBox.Show( db.Insert(sql).ToString());
+                    
                 }
             }
         }

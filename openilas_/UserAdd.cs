@@ -22,7 +22,7 @@ namespace mdisample
         private void UserAdd_Load(object sender, EventArgs e)
         {
             permit.Enabled = false;
-            string sql = "select * from usercode";
+            string sql = "select [user],unit,user_code from usercode";
             if (usercode != null)
             {
                 string cond = String.Format("user_code = '{0}'", usercode);
@@ -48,9 +48,11 @@ namespace mdisample
             user = new User ();
             Type type = user.GetType();
             foreach( PropertyInfo p in type.GetProperties()) {
-                
-                string dvalue = table.Rows[0][p.Name].ToString();
-                p.SetValue(user, dvalue, null);
+                if (table.Columns[p.Name] != null)
+                {
+                    string dvalue = table.Rows[0][p.Name].ToString();
+                    p.SetValue(user, dvalue, null);
+                }
             };
            
         }
