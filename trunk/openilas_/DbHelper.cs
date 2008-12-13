@@ -118,6 +118,12 @@ namespace mdisample
             DbCommand cmd = GetSqlStringCommond(sql);
             return Query(cmd);
         }
+        public int Insert(string sql)
+        {
+            string n = sql + ";select @@IDENTITY  as 'lastid'";
+            DataTable table = Query(sql);
+            return (int)table.Rows[0]["lastid"];
+        }
         public DataTable ExecuteDataTable(DbCommand cmd)
         {
             DbProviderFactory dbfactory = DbProviderFactories.GetFactory(DbHelper.dbProviderName);
