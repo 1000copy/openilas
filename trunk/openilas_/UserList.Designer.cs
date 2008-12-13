@@ -36,6 +36,9 @@
             this.query = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -50,7 +53,7 @@
             this.grid.Location = new System.Drawing.Point(5, 40);
             this.grid.Name = "grid";
             this.grid.RowTemplate.Height = 23;
-            this.grid.Size = new System.Drawing.Size(587, 233);
+            this.grid.Size = new System.Drawing.Size(820, 233);
             this.grid.TabIndex = 3;
             // 
             // panel1
@@ -59,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 34);
+            this.panel1.Size = new System.Drawing.Size(837, 34);
             this.panel1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -70,10 +73,13 @@
             this.flowLayoutPanel1.Controls.Add(this.query);
             this.flowLayoutPanel1.Controls.Add(this.add);
             this.flowLayoutPanel1.Controls.Add(this.edit);
+            this.flowLayoutPanel1.Controls.Add(this.delete);
+            this.flowLayoutPanel1.Controls.Add(this.password);
+            this.flowLayoutPanel1.Controls.Add(this.exit);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(604, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(837, 29);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // label1
@@ -122,11 +128,40 @@
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(574, 3);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(75, 23);
+            this.delete.TabIndex = 8;
+            this.delete.Text = "delete";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(655, 3);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(75, 23);
+            this.password.TabIndex = 9;
+            this.password.Text = "password";
+            this.password.UseVisualStyleBackColor = true;
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(736, 3);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 10;
+            this.exit.Text = "exit";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 273);
+            this.ClientSize = new System.Drawing.Size(837, 273);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid);
             this.Name = "UserList";
@@ -151,6 +186,9 @@
         private System.Windows.Forms.Button query;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button edit;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button password;
+        private System.Windows.Forms.Button exit;
 
     }
 }

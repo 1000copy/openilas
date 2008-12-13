@@ -18,10 +18,7 @@ namespace mdisample
             InitializeComponent();
         }
 
-        private void query_Click1(object sender, EventArgs e)
-        {
-           
-        }
+
 
         private void ReadList_Load(object sender, EventArgs e)
         {
@@ -84,7 +81,36 @@ namespace mdisample
             UserAdd useradd = new UserAdd();
             if (useradd.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(useradd.table.Rows[0]["user"].ToString());
+                if (useradd.user != null)
+                {
+                    // update ui
+                    DataRow row = table.NewRow();
+                    row["user"] = useradd.user.user;
+                    row["user_code"] = useradd.user.user_code;
+                    row["unit"] = useradd.user.unit;
+                    table.Rows.Add(row);
+                    //update db
+                    DbHelper db = new DbHelper();
+                    string sql = String.Format("insert into usercode([user],user_code,unit) values('{0}','{1}','{2}')",useradd.user.user,useradd.user.user_code,useradd.user.unit);
+                    MessageBox.Show( db.Exec(sql).ToString());
+                }
+            }
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            int i = grid.CurrentCell.RowIndex;
+            if (i >-1 ){
+                string user_code = table.Rows[i]["user_code"].ToString();
+                string sql = String.Format("delete from usercode where user_code='{0}'", user_code);
+                DbHelper db = new DbHelper();
+                db.Exec(sql);
+                table.Rows.RemoveAt(i);                
             }
         }
     }
