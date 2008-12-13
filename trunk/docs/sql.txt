@@ -1,1 +1,7 @@
-alter table user alter rdrm_flag bit not null default 0
+
+-- usercode 添加guid类型的主键。2008年12月14日
+alter table [usercode] add maindb_key1 uniqueidentifier  null default newid()
+
+select * from usercode
+
+update usercode set maindb_key1 = newid()
