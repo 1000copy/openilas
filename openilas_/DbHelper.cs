@@ -185,7 +185,7 @@ namespace mdisample
             DataTable dt = new DataTable();
             return reader;
         }
-        public int ExecuteNonQuery(DbCommand cmd, Trans t)
+        private int ExecuteNonQuery(DbCommand cmd, Trans t)
         {
             cmd.Connection.Close();
             cmd.Connection = t.DbConnection;
@@ -194,7 +194,7 @@ namespace mdisample
             return ret;
         }
 
-        public object ExecuteScalar(DbCommand cmd, Trans t)
+        private object ExecuteScalar(DbCommand cmd, Trans t)
         {
             cmd.Connection.Close();
             cmd.Connection = t.DbConnection;
@@ -203,6 +203,12 @@ namespace mdisample
             return ret;
         }
         #endregion
+
+        public int Exec(string sql)
+        {
+            DbCommand cmd = GetSqlStringCommond(sql);
+            return ExecuteNonQuery(cmd);
+        }
     }
 
     public class Trans : IDisposable

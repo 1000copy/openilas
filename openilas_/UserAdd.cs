@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace mdisample
 {
@@ -15,6 +16,7 @@ namespace mdisample
             InitializeComponent();
         }
         public string usercode=null;
+        public User user = null;
         DbHelper db = new DbHelper();
         public DataTable table = null;
         private void UserAdd_Load(object sender, EventArgs e)
@@ -43,12 +45,20 @@ namespace mdisample
         private void ok_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            
+            user = new User ();
+            Type type = user.GetType();
+            foreach( PropertyInfo p in type.GetProperties()) {
+                
+                string dvalue = table.Rows[0][p.Name].ToString();
+                p.SetValue(user, dvalue, null);
+            };
+           
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+
         }
     }
 }
