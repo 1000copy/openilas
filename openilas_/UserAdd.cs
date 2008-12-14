@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace mdisample
+namespace openilas
 {
     public partial class UserAdd : Form
     {
@@ -15,23 +15,22 @@ namespace mdisample
         {
             InitializeComponent();
         }
-        public string usercode=null;
+        public string gid=null;
         public User user = null;
         DbHelper db = new DbHelper();
         public DataTable table = null;
         private void UserAdd_Load(object sender, EventArgs e)
         {
-            permit.Enabled = false;
             string sql = "select [user],unit,user_code from usercode";
-            if (usercode != null)
+            if (gid != null && gid!="")
             {
-                string cond = String.Format("user_code = '{0}'", usercode);
+                string cond = String.Format("gid = '{0}'", gid);
                 sql += " where " + cond;
                 table = db.Query(sql);
             }
             else
             {
-                string cond = String.Format("1=0", usercode);
+                string cond = String.Format("1=0", gid);
                 sql += " where 1=0";
                 table = db.Query(sql);
                 DataRow row = table.NewRow();

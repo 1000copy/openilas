@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace mdisample
+namespace openilas
 {
     //[PASSWORD],[REG_DATE],[TOTAL_PAGE],[UNIT],[USER],[USER_CODE],[MAINDB_KEY],
     //[AQUI_FLAG],[CATA_FLAG],[COLL_FLAG],[CIRC_FLAG],[SERI_FLAG],[BIBL_FLAG],[RDRM_FLAG],[REFR_FLAG],[SUB_FUNC]

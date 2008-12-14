@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
-namespace mdisample
+namespace openilas
 {
 	/// <summary>
 	/// Summary description for Form2.

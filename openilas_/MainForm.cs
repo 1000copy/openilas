@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 
-namespace mdisample
+namespace openilas
 {
 	/// <summary>
 	/// Summary description for Form1.
@@ -311,6 +311,7 @@ namespace mdisample
         {
             this.IsMdiContainer = true;
             this.menuItemWindow.MdiList = true;
+            this.Text = "openilas";
         }
 
         private void menuItem3_Click(object sender, EventArgs e)
