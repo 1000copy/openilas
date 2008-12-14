@@ -1,4 +1,4 @@
-﻿namespace mdisample
+﻿namespace openilas
 {
     partial class UserAdd
     {
@@ -36,7 +36,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.ok = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.permit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -107,21 +106,11 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // permit
-            // 
-            this.permit.Location = new System.Drawing.Point(262, 171);
-            this.permit.Name = "permit";
-            this.permit.Size = new System.Drawing.Size(75, 23);
-            this.permit.TabIndex = 8;
-            this.permit.Text = "permit";
-            this.permit.UseVisualStyleBackColor = true;
-            // 
             // UserAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 211);
-            this.Controls.Add(this.permit);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label3);
@@ -148,6 +137,5 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button ok;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button permit;
     }
 }

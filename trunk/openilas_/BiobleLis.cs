@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace openilas
 {
-    public partial class ReaderList : Form
+    public partial class BiobleList : Form
     {
-        public ReaderList()
+        public BiobleList()
         {
             InitializeComponent();
         }

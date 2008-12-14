@@ -4,24 +4,44 @@ using System.Text;
 using System.Data;
 using System.Data.Common;
 using System.Configuration;
-
-namespace mdisample
+using System.Security.Cryptography;
+namespace openilas
 {
+    public class Encrypt
+    {
 
+        public static string EncodePassword(string originalPassword)
+        {
+            Byte[] originalBytes;
+            Byte[] encodedBytes;
+            MD5 md5;
+
+            // Conver the original password to bytes; then create the hash
+            md5 = new MD5CryptoServiceProvider();
+            originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+            encodedBytes = md5.ComputeHash(originalBytes);
+
+            // Bytes to string
+            return System.Text.RegularExpressions.Regex.Replace(BitConverter.ToString(encodedBytes), "-", "").ToLower();
+        }
+
+    }
     public class DbHelper
     {
         
         private static string dbProviderName = ConfigurationManager.AppSettings["DbHelperProvider"];
         private static string dbConnectionString = ConfigurationManager.AppSettings["DbHelperConnectionString"];
 
-        private DbConnection connection;
+        static private DbConnection connection =null;
         public DbHelper()
         {
-            this.connection = CreateConnection(DbHelper.dbConnectionString);
+            if (connection ==null)
+                connection = CreateConnection(DbHelper.dbConnectionString);
         }
         public DbHelper(string connectionString)
         {
-            this.connection = CreateConnection(connectionString);
+            if (connection == null)
+              connection = CreateConnection(connectionString);
         }
         public static DbConnection CreateConnection()
         {
@@ -117,13 +137,9 @@ namespace mdisample
         {
             DbCommand cmd = GetSqlStringCommond(sql);
             return Query(cmd);
-        }
-        public int Insert(string sql)
-        {
-            string n = sql + ";select @@IDENTITY  as 'lastid'";
-            DataTable table = Query(sql);
-            return (int)table.Rows[0]["lastid"];
-        }
+        }      
+ 
+
         public DataTable ExecuteDataTable(DbCommand cmd)
         {
             DbProviderFactory dbfactory = DbProviderFactories.GetFactory(DbHelper.dbProviderName);

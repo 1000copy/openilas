@@ -1,6 +1,6 @@
 ﻿namespace openilas
 {
-    partial class ReaderList
+    partial class BiobleList
     {
         /// <summary>
         /// Required designer variable.
@@ -98,15 +98,15 @@
             this.panel1.Size = new System.Drawing.Size(540, 34);
             this.panel1.TabIndex = 6;
             // 
-            // ReaderList
+            // BiobleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 273);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.panel1);
-            this.Name = "ReaderList";
-            this.Text = "ReaderList";
+            this.Name = "BiobleList";
+            this.Text = "BiobleList";
             this.Load += new System.EventHandler(this.ReaderList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);

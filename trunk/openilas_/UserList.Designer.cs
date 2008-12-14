@@ -1,4 +1,4 @@
-﻿namespace mdisample
+﻿namespace openilas
 {
     partial class UserList
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,23 +37,13 @@
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.password = new System.Windows.Forms.Button();
+            this.permit = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            this.grid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grid
-            // 
-            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(5, 40);
-            this.grid.Name = "grid";
-            this.grid.RowTemplate.Height = 23;
-            this.grid.Size = new System.Drawing.Size(820, 233);
-            this.grid.TabIndex = 3;
             // 
             // panel1
             // 
@@ -62,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 34);
+            this.panel1.Size = new System.Drawing.Size(903, 34);
             this.panel1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -75,11 +64,12 @@
             this.flowLayoutPanel1.Controls.Add(this.edit);
             this.flowLayoutPanel1.Controls.Add(this.delete);
             this.flowLayoutPanel1.Controls.Add(this.password);
+            this.flowLayoutPanel1.Controls.Add(this.permit);
             this.flowLayoutPanel1.Controls.Add(this.exit);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(837, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(903, 29);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // label1
@@ -146,10 +136,21 @@
             this.password.TabIndex = 9;
             this.password.Text = "password";
             this.password.UseVisualStyleBackColor = true;
+            this.password.Click += new System.EventHandler(this.password_Click);
+            // 
+            // permit
+            // 
+            this.permit.Location = new System.Drawing.Point(736, 3);
+            this.permit.Name = "permit";
+            this.permit.Size = new System.Drawing.Size(75, 23);
+            this.permit.TabIndex = 11;
+            this.permit.Text = "permit";
+            this.permit.UseVisualStyleBackColor = true;
+            this.permit.Click += new System.EventHandler(this.permit_Click);
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(736, 3);
+            this.exit.Location = new System.Drawing.Point(817, 3);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(75, 23);
             this.exit.TabIndex = 10;
@@ -157,28 +158,39 @@
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // grid
+            // 
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.Location = new System.Drawing.Point(5, 40);
+            this.grid.Name = "grid";
+            this.grid.RowTemplate.Height = 23;
+            this.grid.Size = new System.Drawing.Size(886, 233);
+            this.grid.TabIndex = 3;
+            // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 273);
+            this.ClientSize = new System.Drawing.Size(903, 273);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid);
             this.Name = "UserList";
             this.Text = "UserList";
             this.Load += new System.EventHandler(this.ReadList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
@@ -189,6 +201,8 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button password;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button permit;
+        private System.Windows.Forms.DataGridView grid;
 
     }
 }
