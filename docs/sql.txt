@@ -1,7 +1,15 @@
 
--- usercode 添加guid类型的主键。2008年12月14日
-alter table [usercode] add maindb_key1 uniqueidentifier  null default newid()
 
-select * from usercode
 
-update usercode set maindb_key1 = newid()
+
+
+-- usercode 添加guid类型的主键gid。2008年12月14日
+alter table [usercode] add gid uniqueidentifier  null default newid()
+go
+update usercode set gid = newid()
+
+-- 清空reader内的合法记录
+delete from [READER] where reader_bar is null  or reader_id is null
+
+-- reader ,为reader_id 添加唯一约束，并且不得为空
+

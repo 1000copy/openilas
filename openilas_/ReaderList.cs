@@ -15,22 +15,20 @@ namespace openilas
             InitializeComponent();
         }
         private DbHelper db = new DbHelper();
-     
+        private const string fields = "[READER_ID],[READER_BAR],[NAME],[SEX],[DEPT_CODE],[DEPT_NAME]";
+        DataTable table = null;
         private void refresh()
         {
             string username = this.textBox1.Text;
             string sql = "";
+            sql = "select {0} from reader ";
+            sql = string.Format(sql, fields);
             if (username != "")
             {
-                sql = String.Format("select * from reader where [name] like '%{0}%'", username);
+                sql = String.Format(sql +" where [name] like '%{0}%'", username);
             }
-            else
-            {
-                sql = "select * from reader ";
-
-            }
-            DataTable ds = db.Query(sql);
-            grid.DataSource = ds;
+            table = db.Query(sql);
+            grid.DataSource = table;
             grid.Refresh();
         }
         
@@ -69,6 +67,47 @@ namespace openilas
             grid.AllowUserToDeleteRows = false;
 
             refresh();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            DataTable table_add = ReaderAdd.do_add();
+            if (table_add != null)
+            {
+                DataRow row_add = table_add.Rows[0];
+                DataRow row = table.NewRow();
+                foreach (DataColumn column in row.Table.Columns)
+                {
+                    row[column.ColumnName] = row_add[column.ColumnName];
+                }
+                table.Rows.Add(row);
+                DbHelper db = new DbHelper();
+                db.Insert("reader",row);
+            }
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            DataTable table_add = ReaderAdd.do_add();
+            if (table_add != null)
+            {
+                DataRow row_add = table_add.Rows[0];
+                DataRow row = table.NewRow();
+                foreach (DataColumn column in row.Table.Columns)
+                {
+                    row[column.ColumnName] = row_add[column.ColumnName];
+                }
+                table.Rows.Add(row);
+                DbHelper db = new DbHelper();
+                // TODO: -- reader ,为reader_id ,reader_bar,name 添加唯一约束，并且不得为空
+                db.Insert("reader", row);
+
+            }
         }
     }
 }

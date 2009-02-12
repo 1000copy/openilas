@@ -231,6 +231,30 @@ namespace openilas
             DbCommand cmd = GetSqlStringCommond(sql);
             return ExecuteNonQuery(cmd);
         }
+
+        internal void Insert(string tablename ,DataRow row)
+        {
+            string sql = "insert into {0} ({1})values({2})";
+            string fields = "";
+            string values = "";
+            //List<string> clist = new List<string>();
+            //List<string> vlist = new List<string>();
+            foreach (DataColumn col in row.Table.Columns)
+            {
+                //clist.Add(col.ColumnName);
+                //vlist.Add(row[col.ColumnName]);
+                fields += col.ColumnName+",";
+                values += "'"+row[col.ColumnName]+"',";
+            }
+            if (fields != "")
+            {
+                char[] chars = {','};
+                fields = fields.TrimEnd(chars);
+                values = values.TrimEnd(chars);
+            }
+            sql = string.Format(sql,tablename,fields,values);
+            Exec(sql);
+        }
     }
 
     public class Trans : IDisposable
