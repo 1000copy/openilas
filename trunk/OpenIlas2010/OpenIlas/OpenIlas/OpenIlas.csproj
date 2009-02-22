@@ -38,42 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="BiobleLis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BiobleLis.designer.cs">
-      <DependentUpon>BiobleLis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Child.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CompanyDb.cs" />
-    <Compile Include="CompanyQuerys.cs" />
-    <Compile Include="DbHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Password.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Password.designer.cs">
-      <DependentUpon>Password.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BiobleLis.resx">
-      <DependentUpon>BiobleLis.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Child.resx">
-      <DependentUpon>Child.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Password.resx">
-      <DependentUpon>Password.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,21 +51,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReaderAdd.resx">
-      <DependentUpon>ReaderAdd.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReaderList.resx">
-      <DependentUpon>ReaderList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserList.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserPermit.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -107,47 +68,29 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Settings1.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
-    </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ReaderAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReaderAdd.designer.cs">
-      <DependentUpon>ReaderAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReaderList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReaderList.designer.cs">
-      <DependentUpon>ReaderList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings1.settings</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs" />
     <Compile Include="UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAdd.Designer.cs" />
+    <Compile Include="UserAdd.designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserList.Designer.cs" />
-    <Compile Include="UserPermit.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserList.designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserPermit.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\sql-smart\SqlSmartTest\SqlSmartTest.csproj">
+      <Project>{5305F5D8-66BC-4D54-B6E8-D7437E3E98D3}</Project>
+      <Name>SqlSmartTest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\sql-smart\SqlSmart\SqlSmart.csproj">
       <Project>{46AB3FC6-134C-4F9B-BC9F-7D1948B8F38F}</Project>
       <Name>SqlSmart</Name>

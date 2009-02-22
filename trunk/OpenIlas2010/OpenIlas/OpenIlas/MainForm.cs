@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
+using SqlSmartTest;
 
 namespace openilas
 {
@@ -29,7 +30,6 @@ namespace openilas
         private MenuItem menuItem1;
         private MenuItem menuItem2;
         private MenuItem menuItem3;
-        private MenuItem menuItem4;
         private IContainer components;
 
 		public MainForm()
@@ -82,7 +82,6 @@ namespace openilas
             this.menuItemMin = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -181,21 +180,14 @@ namespace openilas
             // 
             this.menuItem2.Index = 3;
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem3,
-            this.menuItem4});
+            this.menuItem3});
             this.menuItem2.Text = "baseinfo";
             // 
             // menuItem3
             // 
             this.menuItem3.Index = 0;
-            this.menuItem3.Text = "readers";
+            this.menuItem3.Text = "”√ªß";
             this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
-            // 
-            // menuItem4
-            // 
-            this.menuItem4.Index = 1;
-            this.menuItem4.Text = "users";
-            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
             // MainForm
             // 
@@ -225,20 +217,7 @@ namespace openilas
 		private void menuItemNew_Click(object sender, System.EventArgs e)
 		{
 			
-				try
-				{
-					//Create a new instance of the MDI child template form
-					Child chForm = new Child();
-					chForm.MdiParent=this;
-			
-					chForm.Text= "Child - " + count.ToString();
-					
-					chForm.Show();					
-				}
-				catch
-				{
-					MessageBox.Show("Error opening image","MDI Sample",MessageBoxButtons.OK,MessageBoxIcon.Error);
-				}
+				
 			
 		}
 
@@ -316,6 +295,10 @@ namespace openilas
             this.menuItemWindow.MdiList = true;
             this.Text = "openilas";
             CompanyApp app = new CompanyApp();
+            ReaderList list = null;
+            list = new ReaderList();
+            list.MdiParent = this;
+            list.Show();
             
         }
 
@@ -330,10 +313,7 @@ namespace openilas
 
         private void menuItem4_Click(object sender, EventArgs e)
         {
-            UserList list = null;
-            list = new UserList();
-            list.MdiParent = this;
-            list.Show();
+
 
         }
 

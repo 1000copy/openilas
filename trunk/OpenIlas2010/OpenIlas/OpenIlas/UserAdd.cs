@@ -5,60 +5,57 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Reflection;
 
 namespace openilas
 {
-    public partial class UserAdd : Form
+    public partial class ReaderAdd : Form
     {
-        public UserAdd()
+        public ReaderAdd()
         {
             InitializeComponent();
-        }
-        public string gid=null;
-        public User user = null;
-        public DataTable table = null;
-        private void UserAdd_Load(object sender, EventArgs e)
-        {
-            string sql = "select [user],unit,user_code from usercode";
-            if (gid != null && gid!="")
-            {
-                string cond = String.Format("gid = '{0}'", gid);
-                sql += " where " + cond;
-                //TODO:table = db.Query(sql);
-            }
-            else
-            {
-                string cond = String.Format("1=0", gid);
-                sql += " where 1=0";
-                //TODO table = db.Query(sql);
-                DataRow row = table.NewRow();
-                table.Rows.Add(row);                
-            }
-            this.textBox1.DataBindings.Add("Text", table, "user");
-            this.textBox2.DataBindings.Add("Text", table, "unit");
-            this.textBox3.DataBindings.Add("Text", table, "user_code");
         }
 
         private void ok_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            user = new User ();
-            Type type = user.GetType();
-            foreach( PropertyInfo p in type.GetProperties()) {
-                if (table.Columns[p.Name] != null)
-                {
-                    string dvalue = table.Rows[0][p.Name].ToString();
-                    p.SetValue(user, dvalue, null);
-                }
-            };
-           
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+        private DataTable table = null;
+        public static DataTable do_add()
+        {
+            /*
+            ReaderAdd reader = new ReaderAdd();
+            // init data
+            // TODO :
+            string fields = "[READER_ID],[READER_BAR],[NAME],[SEX],[DEPT_CODE],[DEPT_NAME],[POSITION],[READER_LVL],[ISSUE_DATE],[EXPIREDATE],[EMAIL]";
+            // todo:reader.table = db.Query(String.Format("select {0} from  reader where 1=0",fields));
+            DataRow row = reader.table.NewRow();
+            reader.table.Rows.Add(row);            
+            if (reader.ShowDialog() == DialogResult.OK)
+            {
+                return reader.table;
+            }
+             *   * */
+            return null;
+           
+        }
 
+        private void ReaderAdd_Load(object sender, EventArgs e)
+        {
+            /*
+            this.reader_bar.DataBindings.Add("text", table, "reader_bar");
+            this.reader_id.DataBindings.Add("text", table, "reader_id");
+            this.position.DataBindings.Add("text", table, "position");
+            this.sex.DataBindings.Add("text", table, "sex");
+            this.reader_lvl.DataBindings.Add("text", table, "reader_lvl");
+            this.dept_code.DataBindings.Add("text", table, "dept_code");
+            this.dept_name.DataBindings.Add("text", table, "dept_name");
+            this.name.DataBindings.Add("text", table, "name");
+            */
         }
     }
 }
