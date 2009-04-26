@@ -1,4 +1,4 @@
-﻿namespace openilas
+﻿namespace OpenIlas
 {
     partial class ReaderList
     {
@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 273);
+            this.ClientSize = new System.Drawing.Size(720, 267);
             this.Name = "ReaderList";
             this.Load += new System.EventHandler(this.ReaderList_Load);
             this.ResumeLayout(false);
