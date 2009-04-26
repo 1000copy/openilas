@@ -1,148 +1,0 @@
-
------------------2008年11月9日
-  图书馆学的术语
-  编目： catalog
-  典藏 : book reservation/collect
-  采访： acquire
-  1. google by :图书馆 典藏
-  http://www.chnlib.com/Zylwj/5908.html
-  图书馆的典藏工作包括采购、编目后的全部藏书过程，通常包括图书配置、图书调拨和图书剔除３个部分。实践中由于受到图书馆机构设置、职权分工以及流通方式和阅览室空间条件等因素的限制，典藏工作往往只停留在图书配置上，且图书配置工作没能按照 “服务于读者”的根本要求开展。在具体操作中，典藏只根据图书馆的不同流通点，不同书库和阅览室的设置而依图书分类配置图书，典藏工作因而成为几乎不需要任何技术和知识含量的体力劳动，即分书、搬书、运书、点书。
-
-  2. 典藏员的烦恼
-  http://www.studa.net/Library/080801/14092690.html
-  很多行话，比如一保一减，保质量保副本，保质量，减副本。滚动排架，混合排架
-  三线馆藏制，实行以全开架为主体、部分半开架及闭架的借阅制度
-
-  3. 总结：典藏就是调度员，好听的说是配置更加合理，不好听的就是搬运清点工
-
-----------------------------2008年11月9日
-
-layout source from
-
-http://www.csharphelp.com/archives/archive7.html
-
--------------------------------2008年11月8日
-导入circback.dbf 必须：
-从foxpro中COPY TO d:\lcjun\circback.dbf TYPE FOXPLUS
-然后在sqlserver内dts这个中介文件，就完全导入了
-
--------------------------------2008年11月8日 转入gdlis.reader的时候发现其中的issue_date有形如11/25/200的数据，这是不能转换的，转换的办法是：
-select cast (issue_date as  datetime)  from reader order by issue_date
-
-select issue_date  from reader where issue_date like '%200'order by issue_date
-
-update reader set issue_date = '2009/1/1' where issue_date like '%200'
-
-alter table reader alter column issue_date datetime
-
--------------------------------分析marc
-1. 原始marc :
-
-00761nam0 2200253   45  00100130000000500170001301000370003010000410006710100080010810200150011610500180013110600060014920000690015521000310022421500200025522500550027533000770033060600130040760600130042069000080043370100200044190500330046198900160049401200800584820081106083959.5  a7-113-05198-7d￥66.00（全三册）  a20081106d2004    ekmy0chiy0121    ea0 achi  aCNb110000  ay   z   000yy  ar1 a妙管理的5个小建议AMiao Guan Li De 218 Ge Xiao Jian Yif烨子著  a北京c中国铁道出版社d2004  a391页c图d21cm2 a小智慧做大事丛书AXiao Zhi Hui Zuo Da Shi Cong Shu  a本书就企业管理问题进行探讨，以管理基本理论为基础，注重理论与实践的结合。  a企业管理  a通俗读物  av3 0a烨子AYe Zi4著  b00236515-9dF270-49e05198.1  a0009b0009
-
-2. 分析区
-
-00763nam0 2200253   45
-
-001 0013 00000
-005 0017 00013
-010 0037 00030
-100 0041 00067
-101 0008 00108
-102 0015 00116
-105 0018 00131
-106 0006 00149
-200 0069 00155
-210 0031 00224
-215 0020 00255
-225 0055 00275
-330 0077 00330
-606 0013 00407
-606 0013 00420
-690 0008 00433
-701 0020 00441
-905 0033 00461
-989 0016 00494
-
-01200800584820081106083959.5  a7-113-05198-7d￥66.00（全三册）  a20081106d2004    ekmy0chiy0121    ea0 achi  aCNb110000  ay   z   000yy  ar1 a妙管理的118个小建议AMiao Guan Li De 218 Ge Xiao Jian Yif烨子著  a北京c中国铁道出版社d2004  a391页c图d21cm2 a小智慧做大事丛书AXiao Zhi Hui Zuo Da Shi Cong Shu  a本书就企业管理问题进行探讨，以管理基本理论为基础，注重理论与实践的结合。  a企业管理  a通俗读物  av3 0a烨子AYe Zi4著  b00236515-9dF270-49e05198.1  a0009b0009
-3. 分析结果
-
-1-5 记录长度：ex：00763,763字节
-6-6  记录状态  ex : n 表示新纪录，详细查询p12
-6-9  执行代码  ex : 6= a 表示 文字印刷品
-			    7=m ex：专著
-			    8 层次：ex 0 无层次
-			    9 未定义
-			    10 2 字段指示符长度  字段
-			    11 2 字段标识符长度 子字段
-
-12-16 00233        数据基础地址
-17-19   处理细节 这里没有用
-
-4. 备注
-
-GS 35 29 1d ^] Group separator
-RS 36 30 1e ^^ Record separator, block-mode terminator
-US 37 31 1f ^_ Unit separator
-
-
--------------------------------
-2008年10月11日 record requirement
-  feature BORROW business rules
-  1. 读者如果是学生，每次数量不限定，但是持续总数不能超过7本
-  2. 如果是教师，可以借阅11本
-  3. 读者可以是教师，学生
-  3. 借阅限定时间为3个月
-  4. 到期或者到期之前可以续借
-  5. 超期归还需要交代罚金，罚金按天计算，但是罚金不能超过总的额度
-
-
-2008年10月11日 tech
-  1. how to make MDI application in iup and lua ?
-  2. how to make shortcut key binding to button in iup?  title = e&xit
-
-  重新学习一个新的gui确实是很麻烦的事情。
-
-2008年10月7日  现在luasupport可以使用了
-   a. 下载后把它解压到C:\Program Files\Vim\vimfiles\，然后重启vim就可以看到lua菜单
-   b. 文档生成ctrl+F9 可以执行，但是它把当前的路径加到了当前文件（本身就是full path)的前面，于是就会报错
-   c. 解决的方式是修改代码，幸好还不太难改。只要
-      line 1091 :"let l:fullname        = l:currentdir."/".l:currentbuffer
-      改成：let l:fullname        = currentbuffer
-      就可以了
-   d. luasupport有3种输出方式，vim,buffer,xterm,我偏爱buffer方式，当然xterm方式在windows下就不用想了
-
-2008年10月7日 lint现在可以使用了，很简单
-   usage: lua lualint -r *.lua 表示当前目录下的全部lua文件都要检查，仅仅列出使用了没有赋值的全局变量
-	  lua lualint -s *.lua 表示当前目录下的全部lua文件都要检查，列出使用了没有赋值的全局变量
-
-2008年10月7日 学习到vim的技巧,关于buffer的，有此可见，vim的设计还是非常的不错的，很细致。
-   ctrl+ w ,w 在buffer之间切换
-   ctrl+w ,1_ 当前buffer最小，当然1就是最小高度了，还可以是其他数字，要略大些
-   ctrl+w,1| 当前buffer最小，当然1就是最小宽度了，还可以是其他数字，要略大些
-   相应的ctrl+w ,_ 最大高度，ctrl+w,|最大宽度，=是等大小
-   用_表示高度，|表示宽度，倒是比较容易记忆的。
-   ctrl+w ,q ，退出当前buffer
-   ctrl + w ,s 分割
-
-2008年10月7日  现在luasupport可以使用了
-   a. 下载后把它解压到C:\Program Files\Vim\vimfiles\，然后重启vim就可以看到lua菜单
-   b. 文档生成ctrl+F9 可以执行，但是它把当前的路径加到了当前文件（本身就是full path)的前面，于是就会报错
-   c. 解决的方式是修改代码，幸好还不太难改。只要
-      line 1091 :"let l:fullname        = l:currentdir."/".l:currentbuffer
-      改成：let l:fullname        = currentbuffer
-      就可以了
-   d. luasupport有3种输出方式，vim,buffer,xterm,我偏爱buffer方式，当然xterm方式在windows下就不用想了
-
-2008年10月7日 lint现在可以使用了，很简单
-   usage: lua lualint -r *.lua 表示当前目录下的全部lua文件都要检查，仅仅列出使用了没有赋值的全局变量
-	  lua lualint -s *.lua 表示当前目录下的全部lua文件都要检查，列出使用了没有赋值的全局变量
-
-2008年10月7日 学习到vim的技巧,关于buffer的，有此可见，vim的设计还是非常的不错的，很细致。
-   ctrl+ w ,w 在buffer之间切换
-   ctrl+w ,1_ 当前buffer最小，当然1就是最小高度了，还可以是其他数字，要略大些
-   ctrl+w,1| 当前buffer最小，当然1就是最小宽度了，还可以是其他数字，要略大些
-   相应的ctrl+w ,_ 最大高度，ctrl+w,|最大宽度，=是等大小
-   用_表示高度，|表示宽度，倒是比较容易记忆的。
-   ctrl+w ,q ，退出当前buffer
-   ctrl + w ,s 分割
