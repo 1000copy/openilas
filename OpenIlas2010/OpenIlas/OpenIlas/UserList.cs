@@ -7,9 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 
 using SqlSmart;
-using SqlSmartTest;
+using OpenIlas;
 
-namespace openilas
+namespace OpenIlas
 {
     public partial class ReaderList : Form
     {
@@ -21,12 +21,14 @@ namespace openilas
         CompanyDb db = null;
         QueryPersonsByName persons = null;
         DataGridView grid1 = null;
+        Button btnEdit = null;
+        Button btnClose = null;
         private void refresh()
-        {/*
-            persons = new QueryPersonsByName(app,this.textBox1.Text );
+        {
+            persons = new QueryPersonsByName(app,"");
             persons.DoQuery();
             grid1.DataSource = persons;
-            grid1.Refresh();*/
+            grid1.Refresh();
         }
         
         private void query_Click(object sender, EventArgs e)
@@ -42,19 +44,36 @@ namespace openilas
             FlowLayoutPanel p = new FlowLayoutPanel();
             p.Dock = DockStyle.Top;
             Controls.Add(p);
-            Button b = new Button();
-            b.Text = "close";
-            b.Parent = p;
-            b.Click += new EventHandler(b_Click);
+            btnClose = new Button();
+            btnClose.Text = "close";
+            btnClose.Parent = p;
+            btnClose.Click += new EventHandler(onClose);
+            p.Height = 40;
+            btnEdit = new Button();
+            btnEdit.Text = "Edit";
+            btnEdit.Parent = p;
+            btnEdit.Click += new EventHandler(onEdit);
             p.Height = 40;
             InitData();
         }
 
-        void b_Click(object sender, EventArgs e)
+        void onClose(object sender, EventArgs e)
         {
             Close();
         }
-
+        void onEdit(object sender, EventArgs e)
+        {
+            if (grid1.SelectedRows.Count > 0)
+            {
+                UserEditForm editForm = new UserEditForm();
+                editForm.Id = Convert.ToInt32(((grid1.SelectedRows[0].Cells[0].Value) as SLMField).Value);
+                editForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("no row selected");
+            }
+        }
         private void InitData()
         {
             persons = new QueryPersonsByName(app, "");

@@ -1,6 +1,6 @@
-﻿namespace openilas
+﻿namespace OpenIlas
 {
-    partial class ReaderAdd
+    partial class UserEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,11 @@
             this.cancel = new System.Windows.Forms.Button();
             this.ok = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.TextBox();
+            this.edName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.reader_id = new System.Windows.Forms.TextBox();
+            this.edId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbDeptId = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cancel
@@ -67,12 +67,12 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "name";
             // 
-            // name
+            // edName
             // 
-            this.name.Location = new System.Drawing.Point(106, 69);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(134, 21);
-            this.name.TabIndex = 12;
+            this.edName.Location = new System.Drawing.Point(106, 69);
+            this.edName.Name = "edName";
+            this.edName.Size = new System.Drawing.Size(134, 21);
+            this.edName.TabIndex = 12;
             // 
             // label1
             // 
@@ -83,12 +83,12 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "id";
             // 
-            // reader_id
+            // edId
             // 
-            this.reader_id.Location = new System.Drawing.Point(106, 29);
-            this.reader_id.Name = "reader_id";
-            this.reader_id.Size = new System.Drawing.Size(134, 21);
-            this.reader_id.TabIndex = 8;
+            this.edId.Location = new System.Drawing.Point(106, 29);
+            this.edId.Name = "edId";
+            this.edId.Size = new System.Drawing.Size(134, 21);
+            this.edId.TabIndex = 8;
             // 
             // label4
             // 
@@ -99,30 +99,29 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "dept name";
             // 
-            // comboBox1
+            // cbDeptId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 108);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 20);
-            this.comboBox1.TabIndex = 22;
+            this.cbDeptId.FormattingEnabled = true;
+            this.cbDeptId.Location = new System.Drawing.Point(106, 108);
+            this.cbDeptId.Name = "cbDeptId";
+            this.cbDeptId.Size = new System.Drawing.Size(134, 20);
+            this.cbDeptId.TabIndex = 22;
             // 
-            // ReaderAdd
+            // UserEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 187);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbDeptId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.edName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.reader_id);
-            this.Name = "ReaderAdd";
+            this.Controls.Add(this.edId);
+            this.Name = "UserEditForm";
             this.Text = "User Add";
-            this.Load += new System.EventHandler(this.ReaderAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,10 +132,10 @@
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button ok;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox edName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox reader_id;
+        private System.Windows.Forms.TextBox edId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbDeptId;
     }
 }

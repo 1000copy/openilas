@@ -6,13 +6,22 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace openilas
+
+namespace OpenIlas
 {
-    public partial class ReaderAdd : Form
+    public partial class UserEditForm : Form
     {
-        public ReaderAdd()
+        private int id = 0;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public UserEditForm()
         {
             InitializeComponent();
+            this.Load += doLoad;
         }
 
         private void ok_Click(object sender, EventArgs e)
@@ -44,8 +53,17 @@ namespace openilas
            
         }
 
-        private void ReaderAdd_Load(object sender, EventArgs e)
+        private void doLoad(object sender, EventArgs e)
         {
+            QueryPersonsById q = new QueryPersonsById(CompanyApp.Instance(),id);
+            q.DoQuery();
+            if (q.Count > 0)
+            {
+                QueryPerson person = q.First();
+                this.edId.DataBindings.Add("Text", person.Id, "Value");
+                this.edName.DataBindings.Add("Text", person.Name, "Value");
+                this.cbDeptId.DataBindings.Add("Text", person.DeptId, "Value");
+            }
             /*
             this.reader_bar.DataBindings.Add("text", table, "reader_bar");
             this.reader_id.DataBindings.Add("text", table, "reader_id");

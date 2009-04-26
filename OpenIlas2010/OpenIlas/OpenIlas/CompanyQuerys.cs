@@ -4,7 +4,7 @@ using System.Text;
 using SqlSmart;
 using System.Data.Common;
 
-namespace SqlSmartTest
+namespace OpenIlas
 {
     public class QueryPerson : SLMObject
     {
@@ -29,6 +29,12 @@ namespace SqlSmartTest
             get { return _deptName; }
             set { _deptName = value; }
         }
+        SLMField _deptId = null;
+        public SLMField DeptId
+        {
+            get { return _deptId; }
+            set { _deptId = value; }
+        }
         public override string GetTableName()
         {
             return this.ToString();
@@ -42,6 +48,7 @@ namespace SqlSmartTest
             Id = new SLMField(this, "id", SLMFieldType.Int, true);
             Name = new SLMField(this, "name", SLMFieldType.String);
             DeptName = new SLMField(this, "DeptName", SLMFieldType.String);
+            DeptId = new SLMField(this, "DeptId", SLMFieldType.Int);
             InitFields();
         }
     }
@@ -84,6 +91,31 @@ namespace SqlSmartTest
         }
     }
 
+    public class QueryPersonsById : SLMQuery<QueryPerson>
+    {
+        int _id = 0;
+        CompanyApp CompanyApp { get { return SLMApp as CompanyApp; } }
+        protected override string GetSql()
+        {
+            Person person = CompanyApp.CompanyDb.Person;
+            Dept dept = CompanyApp.CompanyDb.Dept;
+            string sql = "";
+            if (_id != 0)
+            {
+                sql = "select {0} as id ,{1} as name ,{2} as DeptName,{3} as DeptId from {4} left join {5} on {6}={7} where {8} = {9}";
+                sql = string.Format(sql, person.Id.FieldNameWithPrefix, person.Name.FieldNameWithPrefix, dept.Name.FieldNameWithPrefix, dept.Id.FieldNameWithPrefix,
+                    person, dept, 
+                    person.DeptId.FieldNameWithPrefix, dept.Id.FieldNameWithPrefix,
+                    person.Id.FieldNameWithPrefix,_id);
+            }
+            return sql;
+        }
+        public QueryPersonsById(CompanyApp app, int id)
+            : base(app)
+        {
+            this._id = id ;
+        }
+    }
     public class QueryPersonsByName : SLMQuery<QueryPerson>
     {
         string _name = "";

@@ -4,10 +4,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
-using SqlSmartTest;
+using OpenIlas;
 
 
-namespace openilas
+namespace OpenIlas
 {
 	/// <summary>
 	/// Summary description for Form1.

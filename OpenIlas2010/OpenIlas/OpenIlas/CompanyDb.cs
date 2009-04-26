@@ -5,12 +5,13 @@ using System.Reflection;
 using System.Data.Common;
 
 
-namespace SqlSmartTest
+namespace OpenIlas
 {
 
     // 自动根据数据库来生成的内容
     public class CompanyApp : SLMApp
     {
+        static CompanyApp app = null;
         public CompanyApp()
         {
             CompanyDb companydb = new CompanyDb(this);            
@@ -22,6 +23,12 @@ namespace SqlSmartTest
             {
                 return (Database as CompanyDb);
             }
+        }
+        public static CompanyApp Instance()
+        {
+            if (app ==null)
+                app = new CompanyApp();
+            return app;
         }
     }
     public class CompanyDb : SLMDatabase
