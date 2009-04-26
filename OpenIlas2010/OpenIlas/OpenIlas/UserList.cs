@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using SqlSmartTest;
+
 using SqlSmart;
+using SqlSmartTest;
 
 namespace openilas
 {
@@ -21,11 +22,11 @@ namespace openilas
         QueryPersonsByName persons = null;
         DataGridView grid1 = null;
         private void refresh()
-        {
+        {/*
             persons = new QueryPersonsByName(app,this.textBox1.Text );
             persons.DoQuery();
             grid1.DataSource = persons;
-            grid1.Refresh();
+            grid1.Refresh();*/
         }
         
         private void query_Click(object sender, EventArgs e)
@@ -36,20 +37,34 @@ namespace openilas
         private void ReaderList_Load(object sender, EventArgs e)
         {
             grid1 = new DataGridView();
-            grid1.Parent = this;
-            //grid1.Dock = DockStyle.Fill;
-            grid1.Top = 100;
-            grid1.Width = 300;
-            grid1.Height = 400;
-            grid1.Left = 10;
-            persons = new QueryPersonsByName(app,"");
+            grid1.Dock = DockStyle.Fill; 
+            Controls.Add(grid1);
+            FlowLayoutPanel p = new FlowLayoutPanel();
+            p.Dock = DockStyle.Top;
+            Controls.Add(p);
+            Button b = new Button();
+            b.Text = "close";
+            b.Parent = p;
+            b.Click += new EventHandler(b_Click);
+            p.Height = 40;
+            InitData();
+        }
+
+        void b_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void InitData()
+        {
+            persons = new QueryPersonsByName(app, "");
             this.Text = "User List";
             db = new CompanyDb(app);
             app.CreateApp(new DbHelper(db.ToString()), db);
             grid1.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col = null;
             col = new DataGridViewTextBoxColumn();
-            col.DataPropertyName = QueryPersonMeta.Id.ToString() ;
+            col.DataPropertyName = QueryPersonMeta.Id.ToString();
             col.HeaderText = QueryPersonMeta.Id.Caption;
             grid1.Columns.Add(col);
             col = new DataGridViewTextBoxColumn();
@@ -73,38 +88,13 @@ namespace openilas
 
         private void add_Click(object sender, EventArgs e)
         {
-            /*
-            DataTable table_add = ReaderAdd.do_add();
-            if (table_add != null)
-            {
-                DataRow row_add = table_add.Rows[0];
-                DataRow row = table.NewRow();
-                foreach (DataColumn column in row.Table.Columns)
-                {
-                    row[column.ColumnName] = row_add[column.ColumnName];
-                }
-                table.Rows.Add(row);
-
-            }*/
+          
 
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-            /*
-            DataTable table_add = ReaderAdd.do_add();
-            if (table_add != null)
-            {
-                DataRow row_add = table_add.Rows[0];
-                DataRow row = table.NewRow();
-                foreach (DataColumn column in row.Table.Columns)
-                {
-                    row[column.ColumnName] = row_add[column.ColumnName];
-                }
-                table.Rows.Add(row);
-                // TODO:
 
-            }*/
         }
 
 
@@ -115,12 +105,7 @@ namespace openilas
 
         private void delete_Click(object sender, EventArgs e)
         {
-            if (grid1.SelectedRows.Count > 0)
-            {
-                (grid1.SelectedRows[0].DataBoundItem as QueryPerson).Delete();
-                //grid1.Rows.Remove(grid1.SelectedRows[0]);
-                refresh();
-            }
+          
         }
 
         private void add_Click_1(object sender, EventArgs e)
