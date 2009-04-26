@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIlas", "OpenIlas\OpenIlas.csproj", "{2D7F9B44-1C11-42A8-9EA9-00F730DBE3D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlSmart", "..\..\..\sql-smart\SqlSmart\SqlSmart.csproj", "{46AB3FC6-134C-4F9B-BC9F-7D1948B8F38F}"
