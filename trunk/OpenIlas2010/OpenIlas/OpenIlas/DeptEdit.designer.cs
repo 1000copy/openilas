@@ -1,6 +1,6 @@
 ﻿namespace OpenIlas
 {
-    partial class UserEditForm
+    partial class DeptEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,13 +34,11 @@
             this.edName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.edId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbDeptId = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(197, 155);
+            this.cancel.Location = new System.Drawing.Point(195, 112);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 15;
@@ -50,7 +48,7 @@
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(106, 155);
+            this.ok.Location = new System.Drawing.Point(104, 112);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(75, 23);
             this.ok.TabIndex = 14;
@@ -90,39 +88,19 @@
             this.edId.Size = new System.Drawing.Size(134, 21);
             this.edId.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "dept name";
-            // 
-            // cbDeptId
-            // 
-            this.cbDeptId.FormattingEnabled = true;
-            this.cbDeptId.Location = new System.Drawing.Point(106, 108);
-            this.cbDeptId.Name = "cbDeptId";
-            this.cbDeptId.Size = new System.Drawing.Size(134, 20);
-            this.cbDeptId.TabIndex = 22;
-            // 
-            // UserEditForm
+            // DeptEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 187);
-            this.Controls.Add(this.cbDeptId);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(319, 149);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.edId);
-            this.Name = "UserEditForm";
+            this.Name = "DeptEditForm";
             this.Text = "User Add";
-            this.Load += new System.EventHandler(this.UserEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +114,5 @@
         private System.Windows.Forms.TextBox edName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox edId;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbDeptId;
     }
 }

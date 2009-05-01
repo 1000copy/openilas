@@ -1,6 +1,6 @@
 ﻿namespace OpenIlas
 {
-    partial class UserList
+    partial class Depts
     {
         /// <summary>
         /// Required designer variable.

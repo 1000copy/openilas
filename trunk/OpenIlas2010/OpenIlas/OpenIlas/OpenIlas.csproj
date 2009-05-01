@@ -60,11 +60,31 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="CompanyDb.cs" />
     <Compile Include="CompanyQuerys.cs" />
+    <Compile Include="DeptEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeptEdit.designer.cs">
+      <DependentUpon>DeptEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depts.designer.cs">
+      <DependentUpon>Depts.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DeptEdit.resx">
+      <DependentUpon>DeptEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depts.resx">
+      <DependentUpon>Depts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -88,6 +108,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,6 +118,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TextConst.cs" />
     <Compile Include="UserEdit.cs">
       <SubType>Form</SubType>
     </Compile>
