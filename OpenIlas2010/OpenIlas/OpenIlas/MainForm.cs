@@ -31,6 +31,7 @@ namespace OpenIlas
         private MenuItem menuItem1;
         private MenuItem menuItem2;
         private MenuItem menuItem3;
+        private MenuItem menuItem4;
         private IContainer components;
 
 		public MainForm()
@@ -83,6 +84,7 @@ namespace OpenIlas
             this.menuItemMin = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -181,14 +183,21 @@ namespace OpenIlas
             // 
             this.menuItem2.Index = 3;
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem3});
+            this.menuItem3,
+            this.menuItem4});
             this.menuItem2.Text = "baseinfo";
             // 
             // menuItem3
             // 
             this.menuItem3.Index = 0;
             this.menuItem3.Text = "”√ªß";
-            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
+            this.menuItem3.Click += new System.EventHandler(this.doUserList);
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 1;
+            this.menuItem4.Text = "Dept";
+            this.menuItem4.Click += new System.EventHandler(this.doDeptList);
             // 
             // MainForm
             // 
@@ -295,18 +304,15 @@ namespace OpenIlas
             this.IsMdiContainer = true;
             this.menuItemWindow.MdiList = true;
             this.Text = "openilas";
-            CompanyApp app = new CompanyApp();
-            ReaderList list = null;
-            list = new ReaderList();
-            list.MdiParent = this;
-            list.Show();
+            doUserList(sender, e);
+            doDeptList(sender, e);
             
         }
 
-        private void menuItem3_Click(object sender, EventArgs e)
+        private void doUserList(object sender, EventArgs e)
         {
-            ReaderList list = null;
-            list = new ReaderList();
+            UserList list = null;
+            list = new UserList();
             list.MdiParent = this;
             list.Show();
 
@@ -316,6 +322,14 @@ namespace OpenIlas
         {
 
 
+        }
+
+        private void doDeptList(object sender, EventArgs e)
+        {
+            Depts list = null;
+            list = new Depts();
+            list.MdiParent = this;
+            list.Show();
         }
 
 			

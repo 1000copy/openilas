@@ -116,6 +116,27 @@ namespace OpenIlas
             this._id = id ;
         }
     }
+    public class QueryDeptsById : SLMQuery<Dept>
+    {
+        int _id = 0;
+        CompanyApp CompanyApp { get { return SLMApp as CompanyApp; } }
+        protected override string GetSql()
+        {
+            Dept dept = CompanyApp.CompanyDb.Dept;
+            string sql = "";
+            if (_id != 0)
+            {
+                sql = "select {0} as id ,{1} as name from {2} where {3} = {4}";
+                sql = string.Format(sql, dept.Id.FieldName,dept.Name.FieldName,dept,dept.Id.FieldName,_id);                    
+            }
+            return sql;
+        }
+        public QueryDeptsById(CompanyApp app, int id)
+            : base(app)
+        {
+            this._id = id;
+        }
+    }
     public class QueryPersonsByName : SLMQuery<QueryPerson>
     {
         string _name = "";
@@ -142,7 +163,7 @@ namespace OpenIlas
             _name = name;
         }
     }
-   
+    
     public class QueryPersonsAlias : SLMQuery<QueryPerson>
     {
         // Ð§¹û2

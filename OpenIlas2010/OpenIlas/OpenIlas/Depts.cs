@@ -11,22 +11,22 @@ using OpenIlas;
 
 namespace OpenIlas
 {
-    public partial class UserList : Form
+    public partial class Depts : Form
     {
-        public UserList()
+        public Depts()
         {
             InitializeComponent();
         }
         static CompanyApp app = CompanyApp.Instance();
         static CompanyDb db = app.CompanyDb;
-        QueryPersonsByName persons = null;
+        DeptList deptList = null;
         DataGridView grid1 = null;
 
         private void refresh()
         {
-            persons = new QueryPersonsByName(app, "");
-            persons.DoQuery();
-            grid1.DataSource = persons;
+            deptList = new DeptList(app);
+            deptList.DoQuery();
+            grid1.DataSource = deptList;
             grid1.Refresh();
         }
         FlowLayoutPanel p = null;
@@ -37,16 +37,18 @@ namespace OpenIlas
             Controls.Add(grid1);
             p = new FlowLayoutPanel();
             p.Dock = DockStyle.Top;
-            Controls.Add(p);
+            Controls.Add(p);            
+            // FIX: 文本常量化
+            // FIX: 按钮创建函数化
             ButtonHelper.CreateButton(p, TextConst.Close, onClose);
             ButtonHelper.CreateButton(p, TextConst.Edit, onEdit);
             ButtonHelper.CreateButton(p, TextConst.Add, onAdd);
             ButtonHelper.CreateButton(p, TextConst.Delete, onDel);
-            ButtonHelper.CreateButton(p, TextConst.DeleteAll, onDelAll);
+            ButtonHelper.CreateButton(p, TextConst.DeleteAll, onDelAll);            
             p.Height = 40;
             InitData();
         }
-
+        
         void onClose(object sender, EventArgs e)
         {
             Close();
@@ -56,7 +58,7 @@ namespace OpenIlas
 
             if (grid1.SelectedRows.Count > 0)
             {
-                UserEditForm editForm = new UserEditForm();
+                DeptEditForm editForm = new DeptEditForm();
                 editForm.Id = Convert.ToInt32(((grid1.SelectedRows[0].Cells[0].Value) as SLMField).Value);
                 if (editForm.ShowDialog() == DialogResult.OK)
                 {
@@ -70,7 +72,7 @@ namespace OpenIlas
         }
         void onAdd(object sender, EventArgs e)
         {
-            UserEditForm editForm = new UserEditForm();
+            DeptEditForm editForm = new DeptEditForm();
             if (editForm.ShowDialog() == DialogResult.OK)
             {
                 refresh();
@@ -81,8 +83,8 @@ namespace OpenIlas
             if (grid1.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(((grid1.SelectedRows[0].Cells[0].Value) as SLMField).Value);
-                db.Person.Id.Value = id;
-                db.Person.Delete();
+                db.Dept.Id.Value = id;
+                db.Dept.Delete();
                 refresh();
             }
             else
@@ -92,14 +94,13 @@ namespace OpenIlas
         }
         void onDelAll(object sender, EventArgs e)
         {
-            db.Person.DeleteAll();
+            db.Dept.DeleteAll();
             refresh();
         }
         private void InitData()
         {
-            persons = new QueryPersonsByName(app, "");
-            this.Text = TextConst.UserList;
-            //db = new CompanyDb(app);
+            this.Text = TextConst.DeptList;
+            
             //app.CreateApp(new DbHelper(db.ToString()), db);
             grid1.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col = null;
@@ -111,11 +112,7 @@ namespace OpenIlas
             col.DataPropertyName = QueryPersonMeta.Name.ToString();
             col.HeaderText = QueryPersonMeta.Name.Caption;
             grid1.Columns.Add(col);
-            col = new DataGridViewTextBoxColumn();
-            col.DataPropertyName = QueryPersonMeta.DeptName.ToString();
-            col.HeaderText = QueryPersonMeta.DeptName.Caption;
-            grid1.Columns.Add(col);
-
+            
             grid1.AllowUserToAddRows = false;
             grid1.AllowUserToDeleteRows = false;
             refresh();
@@ -124,6 +121,17 @@ namespace OpenIlas
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+    }
+    public delegate void ButtonEvent(object sender, EventArgs e);
+    public class ButtonHelper
+    {        
+        public static void CreateButton(FlowLayoutPanel panel, string text, ButtonEvent btnEvent)
+        {
+            Button btn = new Button();
+            btn.Text = text;
+            btn.Parent = panel;
+            btn.Click += new EventHandler(btnEvent);
         }
     }
 }
