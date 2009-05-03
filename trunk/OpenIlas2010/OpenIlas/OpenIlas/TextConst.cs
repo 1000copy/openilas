@@ -19,7 +19,7 @@ namespace OpenIlas
         public static readonly string BookList = "书目";
         public static readonly string DeptEdit = "部门编辑";
         
-        public static readonly string DeptList1 = "";
+        public static readonly string BookEdit = "书目编辑";
         public static readonly string DeptList2 = "";
         public static readonly string DeptList3 = "";
         public static readonly string DeptList4 = "";

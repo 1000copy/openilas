@@ -58,7 +58,7 @@ namespace OpenIlas
 
             if (grid1.SelectedRows.Count > 0)
             {
-                DeptEditForm editForm = new DeptEditForm();
+                BookEditForm editForm = new BookEditForm();
                 editForm.Id = Convert.ToInt32(((grid1.SelectedRows[0].Cells[0].Value) as SLMField).Value);
                 if (editForm.ShowDialog() == DialogResult.OK)
                 {
@@ -72,7 +72,7 @@ namespace OpenIlas
         }
         void onAdd(object sender, EventArgs e)
         {
-            DeptEditForm editForm = new DeptEditForm();
+            BookEditForm editForm = new BookEditForm();                
             if (editForm.ShowDialog() == DialogResult.OK)
             {
                 refresh();
