@@ -16,7 +16,6 @@ namespace OpenIlas
 	{
 		private MainMenu mainMenu1;
 
-		int count=0;
 		private MenuItem menuItem5;
 		private MenuItem menuItemAcs;
 		private MenuItem menuItemHoriz;
@@ -32,6 +31,7 @@ namespace OpenIlas
         private MenuItem menuItem2;
         private MenuItem menuItem3;
         private MenuItem menuItem4;
+        private MenuItem menuItem6;
         private IContainer components;
 
 		public MainForm()
@@ -85,6 +85,7 @@ namespace OpenIlas
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -184,7 +185,8 @@ namespace OpenIlas
             this.menuItem2.Index = 3;
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem3,
-            this.menuItem4});
+            this.menuItem4,
+            this.menuItem6});
             this.menuItem2.Text = "baseinfo";
             // 
             // menuItem3
@@ -199,9 +201,15 @@ namespace OpenIlas
             this.menuItem4.Text = "Dept";
             this.menuItem4.Click += new System.EventHandler(this.doDeptList);
             // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 2;
+            this.menuItem6.Text = "Book";
+            this.menuItem6.Click += new System.EventHandler(this.doBookList);
+            // 
             // MainForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(528, 401);
             this.IsMdiContainer = true;
             this.Menu = this.mainMenu1;
@@ -328,6 +336,14 @@ namespace OpenIlas
         {
             Depts list = null;
             list = new Depts();
+            list.MdiParent = this;
+            list.Show();
+        }
+
+        private void doBookList(object sender, EventArgs e)
+        {
+            Books list = null;
+            list = new Books();
             list.MdiParent = this;
             list.Show();
         }

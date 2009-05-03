@@ -38,9 +38,9 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(195, 112);
+            this.cancel.Location = new System.Drawing.Point(195, 121);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
+            this.cancel.Size = new System.Drawing.Size(75, 25);
             this.cancel.TabIndex = 15;
             this.cancel.Text = "cancel";
             this.cancel.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(104, 112);
+            this.ok.Location = new System.Drawing.Point(104, 121);
             this.ok.Name = "ok";
-            this.ok.Size = new System.Drawing.Size(75, 23);
+            this.ok.Size = new System.Drawing.Size(75, 25);
             this.ok.TabIndex = 14;
             this.ok.Text = "ok";
             this.ok.UseVisualStyleBackColor = true;
@@ -59,40 +59,40 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 69);
+            this.label3.Location = new System.Drawing.Point(71, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "name";
             // 
             // edName
             // 
-            this.edName.Location = new System.Drawing.Point(106, 69);
+            this.edName.Location = new System.Drawing.Point(106, 75);
             this.edName.Name = "edName";
-            this.edName.Size = new System.Drawing.Size(134, 21);
+            this.edName.Size = new System.Drawing.Size(134, 20);
             this.edName.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 29);
+            this.label1.Location = new System.Drawing.Point(77, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "id";
             // 
             // edId
             // 
-            this.edId.Location = new System.Drawing.Point(106, 29);
+            this.edId.Location = new System.Drawing.Point(106, 31);
             this.edId.Name = "edId";
-            this.edId.Size = new System.Drawing.Size(134, 21);
+            this.edId.Size = new System.Drawing.Size(134, 20);
             this.edId.TabIndex = 8;
             // 
             // DeptEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 149);
+            this.ClientSize = new System.Drawing.Size(319, 161);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label3);
