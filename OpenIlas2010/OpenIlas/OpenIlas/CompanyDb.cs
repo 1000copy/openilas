@@ -47,7 +47,13 @@ namespace OpenIlas
             get { return _person; }
             set { _person = value; }
         }
-       
+        private Book _book;
+
+        public Book Book
+        {
+            get { return _book; }
+            set { _book = value; }
+        }
         
         public override string ToString()
         {
@@ -58,6 +64,7 @@ namespace OpenIlas
         {
             Dept = new Dept(app);
             Person = new Person(app);
+            Book = new Book(app);
             InitObjects();
         }
         public CompanyApp CompanyApp 
@@ -105,7 +112,45 @@ namespace OpenIlas
             Name = new SLMField(this, "name",SLMFieldType.String);             
         }
     }
+    public class BookList : SLMQuery<Book>
+    {
+        CompanyApp CompanyApp { get { return SLMApp as CompanyApp; } }
+        protected override string GetSql()
+        {
+            return CompanyApp.CompanyDb.Book.SelectAllSql();
+        }
+        public BookList(CompanyApp app)
+            : base(app)
+        {
+        }
+    }
+    public class Book : SLMObject
+    {
+        private SLMField _id = null;
 
+        public SLMField Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        private SLMField _name = null;
+
+        public SLMField Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public override string GetTableName()
+        {
+            return "Book";
+        }
+        public Book(CompanyApp app)
+            : base(app)
+        {
+            Id = new SLMField(this, "id", SLMFieldType.Int, true);
+            Name = new SLMField(this, "name", SLMFieldType.String);
+        }
+    }
     public class PersonList : SLMQuery<Person>
     {
         CompanyApp CompanyApp { get { return SLMApp as CompanyApp; } }

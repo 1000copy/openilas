@@ -42,6 +42,7 @@ namespace OpenIlas
 
         private void doLoad(object sender, EventArgs e)
         {
+            Text = TextConst.DeptEdit;
             db.Dept.ClearValues();
             if (this.id != 0)            
             {
