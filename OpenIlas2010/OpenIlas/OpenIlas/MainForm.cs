@@ -314,7 +314,7 @@ namespace OpenIlas
             this.Text = "openilas";
             doUserList(sender, e);
             doDeptList(sender, e);
-            
+            doBookList(sender, e);
         }
 
         private void doUserList(object sender, EventArgs e)

@@ -66,6 +66,12 @@
     <Compile Include="BookList.designer.cs">
       <DependentUpon>BookList.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEdit.designer.cs">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeptEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BookList.resx">
       <DependentUpon>BookList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookEdit.resx">
+      <DependentUpon>BookEdit.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DeptEdit.resx">
