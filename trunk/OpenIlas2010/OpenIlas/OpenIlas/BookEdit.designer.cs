@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 107);
+            this.ClientSize = new System.Drawing.Size(389, 138);
             this.Name = "BookEditForm";
             this.Text = "User Add";
             this.ResumeLayout(false);
@@ -42,6 +42,9 @@
         }
 
         #endregion
+
+
+
 
 
 
