@@ -69,8 +69,8 @@ namespace OpenIlas
     public class QueryPersonMeta
     {
         public static FieldMeta Id = new FieldMeta("id","No");
-        public static FieldMeta Name = new FieldMeta("name", "Ãû×Ö");
-        public static FieldMeta DeptName = new FieldMeta("deptname", "²¿ÃÅ");
+        public static FieldMeta Name = new FieldMeta("name", TextConst.Name);
+        public static FieldMeta DeptName = new FieldMeta("deptname", TextConst.DeptName);
     }
 
     public class QueryPersons : SLMQuery<QueryPerson>
