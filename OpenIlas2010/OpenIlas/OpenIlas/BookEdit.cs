@@ -47,36 +47,46 @@ namespace OpenIlas
         FlowLayoutPanel btns = new FlowLayoutPanel();
         private void doLoad(object sender, EventArgs e)
         {
-            Text = TextConst.BookEdit;
-            btns.Dock = DockStyle.Bottom;
-            table.Dock = DockStyle.Fill;
-            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            btns.Parent = this;
-            table.Parent = this;
-            table.RowCount = 3;
-            table.ColumnCount = 3;
-            table.Height = 300;
-            table.Size = new Size(200, 100);
-            btns.Height = 40;
-            btns.Controls.Add(new Button());
-            btns.Controls.Add(new Button());
-            btns.FlowDirection = FlowDirection.RightToLeft;
-
+            Text = TextConst.BookEdit; 
+            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
+            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));       
+            table.RowCount = 2;
+            table.Height = 60;// 必须和30+30相等；如果高度大于所有行的总高度，最后一行的高度就会放大
+            table.ColumnCount = 2;
+            
+            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;           
             table.Controls.Add(edId);
             table.Controls.Add(edName);
             table.Controls.Add(lbId);
             table.Controls.Add(lbName);
-            table.SetCellPosition(edId,new TableLayoutPanelCellPosition(2,1));
-            table.SetCellPosition(edName, new TableLayoutPanelCellPosition(2, 2));
-            table.SetCellPosition(lbId, new TableLayoutPanelCellPosition(1, 1));
-            table.SetCellPosition(lbName, new TableLayoutPanelCellPosition(1, 2));
+            table.SetCellPosition(edId,new TableLayoutPanelCellPosition(1,1));
+            table.SetCellPosition(edName, new TableLayoutPanelCellPosition(1, 0));
+            table.SetCellPosition(lbId, new TableLayoutPanelCellPosition(0, 0));
+            table.SetCellPosition(lbName, new TableLayoutPanelCellPosition(0, 1));
             edId.Text = "edid";
             edName.Text = "edName";
             lbId.Text = "edid";
             lbName.Text = "edName";
-            //lbId.Dock = DockStyle.Right;
+            lbId.TextAlign = ContentAlignment.MiddleRight;
+            lbName.TextAlign = ContentAlignment.MiddleRight;
+            lbId.Anchor = AnchorStyles.Right;
+            lbName.Anchor = AnchorStyles.Right;
+            edId.Anchor = AnchorStyles.Left;
+            edName.Anchor = AnchorStyles.Left;
+            
+            btns.Height = 30;
+            btns.Controls.Add(new Button());
+            btns.Controls.Add(new Button());
+            btns.FlowDirection = FlowDirection.RightToLeft;
+
+            btns.Dock = DockStyle.Top;
+            table.Dock = DockStyle.Top;
+            btns.Parent = this;
+            table.Parent = this;
+           
+            
             db.Book.ClearValues();
-            Height = 400;
+            Height = 150;
             if (this.id != 0)            
             {
                 QueryDeptsById q = new QueryDeptsById(CompanyApp.Instance(), id);
@@ -90,8 +100,9 @@ namespace OpenIlas
             }
             this.edId.DataBindings.Clear();
             this.edName.DataBindings.Clear();
-            //this.edId.DataBindings.Add("Text", db.Dept.Id, "Value");
-            //this.edName.DataBindings.Add("Text", db.Dept.Name, "Value");            
+            this.edId.DataBindings.Add("Text", db.Dept.Id, "Value");
+            this.edName.DataBindings.Add("Text", db.Dept.Name, "Value");  
+             
         }
     }
 }
