@@ -12,9 +12,12 @@ namespace OpenIlas
         public static readonly string Close = "关闭";
         public static readonly string Add = "添加";
         public static readonly string Edit = "修改";
+        public static readonly string Ok = "确定";
+        public static readonly string Cancel = "取消";
         public static readonly string Delete = "删除";
         public static readonly string DeleteAll = "清除全部";
         public static readonly string Name = "名称";
+        public static readonly string UserCode = "编号";
         public static readonly string DeptName = "部门名称";
         public static readonly string BookList = "书目";
         public static readonly string DeptEdit = "部门编辑";
