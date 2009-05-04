@@ -137,6 +137,27 @@ namespace OpenIlas
             this._id = id;
         }
     }
+    public class QueryBooksById : SLMQuery<Book>
+    {
+        int _id = 0;
+        CompanyApp CompanyApp { get { return SLMApp as CompanyApp; } }
+        protected override string GetSql()
+        {
+            Book book = CompanyApp.CompanyDb.Book;
+            string sql = "";
+            if (_id != 0)
+            {
+                sql = "select {0} as id ,{1} as name from {2} where {3} = {4}";
+                sql = string.Format(sql, book.Id.FieldName, book.Name.FieldName, book, book.Id.FieldName, _id);
+            }
+            return sql;
+        }
+        public QueryBooksById(CompanyApp app, int id)
+            : base(app)
+        {
+            this._id = id;
+        }
+    }
     public class QueryPersonsByName : SLMQuery<QueryPerson>
     {
         string _name = "";

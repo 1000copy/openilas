@@ -23,15 +23,23 @@ namespace OpenIlas
             InitializeComponent();
             this.Load += doLoad;
         }
-        Dept dept= null;
+        Book book = null;
         CompanyDb db = CompanyApp.Instance().CompanyDb;
         private void ok_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            if (id != 0)
-                db.Dept.Update();
-            else
-                db.Dept.Insert();            
+            try
+            {
+                if (id != 0)
+                    db.Book.Update();
+                else
+                    db.Book.Insert();
+                this.DialogResult = DialogResult.OK;
+            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -59,14 +67,12 @@ namespace OpenIlas
             table.Controls.Add(edName);
             table.Controls.Add(lbId);
             table.Controls.Add(lbName);
-            table.SetCellPosition(edId,new TableLayoutPanelCellPosition(1,1));
-            table.SetCellPosition(edName, new TableLayoutPanelCellPosition(1, 0));
+            table.SetCellPosition(edId,new TableLayoutPanelCellPosition(1,0));
+            table.SetCellPosition(edName, new TableLayoutPanelCellPosition(1, 1));
             table.SetCellPosition(lbId, new TableLayoutPanelCellPosition(0, 0));
             table.SetCellPosition(lbName, new TableLayoutPanelCellPosition(0, 1));
-            edId.Text = "edid";
-            edName.Text = "edName";
-            lbId.Text = "edid";
-            lbName.Text = "edName";
+            lbId.Text = TextConst.UserCode;
+            lbName.Text = TextConst.Name;
             lbId.TextAlign = ContentAlignment.MiddleRight;
             lbName.TextAlign = ContentAlignment.MiddleRight;
             lbId.Anchor = AnchorStyles.Right;
@@ -75,8 +81,15 @@ namespace OpenIlas
             edName.Anchor = AnchorStyles.Left;
             
             btns.Height = 30;
-            btns.Controls.Add(new Button());
-            btns.Controls.Add(new Button());
+            Button btnOk = new Button();
+            btnOk.Click +=new EventHandler(ok_Click);
+            
+            btnOk.Text = TextConst.Ok;
+            Button btnCancel = new Button();
+            btnCancel.Text = TextConst.Cancel;
+            btnCancel.Click += new EventHandler(cancel_Click);
+            btns.Controls.Add(btnCancel);
+            btns.Controls.Add(btnOk);
             btns.FlowDirection = FlowDirection.RightToLeft;
 
             btns.Dock = DockStyle.Top;
@@ -84,24 +97,24 @@ namespace OpenIlas
             btns.Parent = this;
             table.Parent = this;
            
-            
-            db.Book.ClearValues();
             Height = 150;
+            db.Book.ClearValues();
             if (this.id != 0)            
             {
-                QueryDeptsById q = new QueryDeptsById(CompanyApp.Instance(), id);
+                QueryBooksById q = new QueryBooksById(CompanyApp.Instance(), id);
                 q.DoQuery();
                 if (q.Count > 0)
                 {
-                    dept = q.First();
-                    db.Dept.Id.Value = dept.Id.Value;
-                    db.Dept.Name.Value = dept.Name.Value;                    
+                    book = q.First();
+                    db.Book.Id.Value = book.Id.Value;
+                    db.Book.Name.Value = book.Name.Value;                    
                 }
             }
             this.edId.DataBindings.Clear();
             this.edName.DataBindings.Clear();
-            this.edId.DataBindings.Add("Text", db.Dept.Id, "Value");
-            this.edName.DataBindings.Add("Text", db.Dept.Name, "Value");  
+     
+            this.edId.DataBindings.Add("Text", db.Book.Id, "Value");
+            this.edName.DataBindings.Add("Text", db.Book.Name, "Value");  
              
         }
     }
