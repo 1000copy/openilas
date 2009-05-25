@@ -103,7 +103,7 @@ namespace OpenIlas
             //app.CreateApp(new DbHelper(db.ToString()), db);
             grid1.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col = null;
-            col = new DataGridViewTextBoxColumn();
+            col = new DataGridViewTextBoxColumn();//
             col.DataPropertyName = QueryPersonMeta.Id.ToString();
             col.HeaderText = QueryPersonMeta.Id.Caption;
             grid1.Columns.Add(col);
