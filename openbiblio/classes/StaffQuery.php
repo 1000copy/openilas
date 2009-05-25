@@ -28,6 +28,7 @@ class StaffQuery extends Query {
       $sql .= $this->mkSQL(" where userid=%N ", $userid);
     }
     $sql .= " order by last_name, first_name";
+    //mysql_query("set names gb2312");
     return $this->_query($sql, "Error accessing staff member information.");
   }
   /****************************************************************************
@@ -181,15 +182,15 @@ class StaffQuery extends Query {
       $this->_error = "Username is already in use.";
       return false;
     }
-
+    //mysql_query("set names gb2312");
     $sql = $this->mkSQL("update staff set last_change_dt = sysdate(), "
                         . "last_change_userid=%N, username=%Q, last_name=%Q, ",
-                        $staff->getLastChangeUserid(), $staff->getUsername(),
-                        $staff->getLastName());
+                        $staff->getLastChangeUserid(), $staff->getUsername(),			
+                       $staff->getLastName());		       
     if ($staff->getFirstName() == "") {
       $sql .= "first_name=null, ";
     } else {
-      $sql .= $this->mkSQL("first_name=%Q, ", $staff->getFirstName());
+      $sql .= $this->mkSQL("first_name=%Q, ", $staff->getFirstName());      
     }
     $sql .= $this->mkSQL("suspended_flg=%Q, admin_flg=%Q, circ_flg=%Q, "
                          . "circ_mbr_flg=%Q, catalog_flg=%Q, reports_flg=%Q "
@@ -201,6 +202,9 @@ class StaffQuery extends Query {
                          $staff->hasCatalogAuth() ? "Y" : "N",
                          $staff->hasReportsAuth() ? "Y" : "N",
                          $staff->getUserid());
+    //echo $sql;
+     //$this->_query("set names gb2312","dfad");
+     //$this->_query("update staff set last_change_dt = sysdate(), last_change_userid=1, username='11111111111111', last_name='ss打开黑门的说的的的', first_name='11111111111111', suspended_flg='N', admin_flg='N', circ_flg='N', circ_mbr_flg='N', catalog_flg='N', reports_flg='N' where userid=2","dd");
     return $this->_query($sql, "Error updating staff member information.");
   }
 
