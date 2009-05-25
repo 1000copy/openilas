@@ -34,6 +34,8 @@ class Query {
                            "The MySQL extension is not available"));
       }
       $link = mysql_connect(OBIB_HOST,OBIB_USERNAME,OBIB_PWD);
+      
+      
       if (!$link) {
         return array(NULL, new DbError("Connecting to database server...",
                                        "Cannot connect to database server.",
@@ -44,7 +46,7 @@ class Query {
         return array(NULL, new DbError("Selecting database...",
                                        "Cannot select database.",
                                        mysql_error($link)));
-      }
+      }      
     }
     return array($link, NULL);
   }
@@ -86,6 +88,7 @@ class Query {
     if (!$this->_link) {
       Fatal::internalError('Tried to make database query before connection.');
     }
+    mysql_query("set names gb2312");
     $r = mysql_query($sql, $this->_link);
     if ($r === false) {
       Fatal::dbError($sql, 'Database query failed', mysql_error());
