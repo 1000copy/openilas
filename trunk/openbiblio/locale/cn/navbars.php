@@ -37,35 +37,35 @@
 #****************************************************************************
 #*  Translation text shared by various php files under the navbars dir
 #****************************************************************************
-$trans["login"]                    = "\$text = 'Login';";
-$trans["logout"]                   = "\$text = 'Logout';";
-$trans["help"]                     = "\$text = 'Help';";
+$trans["login"]                    = "\$text = '登陆';";
+$trans["logout"]                   = "\$text = '退出';";
+$trans["help"]                     = "\$text = '帮助';";
 
 #****************************************************************************
 #*  Translation text for page home.php
 #****************************************************************************
-$trans["homeHomeLink"]             = "\$text = 'Home';";
-$trans["homeLicenseLink"]          = "\$text = 'License';";
+$trans["homeHomeLink"]             = "\$text = '首页';";
+$trans["homeLicenseLink"]          = "\$text = '许可';";
 
 #****************************************************************************
 #*  Translation text for page admin.php
 #****************************************************************************
-$trans["adminSummary"]             = "\$text = 'Admin Summary';";
-$trans["adminStaff"]               = "\$text = 'Staff Admin';";
-$trans["adminSettings"]            = "\$text = 'Library Settings';";
-$trans["adminMaterialTypes"]       = "\$text = 'Material Types';";
-$trans["adminCollections"]         = "\$text = 'Collections';";
-$trans["adminThemes"]              = "\$text = 'Themes';";
-$trans["adminTranslation"]         = "\$text = 'Translation';";
+$trans["adminSummary"]             = "\$text = '管理入口';";
+$trans["adminStaff"]               = "\$text = '员工管理';";
+$trans["adminSettings"]            = "\$text = '图书馆设置';";
+$trans["adminMaterialTypes"]       = "\$text = '载体类型';";
+$trans["adminCollections"]         = "\$text = '馆藏';";
+$trans["adminThemes"]              = "\$text = '样式';";
+$trans["adminTranslation"]         = "\$text = '翻译';";
 
 #****************************************************************************
 #*  Translation text for page cataloging.php
 #****************************************************************************
-$trans["catalogSummary"]           = "\$text = 'Catalog Summary';";
-$trans["catalogSearch1"]           = "\$text = 'Biblio Search';";
-$trans["catalogSearch2"]           = "\$text = 'Bibliography Search';";
-$trans["catalogResults"]           = "\$text = 'Search Results';";
-$trans["catalogBibInfo"]           = "\$text = 'Biblio Info';";
+$trans["catalogSummary"]           = "\$text = '编目入口';";
+$trans["catalogSearch1"]           = "\$text = '书目搜索';";
+$trans["catalogSearch2"]           = "\$text = '书目搜索';";
+$trans["catalogResults"]           = "\$text = '搜索结果';";
+$trans["catalogBibInfo"]           = "\$text = '书目信息';";
 $trans["catalogBibEdit"]           = "\$text = 'Edit-Basic';";
 $trans["catalogBibEditMarc"]       = "\$text = 'Edit-MARC';";
 $trans["catalogBibMarcNewFld"]     = "\$text = 'New MARC Field';";
@@ -82,18 +82,18 @@ $trans["Upload Marc Data"]         = "\$text = 'Upload Marc Data';";
 #****************************************************************************
 #*  Translation text for page reports.php
 #****************************************************************************
-$trans["reportsSummary"]           = "\$text = 'Reports Summary';";
-$trans["reportsReportListLink"]    = "\$text = 'Report List';";
-$trans["reportsLabelsLink"]        = "\$text = 'Print Labels';";
+$trans["reportsSummary"]           = "\$text = '报表入口';";
+$trans["reportsReportListLink"]    = "\$text = '报表清单';";
+$trans["reportsLabelsLink"]        = "\$text = '打印标签';";
 $trans["reportsLettersLink"]        = "\$text = 'Print Letters';";
 
 #****************************************************************************
 #*  Translation text for page opac.php
 #****************************************************************************
-$trans["catalogSearch1"]           = "\$text = 'Search';";
-$trans["catalogSearch2"]           = "\$text = 'Bibliography Search';";
-$trans["catalogResults"]           = "\$text = 'Search Results';";
-$trans["catalogBibInfo"]           = "\$text = 'Biblio Info';";
+$trans["catalogSearch1"]           = "\$text = '搜索';";
+$trans["catalogSearch2"]           = "\$text = '书目搜索';";
+$trans["catalogResults"]           = "\$text = '搜索结果';";
+$trans["catalogBibInfo"]           = "\$text = '书目信息';";
 
 #Added
 

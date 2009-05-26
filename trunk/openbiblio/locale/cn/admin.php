@@ -37,17 +37,17 @@
 #****************************************************************************
 #*  Common translation text shared among multiple pages
 #****************************************************************************
-$trans["adminSubmit"]              = "\$text = 'Submit';";
-$trans["adminCancel"]              = "\$text = 'Cancel';";
-$trans["adminDelete"]              = "\$text = 'Delete';";
-$trans["adminUpdate"]              = "\$text = 'Update';";
+$trans["adminSubmit"]              = "\$text = '提交';";
+$trans["adminCancel"]              = "\$text = '取消';";
+$trans["adminDelete"]              = "\$text = '删除';";
+$trans["adminUpdate"]              = "\$text = '更新';";
 $trans["adminFootnote"]            = "\$text = 'Fields marked with %symbol% are required.';";
 
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHdr"]                 = "\$text = 'Admin';";
-$trans["indexDesc"]                = "\$text = 'Use the functions located in the left hand navigation area to manage your library\'s staff and administrative records.';";
+$trans["indexHdr"]                 = "\$text = '管理';";
+$trans["indexDesc"]                = "\$text = '用左侧的导航来管理员工和基本类型.';";
 
 #****************************************************************************
 #*  Translation text for page collections*.php
@@ -58,7 +58,7 @@ $trans["adminCollections_delStart"]                 = "\$text = 'Collection, ';"
 #****************************************************************************
 #*  Translation text for page collections_del.php
 #****************************************************************************
-$trans["adminCollections_delEnd"]                 = "\$text = ', has been deleted.';";
+$trans["adminCollections_delEnd"]                 = "\$text = ', 已经删除.';";
 
 #****************************************************************************
 #*  Translation text for page collections_del_confirm.php
@@ -68,106 +68,106 @@ $trans["adminCollections_del_confirmText"]                 = "\$text = 'Are you 
 #****************************************************************************
 #*  Translation text for page collections_edit.php
 #****************************************************************************
-$trans["adminCollections_editEnd"]                 = "\$text = ', has been updated.';";
+$trans["adminCollections_editEnd"]                 = "\$text = ', 已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page collections_edit_form.php
 #****************************************************************************
-$trans["adminCollections_edit_formEditcollection"]                 = "\$text = 'Edit Collection:';";
-$trans["adminCollections_edit_formDescription"]                 = "\$text = 'Description:';";
-$trans["adminCollections_edit_formDaysdueback"]                 = "\$text = 'Days Due Back:';";
-$trans["adminCollections_edit_formDailyLateFee"]                 = "\$text = 'Daily Late Fee:';";
-$trans["adminCollections_edit_formNote"]                 = "\$text = '*Note:';";
-$trans["adminCollections_edit_formNoteText"]                 = "\$text = 'Setting the days due back to zero makes the entire collection unavailable for checkout.';";
+$trans["adminCollections_edit_formEditcollection"]                 = "\$text = '编辑馆藏:';";
+$trans["adminCollections_edit_formDescription"]                 = "\$text = '描述:';";
+$trans["adminCollections_edit_formDaysdueback"]                 = "\$text = '可借天数:';";
+$trans["adminCollections_edit_formDailyLateFee"]                 = "\$text = '超期罚金(每天):';";
+$trans["adminCollections_edit_formNote"]                 = "\$text = '*备注:';";
+$trans["adminCollections_edit_formNoteText"]                 = "\$text = '可借天数为零表示馆藏不可借出.';";
 
 #****************************************************************************
 #*  Translation text for page collections_list.php
 #****************************************************************************
-$trans["adminCollections_listAddNewCollection"]                 = "\$text = 'Add New Collection';";
-$trans["adminCollections_listCollections"]                 = "\$text = 'Collections:';";
+$trans["adminCollections_listAddNewCollection"]                 = "\$text = '新建馆藏';";
+$trans["adminCollections_listCollections"]                 = "\$text = '馆藏:';";
 $trans["adminCollections_listFunction"]                 = "\$text = 'Function';";
-$trans["adminCollections_listDescription"]                 = "\$text = 'Description';";
-$trans["adminCollections_listDaysdueback"]                 = "\$text = 'Days<br>Due Back';";
-$trans["adminCollections_listDailylatefee"]                 = "\$text = 'Daily<br>Late Fee';";
-$trans["adminCollections_listBibliographycount"]                 = "\$text = 'Bibliography<br>Count';";
-$trans["adminCollections_listEdit"]                 = "\$text = 'Edit';";
-$trans["adminCollections_listDel"]                 = "\$text = 'del';";
-$trans["adminCollections_ListNote"]                 = "\$text = '*Note:';";
-$trans["adminCollections_ListNoteText"]                 = "\$text = 'The delete function is only available on collections that have a bibliography count of zero.<br>If you wish to delete a collection with a bibliography count greater than zero you will first need to change the material type on those bibliographies to another material type.';";
+$trans["adminCollections_listDescription"]                 = "\$text = '描述';";
+$trans["adminCollections_listDaysdueback"]                 = "\$text = '可借天数';";
+$trans["adminCollections_listDailylatefee"]                 = "\$text = '超期罚金';";
+$trans["adminCollections_listBibliographycount"]                 = "\$text = '文献<br>计数';";
+$trans["adminCollections_listEdit"]                 = "\$text = '编辑';";
+$trans["adminCollections_listDel"]                 = "\$text = '删除';";
+$trans["adminCollections_ListNote"]                 = "\$text = '*备注:';";
+$trans["adminCollections_ListNoteText"]                 = "\$text = '仅仅可以删除书目为0的馆藏<br>确实要删除，请首先改变文献的载体类型';";
 
 #****************************************************************************
 #*  Translation text for page collections_new.php
 #****************************************************************************
-$trans["adminCollections_newAdded"]                 = "\$text = ', has been added.';";
+$trans["adminCollections_newAdded"]                 = "\$text = ', 已经添加.';";
 
 #****************************************************************************
 #*  Translation text for page collections_new_form.php
 #****************************************************************************
-$trans["adminCollections_new_formAddnewcollection"]                 = "\$text = 'Add New Collection:';";
-$trans["adminCollections_new_formDescription"]                 = "\$text = 'Description:';";
-$trans["adminCollections_new_formDaysdueback"]                 = "\$text = 'Days Due Back:';";
-$trans["adminCollections_new_formDailylatefee"]                 = "\$text = 'Daily Late Fee:';";
-$trans["adminCollections_new_formNote"]                 = "\$text = '*Note:';";
-$trans["adminCollections_new_formNoteText"]                 = "\$text = 'Setting the days due back to zero makes the entire collection unavailable for checkout.';";
+$trans["adminCollections_new_formAddnewcollection"]                 = "\$text = '新建馆藏:';";
+$trans["adminCollections_new_formDescription"]                 = "\$text = '描述:';";
+$trans["adminCollections_new_formDaysdueback"]                 = "\$text = '可借天数:';";
+$trans["adminCollections_new_formDailylatefee"]                 = "\$text = '超期罚金(天):';";
+$trans["adminCollections_new_formNote"]                 = "\$text = '*备注:';";
+$trans["adminCollections_new_formNoteText"]                 = "\$text = '可借天数为零表示馆藏不可借出.';";
 
 #****************************************************************************
 #*  Translation text for page materials_del.php
 #****************************************************************************
-$trans["admin_materials_delMaterialType"]                 = "\$text = 'Material type, ';";
-$trans["admin_materials_delMaterialdeleted"]                 = "\$text = ', has been deleted.';";
-$trans["admin_materials_Return"]                 = "\$text = 'return to material type list';";
+$trans["admin_materials_delMaterialType"]                 = "\$text = '载体类型, ';";
+$trans["admin_materials_delMaterialdeleted"]                 = "\$text = ', 已经删除.';";
+$trans["admin_materials_Return"]                 = "\$text = '返回载体类型清单';";
 
 #****************************************************************************
 #*  Translation text for page materials_del_form.php
 #****************************************************************************
-$trans["admin_materials_delAreyousure"]                 = "\$text = 'Are you sure you want to delete material type, ';";
+$trans["admin_materials_delAreyousure"]                 = "\$text = '确实要删除载体类型, ';";
 
 #****************************************************************************
 #*  Translation text for page materials_edit_form.php
 #****************************************************************************
-$trans["admin_materials_delEditmaterialtype"]                 = "\$text = 'Edit Material Type:';";
-$trans["admin_materials_delDescription"]                 = "\$text = 'Description:';";
-$trans["admin_materials_delunlimited"]                 = "\$text = '(enter 0 for unlimited)';";
-$trans["admin_materials_delImagefile"]                 = "\$text = 'Image File:';";
-$trans["admin_materials_delNote"]                 = "\$text = '*Note:';";
-$trans["admin_materials_delNoteText"]                 = "\$text = 'Image files must be located in the openbiblio/images directory.';";
+$trans["admin_materials_delEditmaterialtype"]                 = "\$text = '编辑载体类型:';";
+$trans["admin_materials_delDescription"]                 = "\$text = '描述:';";
+$trans["admin_materials_delunlimited"]                 = "\$text = '(0为不限制)';";
+$trans["admin_materials_delImagefile"]                 = "\$text = '图片文件:';";
+$trans["admin_materials_delNote"]                 = "\$text = '*备注:';";
+$trans["admin_materials_delNoteText"]                 = "\$text = '图片文件必须在openbiblio/images 内.';";
 
 #****************************************************************************
 #*  Translation text for page materials_edit.php
 #****************************************************************************
-$trans["admin_materials_editEnd"]                 = "\$text = ', has been updated.';";
+$trans["admin_materials_editEnd"]                 = "\$text = ', 已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page materials_list.php
 #****************************************************************************
-$trans["admin_materials_listAddmaterialtypes"]                 = "\$text = 'Add New Material Type';";
-$trans["admin_materials_listMaterialtypes"]                 = "\$text = 'Material Types:';";
+$trans["admin_materials_listAddmaterialtypes"]                 = "\$text = '新建载体类型';";
+$trans["admin_materials_listMaterialtypes"]                 = "\$text = '载体类型:';";
 $trans["admin_materials_listFunction"]                 = "\$text = 'Function';";
-$trans["admin_materials_listDescription"]                 = "\$text = 'Description';";
-$trans["admin_materials_listLimits"]                 = "\$text = 'Limits';";
-$trans["admin_materials_listCheckoutlimit"]                 = "\$text = 'Checkout';";
-$trans["admin_materials_listRenewallimit"]                 = "\$text = 'Renewal';";
-$trans["admin_materials_listImageFile"]                 = "\$text = 'Image<br>File';";
-$trans["admin_materials_listBibcount"]                 = "\$text = 'Bibliography<br>Count';";
-$trans["admin_materials_listEdit"]                 = "\$text = 'edit';";
-$trans["admin_materials_listDel"]                 = "\$text = 'del';";
-$trans["admin_materials_listNote"]                 = "\$text = '*Note:';";
-$trans["admin_materials_listNoteText"]                 = "\$text = 'The delete function is only available on material types that have a bibliography count of zero.  If you wish to delete a material type with a bibliography count greater than zero you will first need to change the material type on those bibliographies to another material type.';";
+$trans["admin_materials_listDescription"]                 = "\$text = '描述';";
+$trans["admin_materials_listLimits"]                 = "\$text = '限定';";
+$trans["admin_materials_listCheckoutlimit"]                 = "\$text = '借出';";
+$trans["admin_materials_listRenewallimit"]                 = "\$text = '续借';";
+$trans["admin_materials_listImageFile"]                 = "\$text = '图片<br>文件';";
+$trans["admin_materials_listBibcount"]                 = "\$text = '文献<br>计数';";
+$trans["admin_materials_listEdit"]                 = "\$text = '编辑';";
+$trans["admin_materials_listDel"]                 = "\$text = '删除';";
+$trans["admin_materials_listNote"]                 = "\$text = '*备注:';";
+$trans["admin_materials_listNoteText"]                 = "\$text = '仅仅可以删除书目为0的馆藏<br>确实要删除，请首先改变文献的载体类型.';";
 
 #****************************************************************************
 #*  Translation text for page materials_new.php
 #****************************************************************************
-$trans["admin_materials_listNewadded"]                 = "\$text = ', has been added.';";
+$trans["admin_materials_listNewadded"]                 = "\$text = ', 已经添加.';";
 
 #****************************************************************************
 #*  Translation text for page materials_new_form.php
 #****************************************************************************
-$trans["admin_materials_new_formNoteText"]                 = "\$text = 'Image files must be located in the openbiblio/images directory.';";
+$trans["admin_materials_new_formNoteText"]                 = "\$text = '图片文件必须在openbiblio/images 内.';";
 
 #****************************************************************************
 #*  Translation text for page noauth.php
 #****************************************************************************
-$trans["admin_noauth"]                 = "\$text = 'You are not authorized to use the Admin tab.';";
+$trans["admin_noauth"]                 = "\$text = '未授权使用管理功能.';";
 
 #****************************************************************************
 #*  Translation text for page settings_edit.php
@@ -176,120 +176,120 @@ $trans["admin_noauth"]                 = "\$text = 'You are not authorized to us
 #****************************************************************************
 #*  Translation text for page settings_edit_form.php
 #****************************************************************************
-$trans["admin_settingsUpdated"]                 = "\$text = 'Data has been updated.';";
-$trans["admin_settingsEditsettings"]                 = "\$text = 'Edit Library Settings:';";
-$trans["admin_settingsLibName"]                 = "\$text = 'Library Name:';";
-$trans["admin_settingsLibimageurl"]                 = "\$text = 'Library Image URL:';";
-$trans["admin_settingsOnlyshowimginheader"]                 = "\$text = 'Only Show Image in Header:';";
-$trans["admin_settingsLibhours"]                 = "\$text = 'Library Hours:';";
-$trans["admin_settingsLibphone"]                 = "\$text = 'Library Phone:';";
-$trans["admin_settingsLibURL"]                 = "\$text = 'Library URL:';";
+$trans["admin_settingsUpdated"]                 = "\$text = '数据已经更新.';";
+$trans["admin_settingsEditsettings"]                 = "\$text = '编辑图书馆设置:';";
+$trans["admin_settingsLibName"]                 = "\$text = '图书馆名称:';";
+$trans["admin_settingsLibimageurl"]                 = "\$text = 'Logo URL:';";
+$trans["admin_settingsOnlyshowimginheader"]                 = "\$text = '仅仅在页头显示图片:';";
+$trans["admin_settingsLibhours"]                 = "\$text = '工作时间:';";
+$trans["admin_settingsLibphone"]                 = "\$text = '联系电话:';";
+$trans["admin_settingsLibURL"]                 = "\$text = '图书馆首页URL:';";
 $trans["admin_settingsOPACURL"]                 = "\$text = 'OPAC URL:';";
-$trans["admin_settingsSessionTimeout"]                 = "\$text = 'Session Timeout:';";
-$trans["admin_settingsMinutes"]                 = "\$text = 'minutes';";
-$trans["admin_settingsSearchResults"]                 = "\$text = 'Search Results:';";
-$trans["admin_settingsItemsperpage"]                 = "\$text = 'items per page';";
-$trans["admin_settingsPurgebibhistory"]                 = "\$text = 'Purge Bibliography History After:';";
-$trans["admin_settingsmonths"]                 = "\$text = 'months';";
+$trans["admin_settingsSessionTimeout"]                 = "\$text = '会话超时时间:';";
+$trans["admin_settingsMinutes"]                 = "\$text = '分钟';";
+$trans["admin_settingsSearchResults"]                 = "\$text = '搜索结果:';";
+$trans["admin_settingsItemsperpage"]                 = "\$text = '每页显示条目';";
+$trans["admin_settingsPurgebibhistory"]                 = "\$text = '清除文献历史在:';";
+$trans["admin_settingsmonths"]                 = "\$text = '月后';";
 $trans["admin_settingsBlockCheckouts"]                 = "\$text = 'Block Checkouts When Fines Due:';";
-$trans["admin_settingsLocale"]                 = "\$text = 'Locale:';";
-$trans["admin_settingsHTMLChar"]                 = "\$text = 'HTML Charset:';";
+$trans["admin_settingsLocale"]                 = "\$text = '本地化:';";
+$trans["admin_settingsHTMLChar"]                 = "\$text = 'HTML 字符集:';";
 $trans["admin_settingsHTMLTagLangAttr"]                 = "\$text = 'HTML Tag Lang Attribute:';";
 
 #****************************************************************************
 #*  Translation text for all staff pages
 #****************************************************************************
 $trans["adminStaff_Staffmember"]                 = "\$text = 'Staff member,';";
-$trans["adminStaff_Return"]                 = "\$text = 'return to staff list';";
-$trans["adminStaff_Yes"]                 = "\$text = 'Yes';";
-$trans["adminStaff_No"]                 = "\$text = 'No';";
+$trans["adminStaff_Return"]                 = "\$text = '返回员工表';";
+$trans["adminStaff_Yes"]                 = "\$text = '是';";
+$trans["adminStaff_No"]                 = "\$text = '否';";
 
 
 #****************************************************************************
 #*  Translation text for page staff_del.php
 #****************************************************************************
-$trans["adminStaff_delDeleted"]                 = "\$text = ', has been deleted.';";
+$trans["adminStaff_delDeleted"]                 = "\$text = ', 已经删除.';";
 
 #****************************************************************************
 #*  Translation text for page staff_delete_confirm.php
 #****************************************************************************
-$trans["adminStaff_del_confirmConfirmText"]                 = "\$text = 'Are you sure you want to delete staff member, ';";
+$trans["adminStaff_del_confirmConfirmText"]                 = "\$text = '确实要删除员工吗, ';";
 
 #****************************************************************************
 #*  Translation text for page staff_edit.php
 #****************************************************************************
-$trans["adminStaff_editUpdated"]                 = "\$text = ', has been updated.';";
+$trans["adminStaff_editUpdated"]                 = "\$text = ', 已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page staff_edit_form.php
 #****************************************************************************
-$trans["adminStaff_edit_formHeader"]                 = "\$text = 'Edit Staff Member Information:';";
-$trans["adminStaff_edit_formLastname"]                 = "\$text = 'Last Name:';";
-$trans["adminStaff_edit_formFirstname"]                 = "\$text = 'First Name:';";
-$trans["adminStaff_edit_formLogin"]                 = "\$text = 'Login Username:';";
-$trans["adminStaff_edit_formAuth"]                 = "\$text = 'Authorization:';";
-$trans["adminStaff_edit_formCirc"]                 = "\$text = 'Circ';";
-$trans["adminStaff_edit_formUpdatemember"]                 = "\$text = 'Update Member';";
-$trans["adminStaff_edit_formCatalog"]                 = "\$text = 'Catalog';";
-$trans["adminStaff_edit_formAdmin"]                 = "\$text = 'Admin';";
-$trans["adminStaff_edit_formReports"]                 = "\$text = 'Reports';";
+$trans["adminStaff_edit_formHeader"]                 = "\$text = '编辑员工:';";
+$trans["adminStaff_edit_formLastname"]                 = "\$text = '姓:';";
+$trans["adminStaff_edit_formFirstname"]                 = "\$text = '名:';";
+$trans["adminStaff_edit_formLogin"]                 = "\$text = '登陆账号:';";
+$trans["adminStaff_edit_formAuth"]                 = "\$text = '授权:';";
+$trans["adminStaff_edit_formCirc"]                 = "\$text = '流通';";
+$trans["adminStaff_edit_formUpdatemember"]                 = "\$text = '更新';";
+$trans["adminStaff_edit_formCatalog"]                 = "\$text = '编目';";
+$trans["adminStaff_edit_formAdmin"]                 = "\$text = '管理';";
+$trans["adminStaff_edit_formReports"]                 = "\$text = '报表';";
 $trans["adminStaff_edit_formSuspended"]                 = "\$text = 'Suspended:';";
 
 #****************************************************************************
 #*  Translation text for page staff_list.php
 #****************************************************************************
-$trans["adminStaff_list_formHeader"]                 = "\$text = 'Add New Staff Member';";
-$trans["adminStaff_list_Columnheader"]                 = "\$text = ' Staff Members:';";
+$trans["adminStaff_list_formHeader"]                 = "\$text = '新建员工';";
+$trans["adminStaff_list_Columnheader"]                 = "\$text = ' 员工:';";
 $trans["adminStaff_list_Function"]                 = "\$text = 'Function';";
-$trans["adminStaff_list_Edit"]                 = "\$text = 'edit';";
-$trans["adminStaff_list_Pwd"]                 = "\$text = 'pwd';";
-$trans["adminStaff_list_Del"]                 = "\$text = 'del';";
+$trans["adminStaff_list_Edit"]                 = "\$text = '编辑';";
+$trans["adminStaff_list_Pwd"]                 = "\$text = '密码';";
+$trans["adminStaff_list_Del"]                 = "\$text = '删除';";
 
 #****************************************************************************
 #*  Translation text for page staff_new.php
 #****************************************************************************
-$trans["adminStaff_new_Added"]                 = "\$text = ', has been added.';";
+$trans["adminStaff_new_Added"]                 = "\$text = ', 已经添加.';";
 
 #****************************************************************************
 #*  Translation text for page staff_new_form.php
 #****************************************************************************
-$trans["adminStaff_new_form_Header"]          	= "\$text = 'Add New Staff Member:';";
-$trans["adminStaff_new_form_Password"]          = "\$text = 'Password:';";
-$trans["adminStaff_new_form_Reenterpassword"]   = "\$text = 'Re-enter Password:';";
+$trans["adminStaff_new_form_Header"]          	= "\$text = '新员工:';";
+$trans["adminStaff_new_form_Password"]          = "\$text = '密码:';";
+$trans["adminStaff_new_form_Reenterpassword"]   = "\$text = '重输密码:';";
 
 #****************************************************************************
 #*  Translation text for page staff_pwd_reset.php
 #****************************************************************************
-$trans["adminStaff_pwd_reset_Passwordreset"]   = "\$text = 'Password has been reset.';";
+$trans["adminStaff_pwd_reset_Passwordreset"]   = "\$text = '密码已经重置.';";
 
 #****************************************************************************
 #*  Translation text for page staff_pwd_reset_form.php
 #****************************************************************************
-$trans["adminStaff_pwd_reset_form_Resetheader"]   = "\$text = 'Reset Staff Member Password:';";
+$trans["adminStaff_pwd_reset_form_Resetheader"]   = "\$text = '重置员工密码:';";
 
 #****************************************************************************
 #*  Translation text for theme pages
 #****************************************************************************
-$trans["adminTheme_Return"]                 = "\$text = 'return to theme list';";
-$trans["adminTheme_Theme"]                 = "\$text = 'Theme, ';";
+$trans["adminTheme_Return"]                 = "\$text = '返回样式表';";
+$trans["adminTheme_Theme"]                 = "\$text = '样式, ';";
 
 #****************************************************************************
 #*  Translation text for page theme_del.php
 #****************************************************************************
-$trans["adminTheme_Deleted"]                 = "\$text = ', has been deleted.';";
+$trans["adminTheme_Deleted"]                 = "\$text = ', 已经删除.';";
 #****************************************************************************
 #*  Translation text for page theme_del_confirm.php
 #****************************************************************************
-$trans["adminTheme_Deleteconfirm"]                 = "\$text = 'Are you sure you want to delete theme, ';";
+$trans["adminTheme_Deleteconfirm"]                 = "\$text = '是否确定删除样式, ';";
 #****************************************************************************
 #*  Translation text for page theme_edit.php
 #****************************************************************************
-$trans["adminTheme_Updated"]                 = "\$text = ', has been updated.';";
+$trans["adminTheme_Updated"]                 = "\$text = ', 已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page theme_edit_form.php
 #****************************************************************************
-$trans["adminTheme_Preview"]                 = "\$text = 'Preview Theme Changes';";
+$trans["adminTheme_Preview"]                 = "\$text = '预览样式修改';";
 
 #****************************************************************************
 #*  Translation text for page theme_list.php

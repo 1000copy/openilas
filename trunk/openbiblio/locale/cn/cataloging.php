@@ -37,77 +37,77 @@
 #****************************************************************************
 #*  Common translation text shared among multiple pages
 #****************************************************************************
-$trans["catalogSubmit"]            = "\$text = 'Submit';";
-$trans["catalogCancel"]            = "\$text = 'Cancel';";
-$trans["catalogRefresh"]           = "\$text = 'Refresh';";
-$trans["catalogDelete"]            = "\$text = 'Delete';";
+$trans["catalogSubmit"]            = "\$text = '提交';";
+$trans["catalogCancel"]            = "\$text = '取消';";
+$trans["catalogRefresh"]           = "\$text = '刷新';";
+$trans["catalogDelete"]            = "\$text = '删除';";
 $trans["catalogFootnote"]          = "\$text = 'Fields marked with %symbol% are required.';";
-$trans["AnswerYes"]                = "\$text = 'Yes';";
-$trans["AnswerNo"]                 = "\$text = 'No';";
+$trans["AnswerYes"]                = "\$text = '是';";
+$trans["AnswerNo"]                 = "\$text = '否';";
 
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHdr"]                 = "\$text = 'Cataloging';";
-$trans["indexBarcodeHdr"]          = "\$text = 'Search Bibliography by Barcode Number';";
-$trans["indexBarcodeField"]        = "\$text = 'Barcode Number';";
-$trans["indexSearchHdr"]           = "\$text = 'Search Bibliography by Search Phrase';";
-$trans["indexTitle"]               = "\$text = 'Title';";
-$trans["indexAuthor"]              = "\$text = 'Author';";
-$trans["indexSubject"]             = "\$text = 'Subject';";
-$trans["indexButton"]              = "\$text = 'Search';";
+$trans["indexHdr"]                 = "\$text = '正在编目';";
+$trans["indexBarcodeHdr"]          = "\$text = '通过条目找书目';";
+$trans["indexBarcodeField"]        = "\$text = '条码';";
+$trans["indexSearchHdr"]           = "\$text = '通过词汇找书目';";
+$trans["indexTitle"]               = "\$text = '书目名';";
+$trans["indexAuthor"]              = "\$text = '作者';";
+$trans["indexSubject"]             = "\$text = '标题';";
+$trans["indexButton"]              = "\$text = '搜索';";
 
 #****************************************************************************
 #*  Translation text for page biblio_fields.php
 #****************************************************************************
-$trans["biblioFieldsLabel"]        = "\$text = 'Bibliography';";
-$trans["biblioFieldsMaterialTyp"]  = "\$text = 'Type of Material';";
-$trans["biblioFieldsCollection"]   = "\$text = 'Collection';";
-$trans["biblioFieldsCallNmbr"]     = "\$text = 'Call Number';";
+$trans["biblioFieldsLabel"]        = "\$text = '书目';";
+$trans["biblioFieldsMaterialTyp"]  = "\$text = '载体类型';";
+$trans["biblioFieldsCollection"]   = "\$text = '馆藏';";
+$trans["biblioFieldsCallNmbr"]     = "\$text = '索书号';";
 $trans["biblioFieldsUsmarcFields"] = "\$text = 'USMarc Fields';";
-$trans["biblioFieldsOpacFlg"]      = "\$text = 'Show in OPAC';";
+$trans["biblioFieldsOpacFlg"]      = "\$text = 'OPAC内显示';";
 
 #****************************************************************************
 #*  Translation text for page biblio_new.php
 #****************************************************************************
-$trans["biblioNewFormLabel"]       = "\$text = 'Add New';";
-$trans["biblioNewSuccess"]         = "\$text = 'The following new bibliography has been created.  To add a copy, select \"New Copy\" from the left hand navigation or \"Add New Copy\" from the copy information below.';";
+$trans["biblioNewFormLabel"]       = "\$text = '新建';";
+$trans["biblioNewSuccess"]         = "\$text = '如下新书目已经建立. 要添加新的拷贝，请在左侧导航选择 [新建拷贝]  或者 选择下面的【加入新拷贝】 .';";
 
 #****************************************************************************
 #*  Translation text for page biblio_edit.php
 #****************************************************************************
-$trans["biblioEditSuccess"]        = "\$text = 'Bibliography successfully updated.';";
+$trans["biblioEditSuccess"]        = "\$text = '书目已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_copy_new_form.php and biblio_copy_edit_form.php
 #****************************************************************************
-$trans["biblioCopyNewFormLabel"]   = "\$text = 'Add New Copy';";
-$trans["biblioCopyNewBarcode"]     = "\$text = 'Barcode Number';";
-$trans["biblioCopyNewDesc"]        = "\$text = 'Description';";
-$trans["biblioCopyNewAuto"]        = "\$text = 'Autogenerate';";
-$trans["biblioCopyEditFormLabel"]  = "\$text = 'Edit Copy';";
-$trans["biblioCopyEditFormStatus"] = "\$text = 'Status';";
+$trans["biblioCopyNewFormLabel"]   = "\$text = '新建拷贝';";
+$trans["biblioCopyNewBarcode"]     = "\$text = '条码';";
+$trans["biblioCopyNewDesc"]        = "\$text = '描述';";
+$trans["biblioCopyNewAuto"]        = "\$text = '自动生成';";
+$trans["biblioCopyEditFormLabel"]  = "\$text = '编辑拷贝';";
+$trans["biblioCopyEditFormStatus"] = "\$text = '状态';";
 
 #****************************************************************************
 #*  Translation text for page biblio_copy_new.php
 #****************************************************************************
-$trans["biblioCopyNewSuccess"]     = "\$text = 'Copy successfully created.';";
+$trans["biblioCopyNewSuccess"]     = "\$text = '拷贝已经建立.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_copy_edit.php
 #****************************************************************************
-$trans["biblioCopyEditSuccess"]    = "\$text = 'Copy successfully updated.';";
+$trans["biblioCopyEditSuccess"]    = "\$text = '拷贝已经更新.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_copy_del_confirm.php
 #****************************************************************************
-$trans["biblioCopyDelConfirmErr1"] = "\$text = 'Could not delete copy.  A copy must be checked in before it can be deleted.';";
-$trans["biblioCopyDelConfirmMsg"]  = "\$text = 'Are you sure you want to delete the copy with barcode %barcodeNmbr%?  This will also delete all status change history for this copy.';";
+$trans["biblioCopyDelConfirmErr1"] = "\$text = '不能删除拷贝.必须还回后才能删除';";
+$trans["biblioCopyDelConfirmMsg"]  = "\$text = '要删除条码为 %barcodeNmbr% 的拷贝? 这个拷贝的所有状态改变历史也会同时删除.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_copy_del.php
 #****************************************************************************
-$trans["biblioCopyDelSuccess"]     = "\$text = 'Copy with barcode %barcode% was successfully deleted.';";
+$trans["biblioCopyDelSuccess"]     = "\$text = '条码为 %barcode% 的拷贝已经被删除.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_list.php
@@ -174,33 +174,33 @@ $trans["biblioMarcDelSuccess"]     = "\$text = 'Marc field successfully deleted.
 #****************************************************************************
 #*  Translation text for page biblio_del_confirm.php
 #****************************************************************************
-$trans["biblioDelConfirmWarn"]     = "\$text = 'This bibliography has %copyCount% copy(ies) and %holdCount% hold request(s).  Please delete these copies and/or hold requests before deleting this bibliography.';";
-$trans["biblioDelConfirmReturn"]   = "\$text = 'return to bibliography information';";
-$trans["biblioDelConfirmMsg"]      = "\$text = 'Are you sure you want to delete the bibliography with title %title%?';";
+$trans["biblioDelConfirmWarn"]     = "\$text = '这个数目有 %copyCount% 拷贝， %holdCount% 预约.  请先删除拷贝和预约.';";
+$trans["biblioDelConfirmReturn"]   = "\$text = '返回书目清单';";
+$trans["biblioDelConfirmMsg"]      = "\$text = '确认删除标题为 %title% 的书目吗?';";
 
 #****************************************************************************
 #*  Translation text for page biblio_del_confirm.php
 #****************************************************************************
-$trans["biblioDelMsg"]             = "\$text = 'Bibliography, %title%, has been deleted.';";
-$trans["biblioDelReturn"]          = "\$text = 'return to bibliography search';";
+$trans["biblioDelMsg"]             = "\$text = '书目, %title%, 已经删除.';";
+$trans["biblioDelReturn"]          = "\$text = '返回书目搜索';";
 
 #****************************************************************************
 #*  Translation text for page biblio_hold_list.php
 #****************************************************************************
-$trans["biblioHoldListHead"]       = "\$text = 'Bibliography Hold Requests:';";
-$trans["biblioHoldListNoHolds"]    = "\$text = 'No bibliography copies are currently on hold.';";
+$trans["biblioHoldListHead"]       = "\$text = '书目预约:';";
+$trans["biblioHoldListNoHolds"]    = "\$text = '没有书目拷贝被预约.';";
 $trans["biblioHoldListHdr1"]       = "\$text = 'Function';";
-$trans["biblioHoldListHdr2"]       = "\$text = 'Copy';";
-$trans["biblioHoldListHdr3"]       = "\$text = 'Placed On Hold';";
-$trans["biblioHoldListHdr4"]       = "\$text = 'Member';";
-$trans["biblioHoldListHdr5"]       = "\$text = 'Status';";
+$trans["biblioHoldListHdr2"]       = "\$text = '拷贝';";
+$trans["biblioHoldListHdr3"]       = "\$text = '预约';";
+$trans["biblioHoldListHdr4"]       = "\$text = '读者';";
+$trans["biblioHoldListHdr5"]       = "\$text = '状态';";
 $trans["biblioHoldListHdr6"]       = "\$text = 'Due Back';";
-$trans["biblioHoldListdel"]        = "\$text = 'Del';";
+$trans["biblioHoldListdel"]        = "\$text = '删除';";
 
 #****************************************************************************
 #*  Translation text for page noauth.php
 #****************************************************************************
-$trans["NotAuth"]                 = "\$text = 'You are not authorized to use the Cataloging tab';";
+$trans["NotAuth"]                 = "\$text = '未授权使用编目';";
 
 #****************************************************************************
 #*  Translation text for page upload_usmarc.php and upload_usmarc_form.php
@@ -220,8 +220,8 @@ $trans["UploadFile"]                = "\$text = 'Upload File';";
 #****************************************************************************
 #*  Translation text for page usmarc_select.php
 #****************************************************************************
-$trans["PoweredByOB"]                 = "\$text = 'Powered by OpenBiblio';";
-$trans["Copyright"]                   = "\$text = 'Copyright &copy; 2002-2005';";
+$trans["PoweredByOB"]                 = "\$text = '提供动力 by OpenBiblio';";
+$trans["Copyright"]                   = "\$text = '版权 &copy; 2002-2005';";
 $trans["underthe"]                    = "\$text = 'under the';";
 $trans["GNU"]                 = "\$text = 'GNU General Public License';";
 

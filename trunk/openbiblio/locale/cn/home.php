@@ -40,30 +40,30 @@
 #****************************************************************************
 $trans["indexHeading"]       = "\$text='欢迎使用OpenBiblio';";
 $trans["indexIntro"]         = "\$text=
-  'Use the navigation tabs at the top of each page to access the following library
-  administration sections.';";
-$trans["indexTab"]           = "\$text='Tab';";
-$trans["indexDesc"]          = "\$text='Description';";
-$trans["indexCirc"]          = "\$text='Circulation';";
-$trans["indexCircDesc1"]     = "\$text='Use this tab to manage your member records.';";
-$trans["indexCircDesc2"]     = "\$text='Member administration (new, search, edit, delete)';";
-$trans["indexCircDesc3"]     = "\$text='Member bibliography checkout, holds, account, and history';";
+  '使用这个导航访问
+  管理区.';";
+$trans["indexTab"]           = "\$text='标签';";
+$trans["indexDesc"]          = "\$text='描述';";
+$trans["indexCirc"]          = "\$text='流通';";
+$trans["indexCircDesc1"]     = "\$text='管理会员.';";
+$trans["indexCircDesc2"]     = "\$text='会员管理(新建，搜索，编辑，删除)';";
+$trans["indexCircDesc3"]     = "\$text='会员书目借出，续借，记账，历史';";
 $trans["indexCircDesc4"]     = "\$text='Bibliography checkin and shelving cart list';";
 //$trans["indexCircDesc5"]     = "\$text='Member late fee payment';";
-$trans["indexCat"]           = "\$text='Cataloging';";
-$trans["indexCatDesc1"]      = "\$text='Use this tab to manage your bibliography records.';";
-$trans["indexCatDesc2"]      = "\$text='Bibliography administration (new, search, edit, delete)';";
+$trans["indexCat"]           = "\$text='编目';";
+$trans["indexCatDesc1"]      = "\$text='管理书目 .';";
+$trans["indexCatDesc2"]      = "\$text='书目管理 (新建，搜索，编辑，删除)';";
 //$trans["indexCatDesc3"]      = "\$text='Import bibliography from USMarc record';";
-$trans["indexAdmin"]         = "\$text='Admin';";
-$trans["indexAdminDesc1"]    = "\$text='Use this tab to manage staff and administrative records.';";
-$trans["indexAdminDesc2"]    = "\$text='Staff administration (new, edit, password, delete)';";
-$trans["indexAdminDesc3"]    = "\$text='General library settings';";
-$trans["indexAdminDesc5"]    = "\$text='Library material type list';";
-$trans["indexAdminDesc4"]    = "\$text='Library collection list';";
-$trans["indexAdminDesc6"]    = "\$text='Library theme editor';";
-$trans["indexReports"]       = "\$text='Reports';";
-$trans["indexReportsDesc1"]  = "\$text='Use this tab to run reports on your library data.';";
-$trans["indexReportsDesc2"]  = "\$text='Report.';";
-$trans["indexReportsDesc3"]  = "\$text='Labels.';";
+$trans["indexAdmin"]         = "\$text='管理';";
+$trans["indexAdminDesc1"]    = "\$text='管理员工和基本信息.';";
+$trans["indexAdminDesc2"]    = "\$text='员工管理 (新建，搜索，编辑，密码,删除)';";
+$trans["indexAdminDesc3"]    = "\$text='同样图书馆设置';";
+$trans["indexAdminDesc5"]    = "\$text='载体类型';";
+$trans["indexAdminDesc4"]    = "\$text='馆藏清单';";
+$trans["indexAdminDesc6"]    = "\$text='样式编辑器';";
+$trans["indexReports"]       = "\$text='报表';";
+$trans["indexReportsDesc1"]  = "\$text='管理报表';";
+$trans["indexReportsDesc2"]  = "\$text='报表.';";
+$trans["indexReportsDesc3"]  = "\$text='标签.';";
 
 ?>

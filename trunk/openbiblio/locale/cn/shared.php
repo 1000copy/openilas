@@ -37,13 +37,13 @@
 #****************************************************************************
 #*  Common translation text shared among multiple pages
 #****************************************************************************
-$trans["sharedCancel"]             = "\$text = 'Cancel';";
-$trans["sharedDelete"]             = "\$text = 'Delete';";
+$trans["sharedCancel"]             = "\$text = '取消';";
+$trans["sharedDelete"]             = "\$text = '删除';";
 
 #****************************************************************************
 #*  Translation text for page biblio_view.php
 #****************************************************************************
-$trans["biblioViewTble1Hdr"]       = "\$text = 'Bibliography Information';";
+$trans["biblioViewTble1Hdr"]       = "\$text = '书目信息';";
 $trans["biblioViewMaterialType"]   = "\$text = 'Material Type';";
 $trans["biblioViewCollection"]     = "\$text = 'Collection';";
 $trans["biblioViewCallNmbr"]       = "\$text = 'Call Number';";
@@ -131,22 +131,22 @@ $trans["headerTodaysDate"]         = "\$text='today\'s date:';";
 $trans["headerDateFormat"]         = "\$text='m.d.Y';";
 $trans["headerLibraryHours"]       = "\$text='library hours:';";
 $trans["headerLibraryPhone"]       = "\$text='library phone:';";
-$trans["headerHome"]               = "\$text='Home';";
-$trans["headerCirculation"]        = "\$text='Circulation';";
-$trans["headerCataloging"]         = "\$text='Cataloging';";
-$trans["headerAdmin"]              = "\$text='Admin';";
-$trans["headerReports"]            = "\$text='Reports';";
+$trans["headerHome"]               = "\$text=' 首 页';";
+$trans["headerCirculation"]        = "\$text=' 流 通';";
+$trans["headerCataloging"]         = "\$text=' 编 目';";
+$trans["headerAdmin"]              = "\$text=' 管 理';";
+$trans["headerReports"]            = "\$text=' 报 表';";
 
 #****************************************************************************
 #*  Translation text for page footer.php
 #****************************************************************************
 $trans["footerLibraryHome"]        = "\$text='Library Home';";
 $trans["footerOPAC"]               = "\$text='OPAC';";
-$trans["footerHelp"]               = "\$text='Help';";
-$trans["footerPoweredBy"]          = "\$text='Powered by OpenBiblio version';";
-$trans["footerDatabaseVersion"]    = "\$text='database version';";
-$trans["footerCopyright"]          = "\$text='Copyright';";
-$trans["footerUnderThe"]           = "\$text='under the';";
+$trans["footerHelp"]               = "\$text='帮助';";
+$trans["footerPoweredBy"]          = "\$text='提供动力由 OpenBiblio version';";
+$trans["footerDatabaseVersion"]    = "\$text='数据库版本';";
+$trans["footerCopyright"]          = "\$text='版权';";
+$trans["footerUnderThe"]           = "\$text='遵循';";
 $trans["footerGPL"]                = "\$text='GNU General Public License';";
 
 ?>
