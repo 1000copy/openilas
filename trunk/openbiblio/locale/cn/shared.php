@@ -127,10 +127,10 @@ $trans["catalogResults"]           = "\$text='Search Results';";
 #****************************************************************************
 #*  Translation text for page header.php and header_opac.php
 #****************************************************************************
-$trans["headerTodaysDate"]         = "\$text='today\'s date:';";
+$trans["headerTodaysDate"]         = "\$text='今天是:';";
 $trans["headerDateFormat"]         = "\$text='m.d.Y';";
-$trans["headerLibraryHours"]       = "\$text='library hours:';";
-$trans["headerLibraryPhone"]       = "\$text='library phone:';";
+$trans["headerLibraryHours"]       = "\$text='工作日:';";
+$trans["headerLibraryPhone"]       = "\$text='联系电话:';";
 $trans["headerHome"]               = "\$text=' 首 页';";
 $trans["headerCirculation"]        = "\$text=' 流 通';";
 $trans["headerCataloging"]         = "\$text=' 编 目';";

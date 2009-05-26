@@ -42,15 +42,15 @@ $trans["reportsCancel"]            = "\$text = 'Cancel';";
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHdr"]                 = "\$text = 'Reports';";
+$trans["indexHdr"]                 = "\$text = '报表';";
 $trans["indexDesc"]                = "\$text = 'Use the report or label list located in the left hand navigation area to produce reports or labels.';";
 
 #****************************************************************************
 #*  Translation text for page report_list.php
 #****************************************************************************
-$trans["reportListHdr"]            = "\$text = 'Report List';";
-$trans["reportListDesc"]           = "\$text = 'Choose from one of the following links to run a report.';";
-$trans["reportListXmlErr"]         = "\$text = 'Error occurred parsing report definition xml.';";
+$trans["reportListHdr"]            = "\$text = '报表清单';";
+$trans["reportListDesc"]           = "\$text = '从下列清单选择一个报表.';";
+$trans["reportListXmlErr"]         = "\$text = '报表xml解释错误';";
 $trans["reportListCannotRead"]     = "\$text = 'Cannot read label file: %fileName%';";
 
 #****************************************************************************

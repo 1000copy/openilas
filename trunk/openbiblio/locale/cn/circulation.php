@@ -47,11 +47,11 @@ $trans["mbrDupBarcode"]           = "\$text = 'Barcode number, %barcode%, is cur
 #*  Translation text for page index.php
 #****************************************************************************
 $trans["indexHeading"]            = "\$text='编目';";
-$trans["indexCardHdr"]            = "\$text='Search Member by Card Number:';";
-$trans["indexCard"]               = "\$text='Card Number:';";
-$trans["indexSearch"]             = "\$text='Search';";
-$trans["indexNameHdr"]            = "\$text='Search Member by Last Name:';";
-$trans["indexName"]               = "\$text='Last name start with:';";
+$trans["indexCardHdr"]            = "\$text='用卡号找会员:';";
+$trans["indexCard"]               = "\$text='卡号:';";
+$trans["indexSearch"]             = "\$text='搜索';";
+$trans["indexNameHdr"]            = "\$text='用名查找会员:';";
+$trans["indexName"]               = "\$text='名字开头:';";
 
 #****************************************************************************
 #*  Translation text for page mbr_new_form.php, mbr_edit_form.php and mbr_fields.php
@@ -97,51 +97,51 @@ $trans["mbrEditSuccess"]          = "\$text='Member has been successfully update
 #****************************************************************************
 #*  Translation text for page mbr_view.php
 #****************************************************************************
-$trans["mbrViewHead1"]            = "\$text='Member Information:';";
-$trans["mbrViewName"]             = "\$text='Name:';";
-$trans["mbrViewAddr"]             = "\$text='Address:';";
-$trans["mbrViewCardNmbr"]         = "\$text='Card Number:';";
-$trans["mbrViewClassify"]         = "\$text='Classification:';";
-$trans["mbrViewPhone"]            = "\$text='Phone:';";
+$trans["mbrViewHead1"]            = "\$text='会员信息:';";
+$trans["mbrViewName"]             = "\$text='名:';";
+$trans["mbrViewAddr"]             = "\$text='地址:';";
+$trans["mbrViewCardNmbr"]         = "\$text='卡号:';";
+$trans["mbrViewClassify"]         = "\$text='分类:';";
+$trans["mbrViewPhone"]            = "\$text='电话:';";
 $trans["mbrViewPhoneHome"]        = "\$text='H:';";
 $trans["mbrViewPhoneWork"]        = "\$text='W:';";
-$trans["mbrViewEmail"]            = "\$text='Email Address:';";
+$trans["mbrViewEmail"]            = "\$text='Email :';";
 $trans["mbrViewGrade"]            = "\$text='School Grade:';";
 $trans["mbrViewTeacher"]          = "\$text='School Teacher:';";
-$trans["mbrViewHead2"]            = "\$text='Checkout Stats:';";
-$trans["mbrViewStatColHdr1"]      = "\$text='Material';";
-$trans["mbrViewStatColHdr2"]      = "\$text='Count';";
-$trans["mbrViewStatColHdr3"]      = "\$text='Limits';";
-$trans["mbrViewStatColHdr4"]      = "\$text='Checkout';";
-$trans["mbrViewStatColHdr5"]      = "\$text='Renewal';";
-$trans["mbrViewHead3"]            = "\$text='Bibliography Check Out:';";
-$trans["mbrViewBarcode"]          = "\$text='Barcode Number:';";
-$trans["mbrViewCheckOut"]         = "\$text='Check Out';";
-$trans["mbrViewHead4"]            = "\$text='Bibliographies Currently Checked Out:';";
-$trans["mbrViewOutHdr1"]          = "\$text='Checked Out';";
-$trans["mbrViewOutHdr2"]          = "\$text='Material';";
-$trans["mbrViewOutHdr3"]          = "\$text='Barcode';";
-$trans["mbrViewOutHdr4"]          = "\$text='Title';";
-$trans["mbrViewOutHdr5"]          = "\$text='Author';";
-$trans["mbrViewOutHdr6"]          = "\$text='Due Back';";
-$trans["mbrViewOutHdr7"]          = "\$text='Days Late';";
-$trans["mbrViewOutHdr8"]          = "\$text='Renewal';";
+$trans["mbrViewHead2"]            = "\$text='借出统计:';";
+$trans["mbrViewStatColHdr1"]      = "\$text='载体类型';";
+$trans["mbrViewStatColHdr2"]      = "\$text='计数';";
+$trans["mbrViewStatColHdr3"]      = "\$text='限定';";
+$trans["mbrViewStatColHdr4"]      = "\$text='借出';";
+$trans["mbrViewStatColHdr5"]      = "\$text='续借';";
+$trans["mbrViewHead3"]            = "\$text='借出书目:';";
+$trans["mbrViewBarcode"]          = "\$text='条码:';";
+$trans["mbrViewCheckOut"]         = "\$text='借出';";
+$trans["mbrViewHead4"]            = "\$text='当前借出书目:';";
+$trans["mbrViewOutHdr1"]          = "\$text='借出';";
+$trans["mbrViewOutHdr2"]          = "\$text='载体类型';";
+$trans["mbrViewOutHdr3"]          = "\$text='条码';";
+$trans["mbrViewOutHdr4"]          = "\$text='标题';";
+$trans["mbrViewOutHdr5"]          = "\$text='作者';";
+$trans["mbrViewOutHdr6"]          = "\$text='归还时间';";
+$trans["mbrViewOutHdr7"]          = "\$text='超期天数';";
+$trans["mbrViewOutHdr8"]          = "\$text='续借';";
 $trans["mbrViewOutHdr9"]          = "\$text='time/s';";
-$trans["mbrViewNoCheckouts"]      = "\$text='No bibliographies are currently checked out.';";
-$trans["mbrViewHead5"]            = "\$text='Place Hold:';";
-$trans["mbrViewHead6"]            = "\$text='Bibliographies Currently On Hold:';";
-$trans["mbrViewPlaceHold"]        = "\$text='Place Hold';";
+$trans["mbrViewNoCheckouts"]      = "\$text='当前没有借出书目.';";
+$trans["mbrViewHead5"]            = "\$text='预约:';";
+$trans["mbrViewHead6"]            = "\$text='当前预约清单:';";
+$trans["mbrViewPlaceHold"]        = "\$text='预约';";
 $trans["mbrViewHoldHdr1"]         = "\$text='Function';";
-$trans["mbrViewHoldHdr2"]         = "\$text='Placed On Hold';";
-$trans["mbrViewHoldHdr3"]         = "\$text='Material';";
-$trans["mbrViewHoldHdr4"]         = "\$text='Barcode';";
-$trans["mbrViewHoldHdr5"]         = "\$text='Title';";
-$trans["mbrViewHoldHdr6"]         = "\$text='Author';";
-$trans["mbrViewHoldHdr7"]         = "\$text='Status';";
-$trans["mbrViewHoldHdr8"]         = "\$text='Due Back';";
-$trans["mbrViewNoHolds"]          = "\$text='No bibliographies are currently on hold.';";
+$trans["mbrViewHoldHdr2"]         = "\$text='预约';";
+$trans["mbrViewHoldHdr3"]         = "\$text='载体类型';";
+$trans["mbrViewHoldHdr4"]         = "\$text='条码';";
+$trans["mbrViewHoldHdr5"]         = "\$text='标题';";
+$trans["mbrViewHoldHdr6"]         = "\$text='作者';";
+$trans["mbrViewHoldHdr7"]         = "\$text='状态';";
+$trans["mbrViewHoldHdr8"]         = "\$text='到期时间';";
+$trans["mbrViewNoHolds"]          = "\$text='当前无预约.';";
 $trans["mbrViewBalMsg"]           = "\$text='Note: Member has an outstanding account balance of %bal%.';";
-$trans["mbrPrintCheckouts"]	  = "\$text='print checkouts';";
+$trans["mbrPrintCheckouts"]	  = "\$text='打印借出清单';";
 $trans["mbrViewDel"]              = "\$text='del';";
 
 #****************************************************************************
