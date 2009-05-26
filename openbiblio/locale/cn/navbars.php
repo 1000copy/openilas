@@ -71,12 +71,12 @@ $trans["catalogBibEditMarc"]       = "\$text = 'Edit-MARC';";
 $trans["catalogBibMarcNewFld"]     = "\$text = 'New MARC Field';";
 $trans["catalogBibMarcNewFldShrt"] = "\$text = 'New MARC';";
 $trans["catalogBibMarcEditFld"]    = "\$text = 'Edit MARC Fld';";
-$trans["catalogCopyNew"]           = "\$text = 'New Copy';";
-$trans["catalogCopyEdit"]          = "\$text = 'Edit Copy';";
-$trans["catalogHolds"]             = "\$text = 'Hold Requests';";
-$trans["catalogDelete"]            = "\$text = 'Delete';";
-$trans["catalogBibNewLike"]        = "\$text = 'New Like';";
-$trans["catalogBibNew"]            = "\$text = 'New Bibliography';";
+$trans["catalogCopyNew"]           = "\$text = '新拷贝';";
+$trans["catalogCopyEdit"]          = "\$text = '编辑拷贝';";
+$trans["catalogHolds"]             = "\$text = '预约申请';";
+$trans["catalogDelete"]            = "\$text = '删除';";
+$trans["catalogBibNewLike"]        = "\$text = '复制新建';";
+$trans["catalogBibNew"]            = "\$text = '新建书目';";
 $trans["Upload Marc Data"]         = "\$text = 'Upload Marc Data';";
 
 #****************************************************************************
@@ -97,13 +97,13 @@ $trans["catalogBibInfo"]           = "\$text = '书目信息';";
 
 #Added
 
-$trans["memberInfo"]="\$text = 'Member Info';";
-$trans["memberSearch"]="\$text = 'Member Search';";
-$trans["editInfo"]="\$text = 'Edit Info';";
-$trans["checkoutHistory"]= "\$text = 'Checkout History';";
-$trans["account"]="\$text = 'Account';";
-$trans["checkIn"]="\$text = 'Check In';";
-$trans["memberSearch"]= "\$text = 'Member Search';";
-$trans["newMember"]= "\$text = 'New Member';";
+$trans["memberInfo"]="\$text = '会员信息';";
+$trans["memberSearch"]="\$text = '搜索';";
+$trans["editInfo"]="\$text = '编辑';";
+$trans["checkoutHistory"]= "\$text = '借出历史';";
+$trans["account"]="\$text = '记账';";
+$trans["checkIn"]="\$text = '还书';";
+$trans["memberSearch"]= "\$text = '会员搜索';";
+$trans["newMember"]= "\$text = '新会员';";
 //$trans["account"]        	= "\$text = 'Account';";
 ?>
