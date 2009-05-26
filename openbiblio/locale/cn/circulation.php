@@ -46,7 +46,7 @@ $trans["mbrDupBarcode"]           = "\$text = 'Barcode number, %barcode%, is cur
 #****************************************************************************
 #*  Translation text for page index.php
 #****************************************************************************
-$trans["indexHeading"]            = "\$text='Circulation';";
+$trans["indexHeading"]            = "\$text='±àÄ¿';";
 $trans["indexCardHdr"]            = "\$text='Search Member by Card Number:';";
 $trans["indexCard"]               = "\$text='Card Number:';";
 $trans["indexSearch"]             = "\$text='Search';";
