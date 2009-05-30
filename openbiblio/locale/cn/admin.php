@@ -41,7 +41,7 @@ $trans["adminSubmit"]              = "\$text = '提交';";
 $trans["adminCancel"]              = "\$text = '取消';";
 $trans["adminDelete"]              = "\$text = '删除';";
 $trans["adminUpdate"]              = "\$text = '更新';";
-$trans["adminFootnote"]            = "\$text = 'Fields marked with %symbol% are required.';";
+$trans["adminFootnote"]            = "\$text = '以 %symbol% 标记的字段是必须的.';";
 
 #****************************************************************************
 #*  Translation text for page index.php
@@ -52,7 +52,7 @@ $trans["indexDesc"]                = "\$text = '用左侧的导航来管理员工和基本类型
 #****************************************************************************
 #*  Translation text for page collections*.php
 #****************************************************************************
-$trans["adminCollections_delReturn"]                 = "\$text = 'return to collection list';";
+$trans["adminCollections_delReturn"]                 = "\$text = '返回 Collection';";
 $trans["adminCollections_delStart"]                 = "\$text = 'Collection, ';";
 
 #****************************************************************************
@@ -63,7 +63,7 @@ $trans["adminCollections_delEnd"]                 = "\$text = ', 已经删除.';";
 #****************************************************************************
 #*  Translation text for page collections_del_confirm.php
 #****************************************************************************
-$trans["adminCollections_del_confirmText"]                 = "\$text = 'Are you sure you want to delete collection, ';";
+$trans["adminCollections_del_confirmText"]                 = "\$text = '确实要删除collection, ';";
 
 #****************************************************************************
 #*  Translation text for page collections_edit.php
@@ -85,7 +85,7 @@ $trans["adminCollections_edit_formNoteText"]                 = "\$text = '可借天
 #****************************************************************************
 $trans["adminCollections_listAddNewCollection"]                 = "\$text = '新建馆藏';";
 $trans["adminCollections_listCollections"]                 = "\$text = '馆藏:';";
-$trans["adminCollections_listFunction"]                 = "\$text = 'Function';";
+$trans["adminCollections_listFunction"]                 = "\$text = '操作';";
 $trans["adminCollections_listDescription"]                 = "\$text = '描述';";
 $trans["adminCollections_listDaysdueback"]                 = "\$text = '可借天数';";
 $trans["adminCollections_listDailylatefee"]                 = "\$text = '超期罚金';";
@@ -199,7 +199,7 @@ $trans["admin_settingsHTMLTagLangAttr"]                 = "\$text = 'HTML Tag La
 #****************************************************************************
 #*  Translation text for all staff pages
 #****************************************************************************
-$trans["adminStaff_Staffmember"]                 = "\$text = 'Staff member,';";
+$trans["adminStaff_Staffmember"]                 = "\$text = '员工会员';";
 $trans["adminStaff_Return"]                 = "\$text = '返回员工表';";
 $trans["adminStaff_Yes"]                 = "\$text = '是';";
 $trans["adminStaff_No"]                 = "\$text = '否';";
@@ -240,7 +240,7 @@ $trans["adminStaff_edit_formSuspended"]                 = "\$text = 'Suspended:'
 #****************************************************************************
 $trans["adminStaff_list_formHeader"]                 = "\$text = '新建员工';";
 $trans["adminStaff_list_Columnheader"]                 = "\$text = ' 员工:';";
-$trans["adminStaff_list_Function"]                 = "\$text = 'Function';";
+$trans["adminStaff_list_Function"]                 = "\$text = '操作';";
 $trans["adminStaff_list_Edit"]                 = "\$text = '编辑';";
 $trans["adminStaff_list_Pwd"]                 = "\$text = '密码';";
 $trans["adminStaff_list_Del"]                 = "\$text = '删除';";
@@ -294,50 +294,50 @@ $trans["adminTheme_Preview"]                 = "\$text = '预览样式修改';";
 #****************************************************************************
 #*  Translation text for page theme_list.php
 #****************************************************************************
-$trans["adminTheme_Changetheme"]                 = "\$text = 'Change Theme In Use:';";
-$trans["adminTheme_Choosetheme"]                 = "\$text = 'Choose a New Theme:';";
-$trans["adminTheme_Addnew"]                 = "\$text = 'Add New Theme';";
-$trans["adminTheme_themes"]                 = "\$text = 'Themes:';";
-$trans["adminTheme_function"]                 = "\$text = 'Function';";
-$trans["adminTheme_Themename"]                 = "\$text = 'Theme Name';";
-$trans["adminTheme_Usage"]                 = "\$text = 'Usage';";
-$trans["adminTheme_Edit"]                 = "\$text = 'edit';";
-$trans["adminTheme_Copy"]                 = "\$text = 'copy';";
-$trans["adminTheme_Del"]                 = "\$text = 'del';";
-$trans["adminTheme_Inuse"]                 = "\$text = 'in use';";
-$trans["adminTheme_Note"]                 = "\$text = '*Note:';";
-$trans["adminTheme_Notetext"]                 = "\$text = 'The delete function is not available on the theme that is currently in use.';";
+$trans["adminTheme_Changetheme"]                 = "\$text = '修改当前使用的样式:';";
+$trans["adminTheme_Choosetheme"]                 = "\$text = '选择一个新样式:';";
+$trans["adminTheme_Addnew"]                 = "\$text = '新建样式';";
+$trans["adminTheme_themes"]                 = "\$text = '样式:';";
+$trans["adminTheme_function"]                 = "\$text = '操作';";
+$trans["adminTheme_Themename"]                 = "\$text = '样式名称';";
+$trans["adminTheme_Usage"]                 = "\$text = '用法';";
+$trans["adminTheme_Edit"]                 = "\$text = '修改';";
+$trans["adminTheme_Copy"]                 = "\$text = '拷贝';";
+$trans["adminTheme_Del"]                 = "\$text = '删除';";
+$trans["adminTheme_Inuse"]                 = "\$text = '正在使用';";
+$trans["adminTheme_Note"]                 = "\$text = '*备注:';";
+$trans["adminTheme_Notetext"]                 = "\$text = '不能删除正在使用的样式.';";
 
 #****************************************************************************
 #*  Translation text for page theme_list.php
 #****************************************************************************
-$trans["adminTheme_Theme2"]                 = "\$text = 'Theme:';";
-$trans["adminTheme_Tablebordercolor"]                 = "\$text = 'Table Border Color:';";
-$trans["adminTheme_Errorcolor"]                 = "\$text = 'Error Color:';";
-$trans["adminTheme_Tableborderwidth"]                 = "\$text = 'Table Border Width:';";
-$trans["adminTheme_Tablecellpadding"]                 = "\$text = 'Table Cell Padding:';";
-$trans["adminTheme_Title"]                 = "\$text = 'Title';";
-$trans["adminTheme_Mainbody"]                 = "\$text = 'Main Body';";
-$trans["adminTheme_Navigation"]                 = "\$text = 'Navigation';";
-$trans["adminTheme_Tabs"]                 = "\$text = 'Tabs';";
-$trans["adminTheme_Backgroundcolor"]                 = "\$text = 'Background Color:';";
-$trans["adminTheme_Fontface"]                 = "\$text = 'Font Face:';";
-$trans["adminTheme_Fontsize"]                 = "\$text = 'Font Size:';";
-$trans["adminTheme_Bold"]                 = "\$text = 'bold';";
-$trans["adminTheme_Fontcolor"]                 = "\$text = 'Font Color:';";
-$trans["adminTheme_Linkcolor"]                 = "\$text = 'Link Color:';";
-$trans["adminTheme_Align"]                 = "\$text = 'Align:';";
-$trans["adminTheme_Right"]                 = "\$text = 'Right';";
-$trans["adminTheme_Left"]                 = "\$text = 'Left';";
-$trans["adminTheme_Center"]                 = "\$text = 'Center';";
+$trans["adminTheme_Theme2"]                 = "\$text = '样式:';";
+$trans["adminTheme_Tablebordercolor"]                 = "\$text = '表的边线颜色:';";
+$trans["adminTheme_Errorcolor"]                 = "\$text = '错误的颜色:';";
+$trans["adminTheme_Tableborderwidth"]                 = "\$text = '表的边线宽度:';";
+$trans["adminTheme_Tablecellpadding"]                 = "\$text = '表格单元填充:';";
+$trans["adminTheme_Title"]                 = "\$text = '标题';";
+$trans["adminTheme_Mainbody"]                 = "\$text = '内容';";
+$trans["adminTheme_Navigation"]                 = "\$text = '导航';";
+$trans["adminTheme_Tabs"]                 = "\$text = '标签';";
+$trans["adminTheme_Backgroundcolor"]                 = "\$text = '背景色:';";
+$trans["adminTheme_Fontface"]                 = "\$text = '字体:';";
+$trans["adminTheme_Fontsize"]                 = "\$text = '字体大小:';";
+$trans["adminTheme_Bold"]                 = "\$text = '粗体';";
+$trans["adminTheme_Fontcolor"]                 = "\$text = '字体颜色:';";
+$trans["adminTheme_Linkcolor"]                 = "\$text = '链接颜色:';";
+$trans["adminTheme_Align"]                 = "\$text = '对齐:';";
+$trans["adminTheme_Right"]                 = "\$text = '靠右';";
+$trans["adminTheme_Left"]                 = "\$text = '靠左';";
+$trans["adminTheme_Center"]                 = "\$text = '中心';";
 
-$trans["adminTheme_HeaderWording"]                 = "\$text = 'Edit';";
+$trans["adminTheme_HeaderWording"]                 = "\$text = '编辑';";
 
 
 #****************************************************************************
 #*  Translation text for page theme_new.php
 #****************************************************************************
-$trans["adminTheme_new_Added"]                 = "\$text = ', has been added.';";
+$trans["adminTheme_new_Added"]                 = "\$text = ', 已经添加.';";
 
 #****************************************************************************
 #*  Translation text for page theme_new_form.php
@@ -346,25 +346,25 @@ $trans["adminTheme_new_Added"]                 = "\$text = ', has been added.';"
 #****************************************************************************
 #*  Translation text for page theme_preview.php
 #****************************************************************************
-$trans["adminTheme_preview_Themepreview"]                 = "\$text = 'Theme Preview';";
-$trans["adminTheme_preview_Librarytitle"]                 = "\$text = 'Library Title';";
-$trans["adminTheme_preview_CloseWindow"]                 = "\$text = 'Close Window';";
-$trans["adminTheme_preview_Home"]                 = "\$text = 'Home';";
-$trans["adminTheme_preview_Circulation"]   = "\$text = 'Circulation';";
-$trans["adminTheme_preview_Cataloging"]    = "\$text = 'Cataloging';";
-$trans["adminTheme_preview_Admin"]         = "\$text = 'Admin';";
-$trans["adminTheme_preview_Samplelink"]    = "\$text = 'Sample Link';";
-$trans["adminTheme_preview_Thisstart"]     = "\$text = 'This is a preview of the ';";
-$trans["adminTheme_preview_Thisend"]       = "\$text = 'theme.';";
-$trans["adminTheme_preview_Samplelist"]    = "\$text = 'Sample List:';";
-$trans["adminTheme_preview_Tableheading"]  = "\$text = 'Table Heading';";
-$trans["adminTheme_preview_Sampledatarow1"]= "\$text = 'Sample data row 1';";
-$trans["adminTheme_preview_Sampledatarow2"]= "\$text = 'Sample data row 2';";
-$trans["adminTheme_preview_Sampledatarow3"]= "\$text = 'Sample data row 3';";
-$trans["adminTheme_preview_Samplelink"]    = "\$text = 'sample link';";
-$trans["adminTheme_preview_Sampleerror"]   = "\$text = 'sample error';";
-$trans["adminTheme_preview_Sampleinput"]   = "\$text = 'Sample Input';";
-$trans["adminTheme_preview_Samplebutton"]  = "\$text = 'Sample Button';";
+$trans["adminTheme_preview_Themepreview"]                 = "\$text = '样式预览';";
+$trans["adminTheme_preview_Librarytitle"]                 = "\$text = '图书馆标题';";
+$trans["adminTheme_preview_CloseWindow"]                 = "\$text = '关闭窗口';";
+$trans["adminTheme_preview_Home"]                 = "\$text = '首页';";
+$trans["adminTheme_preview_Circulation"]   = "\$text = '流通';";
+$trans["adminTheme_preview_Cataloging"]    = "\$text = '编目';";
+$trans["adminTheme_preview_Admin"]         = "\$text = '管理';";
+$trans["adminTheme_preview_Samplelink"]    = "\$text = '简单链接';";
+$trans["adminTheme_preview_Thisstart"]     = "\$text = '预览';";
+$trans["adminTheme_preview_Thisend"]       = "\$text = '样式.';";
+$trans["adminTheme_preview_Samplelist"]    = "\$text = '样本清单:';";
+$trans["adminTheme_preview_Tableheading"]  = "\$text = '表头';";
+$trans["adminTheme_preview_Sampledatarow1"]= "\$text = '样本行1';";
+$trans["adminTheme_preview_Sampledatarow2"]= "\$text = '样本行2';";
+$trans["adminTheme_preview_Sampledatarow3"]= "\$text = '样本行3';";
+$trans["adminTheme_preview_Samplelink"]    = "\$text = '样本链接';";
+$trans["adminTheme_preview_Sampleerror"]   = "\$text = '样本错误';";
+$trans["adminTheme_preview_Sampleinput"]   = "\$text = '样本输入';";
+$trans["adminTheme_preview_Samplebutton"]  = "\$text = '样本按钮';";
 $trans["adminTheme_preview_Poweredby"]     = "\$text = 'Powered by OpenBiblio';";
 $trans["adminTheme_preview_Copyright"]     = "\$text = 'Copyright &copy; 2002-2005 Dave Stevens';";
 $trans["adminTheme_preview_underthe"]      = "\$text = 'under the';";
