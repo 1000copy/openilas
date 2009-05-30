@@ -41,7 +41,7 @@ $trans["catalogSubmit"]            = "\$text = '提交';";
 $trans["catalogCancel"]            = "\$text = '取消';";
 $trans["catalogRefresh"]           = "\$text = '刷新';";
 $trans["catalogDelete"]            = "\$text = '删除';";
-$trans["catalogFootnote"]          = "\$text = 'Fields marked with %symbol% are required.';";
+$trans["catalogFootnote"]          = "\$text = '有 %symbol% 标记的字段是必须录入的.';";
 $trans["AnswerYes"]                = "\$text = '是';";
 $trans["AnswerNo"]                 = "\$text = '否';";
 
