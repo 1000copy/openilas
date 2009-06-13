@@ -43,7 +43,7 @@ $trans["reportsCancel"]            = "\$text = 'Cancel';";
 #*  Translation text for page index.php
 #****************************************************************************
 $trans["indexHdr"]                 = "\$text = '报表';";
-$trans["indexDesc"]                = "\$text = 'Use the report or label list located in the left hand navigation area to produce reports or labels.';";
+$trans["indexDesc"]                = "\$text = '用左侧导航打印报表和生成标签.';";
 
 #****************************************************************************
 #*  Translation text for page report_list.php
@@ -51,32 +51,32 @@ $trans["indexDesc"]                = "\$text = 'Use the report or label list loc
 $trans["reportListHdr"]            = "\$text = '报表清单';";
 $trans["reportListDesc"]           = "\$text = '从下列清单选择一个报表.';";
 $trans["reportListXmlErr"]         = "\$text = '报表xml解释错误';";
-$trans["reportListCannotRead"]     = "\$text = 'Cannot read label file: %fileName%';";
+$trans["reportListCannotRead"]     = "\$text = '不能读标签文件: %fileName%';";
 
 #****************************************************************************
 #*  Translation text for page label_list.php
 #****************************************************************************
-$trans["labelListHdr"]             = "\$text = 'Label List';";
-$trans["labelListDesc"]            = "\$text = 'Choose from one of the following links to produce labels in pdf format.';";
-$trans["displayLabelsXmlErr"]      = "\$text = 'Error occurred parsing report definition xml.  Error = ';";
+$trans["labelListHdr"]             = "\$text = '标签清单';";
+$trans["labelListDesc"]            = "\$text = '选择链接打印pdf格式标签.';";
+$trans["displayLabelsXmlErr"]      = "\$text = '剖析报表定义文件错误.  错误 = ';";
 
 #****************************************************************************
 #*  Translation text for page letter_list.php
 #****************************************************************************
 $trans["letterListHdr"]            = "\$text = 'Letter List';";
-$trans["letterListDesc"]           = "\$text = 'Choose from one of the following links to produce letters in pdf format.';";
-$trans["displayLettersXmlErr"]      = "\$text = 'Error occurred parsing report definition xml.  Error = ';";
+$trans["letterListDesc"]           = "\$text = '选择链接打印pdf格式的Letter.';";
+$trans["displayLettersXmlErr"]      = "\$text = '报表定义文件剖析错误.  错误= ';";
 
 #****************************************************************************
 #*  Translation text for page report_criteria.php
 #****************************************************************************
-$trans["reportCriteriaHead1"]      = "\$text = 'Report Search Criteria (optional)';";
-$trans["reportCriteriaHead2"]      = "\$text = 'Report Sort Order (optional)';";
-$trans["reportCriteriaHead3"]      = "\$text = 'Report Output Type';";
-$trans["reportCriteriaCrit1"]      = "\$text = 'Criteria 1:';";
-$trans["reportCriteriaCrit2"]      = "\$text = 'Criteria 2:';";
-$trans["reportCriteriaCrit3"]      = "\$text = 'Criteria 3:';";
-$trans["reportCriteriaCrit4"]      = "\$text = 'Criteria 4:';";
+$trans["reportCriteriaHead1"]      = "\$text = '报表搜索条件(可选)';";
+$trans["reportCriteriaHead2"]      = "\$text = '报表排序 (可选)';";
+$trans["reportCriteriaHead3"]      = "\$text = '报表输入类型';";
+$trans["reportCriteriaCrit1"]      = "\$text = '条件 1:';";
+$trans["reportCriteriaCrit2"]      = "\$text = '条件 2:';";
+$trans["reportCriteriaCrit3"]      = "\$text = '条件 3:';";
+$trans["reportCriteriaCrit4"]      = "\$text = '条件 4:';";
 $trans["reportCriteriaEQ"]         = "\$text = '=';";
 $trans["reportCriteriaNE"]         = "\$text = 'not =';";
 $trans["reportCriteriaLT"]         = "\$text = '&lt;';";
@@ -85,90 +85,90 @@ $trans["reportCriteriaLE"]         = "\$text = '&lt or =';";
 $trans["reportCriteriaGE"]         = "\$text = '&gt or =';";
 $trans["reportCriteriaBT"]         = "\$text = 'between';";
 $trans["reportCriteriaAnd"]        = "\$text = 'and';";
-$trans["reportCriteriaRunReport"]  = "\$text = 'Run Report';";
-$trans["reportCriteriaSortCrit1"]  = "\$text = 'Sort 1:';";
-$trans["reportCriteriaSortCrit2"]  = "\$text = 'Sort 2:';";
-$trans["reportCriteriaSortCrit3"]  = "\$text = 'Sort 3:';";
-$trans["reportCriteriaAscending"]  = "\$text = 'ascending';";
-$trans["reportCriteriaDescending"] = "\$text = 'descending';";
-$trans["reportCriteriaStartOnLabel"] = "\$text = 'Start printing on label:';";
-$trans["reportCriteriaOutput"]     = "\$text = 'Output Type:';";
+$trans["reportCriteriaRunReport"]  = "\$text = '执行报表';";
+$trans["reportCriteriaSortCrit1"]  = "\$text = '排序 1:';";
+$trans["reportCriteriaSortCrit2"]  = "\$text = '排序 2:';";
+$trans["reportCriteriaSortCrit3"]  = "\$text = '排序 3:';";
+$trans["reportCriteriaAscending"]  = "\$text = '升序';";
+$trans["reportCriteriaDescending"] = "\$text = '降序';";
+$trans["reportCriteriaStartOnLabel"] = "\$text = '开始打印标签:';";
+$trans["reportCriteriaOutput"]     = "\$text = '输入类型:';";
 $trans["reportCriteriaOutputHTML"] = "\$text = 'HTML';";
 $trans["reportCriteriaOutputCSV"]  = "\$text = 'CSV';";
 
 #****************************************************************************
 #*  Translation text for page run_report.php
 #****************************************************************************
-$trans["runReportReturnLink1"]     = "\$text = 'report selection criteria';";
-$trans["runReportReturnLink2"]     = "\$text = 'report list';";
-$trans["runReportTotal"]           = "\$text = 'Total Rows:';";
+$trans["runReportReturnLink1"]     = "\$text = '报表选择条件';";
+$trans["runReportReturnLink2"]     = "\$text = '报表清单';";
+$trans["runReportTotal"]           = "\$text = '总行数:';";
 
 #****************************************************************************
 #*  Translation text for page display_labels.php
 #****************************************************************************
-$trans["displayLabelsStartOnLblErr"] = "\$text = 'Field must be numeric.';";
-$trans["displayLabelsXmlErr"]      = "\$text = 'Error occurred parsing report definition xml.  Error = ';";
-$trans["displayLabelsCannotRead"]  = "\$text = 'Cannot read label file: %fileName%';";
+$trans["displayLabelsStartOnLblErr"] = "\$text = '字段必须是数字.';";
+$trans["displayLabelsXmlErr"]      = "\$text = '剖析报表文件错误.  错误= ';";
+$trans["displayLabelsCannotRead"]  = "\$text = '无法读出文件： %fileName%';";
 
 #****************************************************************************
 #*  Translation text for page noauth.php
 #****************************************************************************
-$trans["noauthMsg"]                = "\$text = 'You are not authorized to use the Reports tab.';";
+$trans["noauthMsg"]                = "\$text = '你没有被授权使用报表标签.';";
 
 #****************************************************************************
 #*  Report Titles
 #****************************************************************************
-$trans["reportHolds"]              = "\$text = 'Hold Requests Containing Member Contact Info';";
-$trans["reportCheckouts"]          = "\$text = 'Bibliography Checkout Listing';";
+$trans["reportHolds"]              = "\$text = '包含会员联系信息的预约';";
+$trans["reportCheckouts"]          = "\$text = '书目借出清单';";
 $trans["Over Due Letters"]           = "\$text = 'Over Due Letters';";
-$trans["reportLabels"]             = "\$text = 'Label Printing Query (used by labels)';";
-$trans["popularBiblios"]           = "\$text = 'Most Popular Bibliographies';";
-$trans["overdueList"]              = "\$text = 'Over Due Member List';";
-$trans["balanceDueList"]           = "\$text = 'Balance Due Member List';";
+$trans["reportLabels"]             = "\$text = '标签打印查询(由标签使用)';";
+$trans["popularBiblios"]           = "\$text = '借阅最多的书目';";
+$trans["overdueList"]              = "\$text = '超期会员清单';";
+$trans["balanceDueList"]           = "\$text = '欠费会员清单';";
 
 #****************************************************************************
 #*  Label Titles
 #****************************************************************************
-$trans["labelsMulti"]              = "\$text = 'Multi Label Example';";
-$trans["labelsSimple"]             = "\$text = 'Simple Label Example';";
+$trans["labelsMulti"]              = "\$text = '多标签例子';";
+$trans["labelsSimple"]             = "\$text = '简单标签例子';";
 
 #****************************************************************************
 #*  Column Text
 #****************************************************************************
-$trans["biblio.bibid"]             = "\$text = 'Biblio ID';";
-$trans["biblio.create_dt"]         = "\$text = 'Date Added';";
-$trans["biblio.last_change_dt"]    = "\$text = 'Last Changed';";
-$trans["biblio.material_cd"]       = "\$text = 'Material Cd';";
-$trans["biblio.collection_cd"]     = "\$text = 'Collection';";
-$trans["biblio.call_nmbr1"]        = "\$text = 'Call 1';";
-$trans["biblio.call_nmbr2"]        = "\$text = 'Call 2';";
-$trans["biblio.call_nmbr3"]        = "\$text = 'Call 3';";
+$trans["biblio.bibid"]             = "\$text = '书目id';";
+$trans["biblio.create_dt"]         = "\$text = '添加日期';";
+$trans["biblio.last_change_dt"]    = "\$text = '最后改变日期';";
+$trans["biblio.material_cd"]       = "\$text = '载体';";
+$trans["biblio.collection_cd"]     = "\$text = '馆藏';";
+$trans["biblio.call_nmbr1"]        = "\$text = '索书号 1';";
+$trans["biblio.call_nmbr2"]        = "\$text = '索书号 2';";
+$trans["biblio.call_nmbr3"]        = "\$text = '索书号 3';";
 $trans["biblio.title_remainder"]   = "\$text = 'Title Remainder';";
 $trans["biblio.responsibility_stmt"] = "\$text = 'Stmt of Resp';";
-$trans["biblio.opac_flg"]          = "\$text = 'OPAC Flag';";
+$trans["biblio.opac_flg"]          = "\$text = 'OPAC 标志';";
 
-$trans["biblio_copy.barcode_nmbr"] = "\$text = 'Barcode';";
-$trans["biblio.title"]             = "\$text = 'Title';";
-$trans["biblio.author"]            = "\$text = 'Author';";
-$trans["biblio_copy.status_begin_dt"]   = "\$text = 'Status Begin Date';";
-$trans["biblio_copy.due_back_dt"]       = "\$text = 'Due Back Date';";
-$trans["member.mbrid"]             = "\$text = 'Member ID';";
-$trans["member.barcode_nmbr"]      = "\$text = 'Member Barcode';";
-$trans["member.last_name"]         = "\$text = 'Last Name';";
-$trans["member.first_name"]        = "\$text = 'First Name';";
-$trans["member.address"]          = "\$text = 'Address';";
-$trans["biblio_hold.hold_begin_dt"] = "\$text = 'Hold Begin Date';";
-$trans["member.home_phone"]        = "\$text = 'Home Phone';";
-$trans["member.work_phone"]        = "\$text = 'Work Phone';";
+$trans["biblio_copy.barcode_nmbr"] = "\$text = '条码';";
+$trans["biblio.title"]             = "\$text = '标题';";
+$trans["biblio.author"]            = "\$text = '作者';";
+$trans["biblio_copy.status_begin_dt"]   = "\$text = '状态开始日期';";
+$trans["biblio_copy.due_back_dt"]       = "\$text = '应归还日期';";
+$trans["member.mbrid"]             = "\$text = '会员 ID';";
+$trans["member.barcode_nmbr"]      = "\$text = '会员条码';";
+$trans["member.last_name"]         = "\$text = '姓';";
+$trans["member.first_name"]        = "\$text = '名';";
+$trans["member.address"]          = "\$text = '地址';";
+$trans["biblio_hold.hold_begin_dt"] = "\$text = '预约开始日期';";
+$trans["member.home_phone"]        = "\$text = '家庭电话';";
+$trans["member.work_phone"]        = "\$text = '工作电话';";
 $trans["member.email"]             = "\$text = 'Email';";
-$trans["biblio_status_dm.description"] = "\$text = 'Status';";
-$trans["settings.library_name"]    = "\$text = 'Library Name';";
-$trans["settings.library_hours"]   = "\$text = 'Library Hours';";
-$trans["settings.library_phone"]   = "\$text = 'Library Phone';";
+$trans["biblio_status_dm.description"] = "\$text = '状态';";
+$trans["settings.library_name"]    = "\$text = '图书馆名称';";
+$trans["settings.library_hours"]   = "\$text = '图书馆工作时间';";
+$trans["settings.library_phone"]   = "\$text = '图书馆电话';";
 $trans["days_late"]                = "\$text = 'Days Late';";
-$trans["title"]                    = "\$text = 'Title';";
-$trans["author"]                   = "\$text = 'Author';";
+$trans["title"]                    = "\$text = '标题';";
+$trans["author"]                   = "\$text = '作者';";
 $trans["due_back_dt"]              = "\$text = 'Due Back';";
-$trans["checkoutCount"]            = "\$text = 'Checkout Count';";
+$trans["checkoutCount"]            = "\$text = '借出数量';";
 
 ?>
