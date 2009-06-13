@@ -112,64 +112,64 @@ $trans["biblioCopyDelSuccess"]     = "\$text = 'ÌõÂëÎª %barcode% µÄ¿½±´ÒÑ¾­±»É¾³
 #****************************************************************************
 #*  Translation text for page biblio_marc_list.php
 #****************************************************************************
-$trans["biblioMarcListMarcSelect"] = "\$text = 'Add New MARC Field';";
-$trans["biblioMarcListHdr"]        = "\$text = 'MARC Field Information';";
-$trans["biblioMarcListTbleCol1"]   = "\$text = 'Function';";
-$trans["biblioMarcListTbleCol2"]   = "\$text = 'Tag';";
-$trans["biblioMarcListTbleCol3"]   = "\$text = 'Tag Description';";
+$trans["biblioMarcListMarcSelect"] = "\$text = 'Ìí¼ÓMARC ×Ö¶Î';";
+$trans["biblioMarcListHdr"]        = "\$text = 'MARC ×Ö¶ÎÐÅÏ¢';";
+$trans["biblioMarcListTbleCol1"]   = "\$text = '²Ù×÷';";
+$trans["biblioMarcListTbleCol2"]   = "\$text = '±êÇ©(tag)';";
+$trans["biblioMarcListTbleCol3"]   = "\$text = '±êÇ©ÃèÊö';";
 $trans["biblioMarcListTbleCol4"]   = "\$text = 'Ind 1';";
 $trans["biblioMarcListTbleCol5"]   = "\$text = 'Ind 2';";
-$trans["biblioMarcListTbleCol6"]   = "\$text = 'Subfld';";
-$trans["biblioMarcListTbleCol7"]   = "\$text = 'Subfield Description';";
-$trans["biblioMarcListTbleCol8"]   = "\$text = 'Field Data';";
-$trans["biblioMarcListNoRows"]     = "\$text = 'No MARC fields found.';";
-$trans["biblioMarcListEdit"]       = "\$text = 'edit';";
-$trans["biblioMarcListDel"]        = "\$text = 'del';";
+$trans["biblioMarcListTbleCol6"]   = "\$text = '×Ó×Ö¶Î';";
+$trans["biblioMarcListTbleCol7"]   = "\$text = '×Ó×Ö¶ÎÃèÊö';";
+$trans["biblioMarcListTbleCol8"]   = "\$text = '×Ö¶ÎÊý¾Ý';";
+$trans["biblioMarcListNoRows"]     = "\$text = 'Ã»ÓÐÕÒµ½MARC ×Ö¶Î.';";
+$trans["biblioMarcListEdit"]       = "\$text = '±à¼­';";
+$trans["biblioMarcListDel"]        = "\$text = 'É¾³ý';";
 
 #****************************************************************************
 #*  Translation text for page usmarc_select.php
 #****************************************************************************
-$trans["usmarcSelectHdr"]          = "\$text = 'MARC Field Selector';";
-$trans["usmarcSelectInst"]         = "\$text = 'Select a field type';";
-$trans["usmarcSelectNoTags"]       = "\$text = 'No tags found.';";
-$trans["usmarcSelectUse"]          = "\$text = 'use';";
-$trans["usmarcCloseWindow"]        = "\$text = 'Close Window';";
+$trans["usmarcSelectHdr"]          = "\$text = 'MARC ×Ö¶ÎÑ¡Ôñ·û';";
+$trans["usmarcSelectInst"]         = "\$text = 'Ñ¡Ôñ×Ö¶ÎÀàÐÍ';";
+$trans["usmarcSelectNoTags"]       = "\$text = 'Ã»ÓÐÕÒµ½±êÇ©.';";
+$trans["usmarcSelectUse"]          = "\$text = 'Ê¹ÓÃ';";
+$trans["usmarcCloseWindow"]        = "\$text = '¹Ø±Õ´°¿Ú';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_new_form.php
 #****************************************************************************
-$trans["biblioMarcNewFormHdr"]     = "\$text = 'Add New Marc Field';";
-$trans["biblioMarcNewFormTag"]     = "\$text = 'Tag';";
-$trans["biblioMarcNewFormSubfld"]  = "\$text = 'Subfield';";
-$trans["biblioMarcNewFormData"]    = "\$text = 'Field Data';";
-$trans["biblioMarcNewFormInd1"]    = "\$text = 'Indicator 1';";
-$trans["biblioMarcNewFormInd2"]    = "\$text = 'Indicator 2';";
-$trans["biblioMarcNewFormSelect"]  = "\$text = 'Select';";
+$trans["biblioMarcNewFormHdr"]     = "\$text = 'Ìí¼ÓMarc ×Ö¶Î';";
+$trans["biblioMarcNewFormTag"]     = "\$text = '±êÇ©';";
+$trans["biblioMarcNewFormSubfld"]  = "\$text = '×Ó×Ö¶Î';";
+$trans["biblioMarcNewFormData"]    = "\$text = '×Ö¶ÎÊý¾Ý';";
+$trans["biblioMarcNewFormInd1"]    = "\$text = 'Ö¸Ê¾Æ÷ 1';";
+$trans["biblioMarcNewFormInd2"]    = "\$text = 'Ö¸Ê¾Æ÷ 2';";
+$trans["biblioMarcNewFormSelect"]  = "\$text = 'Ñ¡Ôñ';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_new.php
 #****************************************************************************
-$trans["biblioMarcNewSuccess"]     = "\$text = 'Marc field successfully added.';";
+$trans["biblioMarcNewSuccess"]     = "\$text = 'Marc ×Ö¶ÎÒÑ¾­Ìí¼Ó.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_edit_form.php
 #****************************************************************************
-$trans["biblioMarcEditFormHdr"]    = "\$text = 'Edit Marc Field';";
+$trans["biblioMarcEditFormHdr"]    = "\$text = '±à¼­ Marc ×Ö¶Î';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_edit.php
 #****************************************************************************
-$trans["biblioMarcEditSuccess"]    = "\$text = 'Marc field successfully updated.';";
+$trans["biblioMarcEditSuccess"]    = "\$text = 'Marc ×Ö¶ÎÒÑ¾­¸üÐÂ.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_del_confirm.php
 #****************************************************************************
-$trans["biblioMarcDelConfirmMsg"]  = "\$text = 'Are you sure you want to delete the field with tag %tag% and subfield %subfieldCd%?';";
+$trans["biblioMarcDelConfirmMsg"]  = "\$text = 'È·¶¨É¾³ý±êÇ©Îª%tag% µÄ×Ö¶ÎºÍ×Ó×Ö¶Î %subfieldCd%?';";
 
 #****************************************************************************
 #*  Translation text for page biblio_marc_del.php
 #****************************************************************************
-$trans["biblioMarcDelSuccess"]     = "\$text = 'Marc field successfully deleted.';";
+$trans["biblioMarcDelSuccess"]     = "\$text = 'Marc ×Ö¶Î³É¹¦¸üÐÂ.';";
 
 #****************************************************************************
 #*  Translation text for page biblio_del_confirm.php
@@ -205,17 +205,17 @@ $trans["NotAuth"]                 = "\$text = 'Î´ÊÚÈ¨Ê¹ÓÃ±àÄ¿';";
 #****************************************************************************
 #*  Translation text for page upload_usmarc.php and upload_usmarc_form.php
 #****************************************************************************
-$trans["MarcUploadTest"]            = "\$text = 'Test Load';";
-$trans["MarcUploadTestTrue"]        = "\$text = 'True';";
-$trans["MarcUploadTestFalse"]       = "\$text = 'False';";
-$trans["MarcUploadTestFileUpload"]  = "\$text = 'USMarc Input File';";
-$trans["MarcUploadRecordsUploaded"] = "\$text = 'Records Uploaded';";
-$trans["MarcUploadMarcRecord"]      = "\$text = 'MARC Record';";
-$trans["MarcUploadTag"]             = "\$text = 'Tag';";
-$trans["MarcUploadSubfield"]        = "\$text = 'Sub';";
-$trans["MarcUploadData"]            = "\$text = 'Data';";
-$trans["MarcUploadRawData"]         = "\$text = 'Raw Data:';";
-$trans["UploadFile"]                = "\$text = 'Upload File';";
+$trans["MarcUploadTest"]            = "\$text = '²âÊÔ×°Èë';";
+$trans["MarcUploadTestTrue"]        = "\$text = 'Õæ';";
+$trans["MarcUploadTestFalse"]       = "\$text = '¼Ù';";
+$trans["MarcUploadTestFileUpload"]  = "\$text = 'USMarc ÊäÈëÎÄ¼þ';";
+$trans["MarcUploadRecordsUploaded"] = "\$text = '¼ÇÂ¼±»ÉÏÔØ';";
+$trans["MarcUploadMarcRecord"]      = "\$text = 'MARC ¼ÇÂ¼';";
+$trans["MarcUploadTag"]             = "\$text = '±êÇ©';";
+$trans["MarcUploadSubfield"]        = "\$text = '×Ó';";
+$trans["MarcUploadData"]            = "\$text = 'Êý¾Ý';";
+$trans["MarcUploadRawData"]         = "\$text = 'Ô­Ê¼Êý¾Ý:';";
+$trans["UploadFile"]                = "\$text = 'ÉÏÔØÎÄ¼þ';";
 
 #****************************************************************************
 #*  Translation text for page usmarc_select.php
