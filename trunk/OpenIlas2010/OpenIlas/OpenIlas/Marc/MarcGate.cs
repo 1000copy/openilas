@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpenIlas.Marc
 {
-    class constg
+    class CONST
     {
         static int RS = 30;
         static int GS = 29;
@@ -41,14 +41,14 @@ namespace OpenIlas.Marc
                 while (index < strField.Length)
                 {
                     // Find first US
-                    while (index < strField.Length && !constg.IsUS(strField[index]))
+                    while (index < strField.Length && !CONST.IsUS(strField[index]))
                     {
                         index++;
                     }
                     index++;
                     // construct value until next US or end
                     string value_mid = "";
-                    while (index < strField.Length && !constg.IsUS(strField[index]))
+                    while (index < strField.Length && !CONST.IsUS(strField[index]))
                     {
                         value_mid += strField[index];
                         index++;
@@ -61,6 +61,32 @@ namespace OpenIlas.Marc
                 }
                 return _SubFields;
             }
+        }
+
+        internal object ReadableCode()
+        {
+            string Idontknow = "I don't know yet";
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("001", "控制号");
+            dic.Add("005", "记录生成时间");
+            dic.Add("010", "美国国会图书馆控制号");
+            dic.Add("100", "标目-个人名称");
+            dic.Add("101", Idontknow);
+            dic.Add("102", Idontknow);
+            dic.Add("105", Idontknow);
+            dic.Add("106", Idontknow);
+            dic.Add("200", "个人名称-一般信息");
+            dic.Add("210", "团体名称-一般信息");
+            dic.Add("215", Idontknow);
+            dic.Add("225", Idontknow);
+            dic.Add("330", "统一题名-一般信息");
+            dic.Add("606", Idontknow);
+            dic.Add("690", Idontknow);
+            dic.Add("701", Idontknow);
+            dic.Add("905", Idontknow);
+            dic.Add("989", Idontknow);
+            if (dic.ContainsKey(Code)) return dic[Code];
+            return "未定义code ";
         }
     }
     public class MarcRecords
@@ -78,11 +104,11 @@ namespace OpenIlas.Marc
             int index = 0;
             while (index < src.Length)
             {
-                while (!constg.IsGS(src[index]) && index < src.Length)
+                while (!CONST.IsGS(src[index]) && index < src.Length)
                 {
                     index++;
                 }
-                if (constg.IsGS(src[index]))
+                if (CONST.IsGS(src[index]))
                 {
                     MarcRecord rec = new MarcRecord(src.Substring(first, index - first));
                     content.Add(rec);
@@ -153,8 +179,8 @@ namespace OpenIlas.Marc
         {
             string p = this.strContent;
             string r = "";
-            if (constg.IsRS(p[currentIndex])) currentIndex++;
-            while (!constg.IsRS(p[currentIndex]) && !constg.IsGS(p[currentIndex]) && currentIndex < p.Length)
+            if (CONST.IsRS(p[currentIndex])) currentIndex++;
+            while (!CONST.IsRS(p[currentIndex]) && !CONST.IsGS(p[currentIndex]) && currentIndex < p.Length)
             {
                 r += p[currentIndex];
                 currentIndex++;
