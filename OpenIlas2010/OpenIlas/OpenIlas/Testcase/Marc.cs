@@ -12,7 +12,7 @@ namespace OpenIlas.MarcTestcase
        
         void PrintToSqReview()
         {
-            marc += marc;
+           // marc += marc;
             Console.WriteLine(marc);
             Console.WriteLine();
             MarcRecords mrs = new MarcRecords(marc);
@@ -21,7 +21,7 @@ namespace OpenIlas.MarcTestcase
 
                 foreach (Field item in rec.Toc)
                 {
-                    Console.WriteLine("[字段码:{0}]", item.Code);
+                    Console.WriteLine("[字段码:{0},{1}]", item.Code,item.ReadableCode());
                     Dictionary<string, string> sfs = item.SubFields;
                     if (sfs.Keys.Count == 0)
                         Console.WriteLine(item.strField);
