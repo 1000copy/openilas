@@ -56,7 +56,12 @@ namespace OpenIlas.Marc
                     // append the value to subfields 
                     if (value_mid.Length > 1)
                     {
-                        _SubFields.Add(value_mid.Substring(0, 1), value_mid.Substring(1));
+                        string key =value_mid.Substring(0, 1);
+                        if (!_SubFields.ContainsKey(key))
+                            _SubFields.Add(key, value_mid.Substring(1));
+                        else
+                            //Console.WriteLine("--debug--key viladation:{0},code:{1}",key,Code);
+                            _SubFields[key] += "+" + value_mid.Substring(1);
                     }
                 }
                 return _SubFields;
@@ -104,13 +109,13 @@ namespace OpenIlas.Marc
             int index = 0;
             while (index < src.Length)
             {
-                while (!CONST.IsGS(src[index]) && index < src.Length)
+                while ( index < src.Length && !CONST.IsGS(src[index]) )
                 {
                     index++;
                 }
-                if (CONST.IsGS(src[index]))
+                if (index < src.Length) 
                 {
-                    MarcRecord rec = new MarcRecord(src.Substring(first, index - first));
+                    MarcRecord rec = new MarcRecord(src.Substring(first, index - first).Trim());
                     content.Add(rec);
                     index++;
                     first = index;

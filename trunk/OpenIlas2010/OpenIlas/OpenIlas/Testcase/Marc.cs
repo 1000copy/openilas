@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using OpenIlas.Marc;
+using System.IO;
+using System.Data;
 
 namespace OpenIlas.MarcTestcase
 {
@@ -13,25 +15,56 @@ namespace OpenIlas.MarcTestcase
         void PrintToSqReview()
         {
            // marc += marc;
-            Console.WriteLine(marc);
-            Console.WriteLine();
+            marc = File.ReadAllText(@"D:\lcjun\test\1001批（29件，286条).txt",Encoding.GetEncoding("GB2312"));
+            //marc = File.ReadAllText(@"D:\lcjun\test\111",Encoding.GetEncoding("GB2312"));
+            
+            //Console.WriteLine(marc);
+            DataTable dt = new DataTable();
             MarcRecords mrs = new MarcRecords(marc);
             foreach (MarcRecord rec in mrs.Content)
-            {
-
+            {   
                 foreach (Field item in rec.Toc)
                 {
-                    Console.WriteLine("[字段码:{0},{1}]", item.Code,item.ReadableCode());
+                    string datafield = string.Format("F_{0}", item.Code);
+                    if (!dt.Columns.Contains(datafield))
+                    {
+                        DataColumn col = dt.Columns.Add();
+                        col.ColumnName = datafield;
+                    }
+                    
                     Dictionary<string, string> sfs = item.SubFields;
-                    if (sfs.Keys.Count == 0)
-                        Console.WriteLine(item.strField);
-                    else
+                    if (sfs.Keys.Count != 0)
+                    {
                         foreach (string key in sfs.Keys)
                         {
-                            Console.WriteLine("{0}:{1} ", key, sfs[key]);
+                            string sub_datafield = string.Format("F_{0}_{1}", item.Code, key);
+                            if (!dt.Columns.Contains(sub_datafield))
+                            {
+                                DataColumn col = dt.Columns.Add();
+                                col.ColumnName = sub_datafield;
+                            }
                         }
-                    Console.WriteLine();
+                    }
                 }
+            }
+            foreach (MarcRecord rec in mrs.Content)
+            {
+                DataRow row = dt.NewRow();
+                foreach (Field item in rec.Toc)
+                {
+                    string datafield = string.Format("F_{0}", item.Code);
+                    row[datafield] = item.strField;
+                    Dictionary<string, string> sfs = item.SubFields;
+                    if (sfs.Keys.Count != 0)
+                    {
+                        foreach (string key in sfs.Keys)
+                        {
+                            string sub_datafield = string.Format("F_{0}_{1}", item.Code, key);
+                            row[sub_datafield] = sfs[key];
+                        }
+                    }
+                }
+                dt.Rows.Add(row);
             }
         }
      
