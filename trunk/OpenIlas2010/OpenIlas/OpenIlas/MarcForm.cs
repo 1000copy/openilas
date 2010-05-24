@@ -29,7 +29,10 @@ namespace OpenIlas
                  //string file =@"D:\lcjun\test\1001批（29件，286条).txt";
                 string file = dlg.FileName;
                 DataTable dt = MarcRRR.Marc2Datatable(file);
-                dataGridView1.DataSource = dt ;
+                //dataGridView1.DataSource = dt ;
+                dt.TableName = "marc";
+                
+                dt.WriteXml("result_liuchuanjun_work_for_s.xml");
                 Text = string.Format("{0}", dt.Rows.Count);
             }
         }
