@@ -1,9 +1,80 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
+using System.IO;
 
 namespace OpenIlas.Marc
 {
+    // @"D:\lcjun\test\1001批（29件，286条).txt"
+    public class MarcRRR
+    {
+        public static DataTable Marc2Datatable(string filename)
+        {
+            string marc = File.ReadAllText(filename, Encoding.GetEncoding("GB2312"));
+            DataTable dt = new DataTable();
+            MarcRecords mrs = new MarcRecords(marc);
+            foreach (MarcRecord rec in mrs.Content)
+            {
+                foreach (Field item in rec.Toc)
+                {
+                    Dictionary<string, string> sfs = item.SubFields;
+                    if (sfs.Keys.Count != 0)
+                    {
+                        foreach (string key in sfs.Keys)
+                        {
+                            //if (key == "A") key = "A_";
+                            string sub_datafield = string.Format("F_{0}_{1}", item.Code, KeyMagic(key));
+                            if (!dt.Columns.Contains(sub_datafield))
+                            {
+                                DataColumn col = dt.Columns.Add();
+                                col.ColumnName = sub_datafield;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string datafield = string.Format("F_{0}", item.Code);
+                        if (!dt.Columns.Contains(datafield))
+                        {
+                            DataColumn col = dt.Columns.Add();
+                            col.ColumnName = datafield;
+                        }                    
+                    }
+                    
+                }
+            }
+            foreach (MarcRecord rec in mrs.Content)
+            {
+                DataRow row = dt.NewRow();
+                foreach (Field item in rec.Toc)
+                {
+                    Dictionary<string, string> sfs = item.SubFields;
+                    if (sfs.Keys.Count != 0)
+                    {
+                        foreach (string key in sfs.Keys)
+                        {
+                            string sub_datafield = string.Format("F_{0}_{1}", item.Code, KeyMagic(key));
+                            row[sub_datafield] = sfs[key];
+                        }
+                    }
+                    else
+                    {
+                        string datafield = string.Format("F_{0}", item.Code);
+                        row[datafield] = item.strField;                    
+                    }
+                    
+                }
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+
+        private static string KeyMagic(string key)
+        {
+            return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".Contains(key) ? key + "_" : key;
+        }
+    }
     class CONST
     {
         static int RS = 30;
@@ -163,8 +234,13 @@ namespace OpenIlas.Marc
                 {
                     Field item = new Field();
                     item.Code = strAddress.Substring(index, FIELD_CODE_LEN);
-                    item.Len = Convert.ToInt32(strAddress.Substring(index + FIELD_CODE_LEN, FIELD_LEN_LEN));
-                    item.Start = Convert.ToInt32(strAddress.Substring(index + FIELD_CODE_LEN + FIELD_LEN_LEN, FIELD_START_LEN));
+                    try
+                    {
+                        item.Len = Convert.ToInt32(strAddress.Substring(index + FIELD_CODE_LEN, FIELD_LEN_LEN));
+                        item.Start = Convert.ToInt32(strAddress.Substring(index + FIELD_CODE_LEN + FIELD_LEN_LEN, FIELD_START_LEN));
+                    }
+                        // TODO ： 哑异常，待处理
+                    catch { }
                     _Toc.Add(item);
                     index += REGION_TOL_LEN;
                 }
@@ -184,8 +260,8 @@ namespace OpenIlas.Marc
         {
             string p = this.strContent;
             string r = "";
-            if (CONST.IsRS(p[currentIndex])) currentIndex++;
-            while (!CONST.IsRS(p[currentIndex]) && !CONST.IsGS(p[currentIndex]) && currentIndex < p.Length)
+            if (currentIndex < p.Length && CONST.IsRS(p[currentIndex])) currentIndex++;
+            while (currentIndex < p.Length && !CONST.IsRS(p[currentIndex]) && !CONST.IsGS(p[currentIndex]) )
             {
                 r += p[currentIndex];
                 currentIndex++;

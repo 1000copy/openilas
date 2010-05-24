@@ -32,6 +32,7 @@ namespace OpenIlas
         private MenuItem menuItem3;
         private MenuItem menuItem4;
         private MenuItem menuItem6;
+        private MenuItem menuItem7;
         private IContainer components;
 
 		public MainForm()
@@ -86,6 +87,7 @@ namespace OpenIlas
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem4 = new System.Windows.Forms.MenuItem();
             this.menuItem6 = new System.Windows.Forms.MenuItem();
+            this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -186,7 +188,8 @@ namespace OpenIlas
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem3,
             this.menuItem4,
-            this.menuItem6});
+            this.menuItem6,
+            this.menuItem7});
             this.menuItem2.Text = "baseinfo";
             // 
             // menuItem3
@@ -207,9 +210,15 @@ namespace OpenIlas
             this.menuItem6.Text = "Book";
             this.menuItem6.Click += new System.EventHandler(this.doBookList);
             // 
+            // menuItem7
+            // 
+            this.menuItem7.Index = 3;
+            this.menuItem7.Text = "marc";
+            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.ClientSize = new System.Drawing.Size(528, 401);
             this.IsMdiContainer = true;
             this.Menu = this.mainMenu1;
@@ -315,6 +324,7 @@ namespace OpenIlas
             doUserList(sender, e);
             doDeptList(sender, e);
             doBookList(sender, e);
+            menuItem7_Click(sender, e);
         }
 
         private void doUserList(object sender, EventArgs e)
@@ -346,6 +356,14 @@ namespace OpenIlas
             list = new Books();
             list.MdiParent = this;
             list.Show();
+        }
+
+        private void menuItem7_Click(object sender, EventArgs e)
+        {
+            MarcForm form = new MarcForm();
+            form.WindowState = FormWindowState.Maximized;
+            form.MdiParent = this;
+            form.Show();
         }
 
 			
