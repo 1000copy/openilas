@@ -7,7 +7,10 @@ using System.Data;
 
 namespace OpenIlas.MarcTestcase
 {
-  
+    public class Marc
+    {
+        
+    }
     class Test
     {
         string marc = "00761nam0 2200253   45  00100130000000500170001301000370003010000410006710100080010810200150011610500180013110600060014920000690015521000310022421500200025522500550027533000770033060600130040760600130042069000080043370100200044190500330046198900160049401200800584820081106083959.5  a7-113-05198-7d￥66.00（全三册）  a20081106d2004    ekmy0chiy0121    ea0 achi  aCNb110000  ay   z   000yy  ar1 a妙管理的5个小建议AMiao Guan Li De 218 Ge Xiao Jian Yif烨子著  a北京c中国铁道出版社d2004  a391页c图d21cm2 a小智慧做大事丛书AXiao Zhi Hui Zuo Da Shi Cong Shu  a本书就企业管理问题进行探讨，以管理基本理论为基础，注重理论与实践的结合。  a企业管理  a通俗读物  av3 0a烨子AYe Zi4著  b00236515-9dF270-49e05198.1  a0009b0009";
@@ -67,8 +70,7 @@ namespace OpenIlas.MarcTestcase
                 dt.Rows.Add(row);
             }
         }
-     
-    
+        
         string b = @"
 -------------------------------分析marc
 1. 原始marc :
