@@ -55,19 +55,24 @@ namespace OpenIlas.Marc
                         foreach (string key in sfs.Keys)
                         {
                             string sub_datafield = string.Format("F_{0}_{1}", item.Code, KeyMagic(key));
-                            row[sub_datafield] = sfs[key];
+                            row[sub_datafield] = ReplaceSpecial(sfs[key]);
                         }
                     }
                     else
                     {
                         string datafield = string.Format("F_{0}", item.Code);
-                        row[datafield] = item.strField;                    
+                        row[datafield] = ReplaceSpecial(item.strField);                    
                     }
                     
                 }
                 dt.Rows.Add(row);
             }
             return dt;
+        }
+
+        private static object ReplaceSpecial(string p)
+        {
+            return p.Replace((char)31,' ');
         }
 
         private static string KeyMagic(string key)
