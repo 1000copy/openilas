@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.IO;
-
 namespace OpenIlas.Marc
 {
     // @"D:\lcjun\test\1001批（29件，286条).txt"
@@ -72,7 +71,7 @@ namespace OpenIlas.Marc
 
         private static object ReplaceSpecial(string p)
         {
-            return p.Replace((char)31,' ');
+            return p.Replace((char)31,' ').Replace(',','`');
         }
 
         private static string KeyMagic(string key)
